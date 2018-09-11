@@ -27,7 +27,7 @@ la cantidad de figuras.
 
 ## Licencia.
 
-Este proyecto está bajo la Licencia ( GNU General Public License v3.0) - mira el archivo [LICENSE.md](https://github.com/DotsCE1103/Proyecto1_Dots/blob/master/LICENCE.md) para detalles.
+Este proyecto está bajo la Licencia ( GNU General Public License v3.0) - mira el archivo [LICENSE.md](https://github.com/DotsCE1103/Proyecto1_Dots/blob/master/LICENCE) para detalles.
 
 ## Referencias.
 
