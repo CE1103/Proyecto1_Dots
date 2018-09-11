@@ -3,7 +3,7 @@
 En primer lugar, ¡gracias por tomarse el tiempo para contribuir con nuestro Proyecto! :+1::tada:  
 
 El presente documento contiene un conjunto de directrices para contribuir con el Juego Dots, que se aloja en 
-[Datos1-Dots](https://github.com/Omar1605/Datos1-Dots) en GitHub.  Estas son principalmente pautas, no reglas. 
+[Datos1-Dots](https://github.com/DotsCE1103/Proyecto1_Dots) en GitHub.  Estas son principalmente pautas, no reglas. 
 
 ### Tabla de Contenidos.
 
