@@ -4,7 +4,6 @@ public class Player {
 	
 	int points;
 	boolean turn;
-	String colorLine;
 	
 	public Player(int p) {
 		
@@ -30,7 +29,6 @@ public class Player {
 	public boolean getTurn(){
 		return this.turn;
 	}
-	
 	
 	public void scorePoints(){
 		this.points += 2;
