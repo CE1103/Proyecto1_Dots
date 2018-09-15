@@ -1,10 +1,11 @@
 package util;
 
 import application.game.*;
+import java.util.Arrays;
 
 public class Client {
 	
-	public static String lines;
+	public String lines;
 
 	public Client(String lines) {
 		

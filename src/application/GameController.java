@@ -2,6 +2,7 @@ package application;
 
 
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import application.screenControllers.ControlledScreen;
@@ -30,6 +31,8 @@ public class GameController implements Initializable, ControlledScreen {
         System.out.println("This line id is - " + ((Line)event.getSource()).getId());
         ((Line)event.getSource()).setStroke(Color.BLUE);
         Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
+        System.out.println(((Line)event.getSource()).getId());
+        System.out.println(Arrays.toString(Game.lines));
         util.Util.sendToServer();
     }
 }
