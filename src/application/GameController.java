@@ -9,10 +9,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Line;
 import javafx.scene.paint.Color;
+import application.game.*;
+import util.*;
 
 public class GameController implements Initializable, ControlledScreen {
 
     ScreensController myController;
+    int i = 0;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -26,7 +29,7 @@ public class GameController implements Initializable, ControlledScreen {
     public void onMouseClick(MouseEvent event) throws Exception {
         System.out.println("This line id is - " + ((Line)event.getSource()).getId());
         ((Line)event.getSource()).setStroke(Color.BLUE);
-        
-        
+        Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
+        util.Util.sendToServer();
     }
 }

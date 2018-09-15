@@ -14,8 +14,9 @@ public class Game extends GameController {
 	Player p2;
 	Turn b1;
 	Label scorePlayer1;
+	public static String[] lines = new String[24];
 	
-	int[] h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12;
+	int [] h1, h2, h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12;
 	
 	public Game() {
 		
