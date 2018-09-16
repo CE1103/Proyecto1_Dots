@@ -17,6 +17,8 @@ public class GameController implements Initializable, ControlledScreen {
     ScreensController myController;
     int i = 0;
     
+    Game g1 = new Game();
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -28,7 +30,9 @@ public class GameController implements Initializable, ControlledScreen {
 
     public void onMouseClick(MouseEvent event) throws Exception {
         System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-        ((Line)event.getSource()).setStroke(Color.BLUE);
+        
+        g1.setPoints(event);
+        
         Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
         System.out.println(((Line)event.getSource()).getId());
         System.out.println(Arrays.toString(Game.lines));
