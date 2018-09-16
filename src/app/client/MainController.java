@@ -7,15 +7,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import util.ControlledScreen;
 
 public class MainController implements Initializable, ControlledScreen {
 
     @FXML
-    private Label titleDots;
-    @FXML
     private Button Jugar;
+    @FXML
+    private ImageView mainLogo;
     
     ScreensController myController;
     
