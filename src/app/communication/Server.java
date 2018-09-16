@@ -1,4 +1,4 @@
-package util;
+package app.communication;
 
 public class Server {
 

@@ -1,4 +1,4 @@
-package util;
+package app.communication;
 
 import java.io.IOException;
 import java.net.InetAddress;

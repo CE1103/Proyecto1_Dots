@@ -9,7 +9,10 @@ import java.util.Arrays;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
-import application.game.*;
+
+import app.client.Game;
+import app.communication.Client;
+import app.server.*;
 
 public class Util {
 	

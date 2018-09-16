@@ -1,8 +1,9 @@
-package application.game;
+package app.client;
 
 import java.awt.event.MouseEvent;
 
-import application.GameController;
+import app.server.Player;
+import app.server.Turn;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;

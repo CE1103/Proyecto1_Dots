@@ -1,7 +1,8 @@
-package util;
+package app.communication;
 
-import application.game.*;
 import java.util.Arrays;
+
+import app.server.*;
 
 public class Client {
 	

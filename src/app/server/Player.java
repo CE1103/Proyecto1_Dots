@@ -1,4 +1,4 @@
-package application.game;
+package app.server;
 
 public class Player {
 	

@@ -1,16 +1,15 @@
-package application;
+package app.client;
 
 
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
-import application.screenControllers.ControlledScreen;
+import app.server.*;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Line;
 import javafx.scene.paint.Color;
-import application.game.*;
 import util.*;
 
 public class GameController implements Initializable, ControlledScreen {

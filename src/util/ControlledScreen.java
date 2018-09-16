@@ -1,6 +1,6 @@
-package application.screenControllers;
+package util;
 
-import application.ScreensController;
+import app.client.ScreensController;
 
 public interface ControlledScreen {
     
