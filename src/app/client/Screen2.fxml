@@ -65,12 +65,6 @@
         <Rectangle fx:id="s7" arcHeight="5.0" arcWidth="5.0" fill="#999999" height="46.0" layoutX="120.0" layoutY="233.0" strokeType="INSIDE" width="67.0" />
         <Rectangle fx:id="s8" arcHeight="5.0" arcWidth="5.0" fill="#999999" height="46.0" layoutX="200.0" layoutY="233.0" strokeType="INSIDE" width="67.0" />
         <Rectangle fx:id="s9" arcHeight="5.0" arcWidth="5.0" fill="#999999" height="46.0" layoutX="280.0" layoutY="233.0" strokeType="INSIDE" width="67.0" />
-        <Label fx:id="labelPlayer1" layoutX="122.0" layoutY="356.0" text="">
-          <font>
-            <Font name="System Bold Italic" size="20.0" fx:id="x3" />
-          </font>
-        </Label>
-        <Label fx:id="labelPlayer2" font="$x3" layoutX="122.0" layoutY="401.0" text="" />
             <Text layoutX="68.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
             <Text layoutX="246.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
             <Text layoutX="160.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DotsCE1103">
@@ -85,6 +79,10 @@
             
             <Label fx:id="labelP2" layoutX="328.0" layoutY="393.0" text="0 pts">
                <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="alert" layoutX="163.0" layoutY="313.0" prefHeight="18.0" prefWidth="138.0">
+                           <font>
                   <Font size="18.0" />
                </font></Label>
       </children>
