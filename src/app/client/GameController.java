@@ -6,16 +6,22 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import app.server.*;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Line;
-import javafx.scene.paint.Color;
 import util.*;
 
 public class GameController implements Initializable, ControlledScreen {
-
+	
+    @FXML
+    private Label labelP1;
+    @FXML
+    private Label labelP2;
+    
     ScreensController myController;
-    int i = 0;
+    public int i = 0;
     
     Game g1 = new Game();
     
@@ -30,8 +36,9 @@ public class GameController implements Initializable, ControlledScreen {
 
     public void onMouseClick(MouseEvent event) throws Exception {
         System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-        
         g1.setPoints(event);
+        labelP1.setText(Integer.toString(g1.p1.getScore()) + " pts");
+        labelP2.setText(Integer.toString(g1.p2.getScore()) + " pts");
         
         Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
         System.out.println(((Line)event.getSource()).getId());

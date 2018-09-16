@@ -78,8 +78,15 @@
                   <Font name="Arial Black" size="22.0" />
                </font>
             </Text>
-            <Text fx:id="scorePlayer1" layoutX="149.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text fx:id="scorePlayer2" layoutX="323.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Label fx:id="labelP1" layoutX="146.0" layoutY="393.0" text="0 pts">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            
+            <Label fx:id="labelP2" layoutX="328.0" layoutY="393.0" text="0 pts">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
       </children>
     </AnchorPane>
   </children>

@@ -13,10 +13,8 @@ public class Main extends Application {
     public static String screen2ID = "screen2";
     public static String screen2File = "Screen2.fxml";
     
-    
     @Override
     public void start(Stage primaryStage) {
-        
         ScreensController mainContainer = new ScreensController();
         mainContainer.loadScreen(Main.screen1ID, Main.screen1File);
         mainContainer.loadScreen(Main.screen2ID, Main.screen2File);

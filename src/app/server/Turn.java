@@ -2,8 +2,7 @@ package app.server;
 
 
 public class Turn{
-
-	boolean gameOver = false;
+	
 	Player p1;
 	Player p2;
 	
@@ -16,4 +15,5 @@ public class Turn{
 		this.p2.setTurn(false);
 		
 	}
+	
 }

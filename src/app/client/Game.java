@@ -1,10 +1,7 @@
 package app.client;
 
-import java.awt.event.MouseEvent;
-
 import app.server.Player;
 import app.server.Turn;
-import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
@@ -15,7 +12,6 @@ public class Game  {
 	Player p2;
 	Turn b1;
 	
-	Label scorePlayer1;
 	public static String[] lines = new String[24];
 	
 	public Game() {

@@ -2,8 +2,8 @@ package app.server;
 
 public class Player {
 	
-	int points;
-	boolean turn;
+	public int points;
+	public boolean turn;
 	
 	public Player(int p) {
 		
@@ -22,7 +22,6 @@ public class Player {
 		}
 	}
 	
-	
 	public void setTurn(Boolean turn){
 		this.turn = turn;
 	}
@@ -33,11 +32,9 @@ public class Player {
 	
 	public void scorePoints(){
 		this.points += 2;
-		//System.out.println("Suma dos");
 	}
 	
 	public int getScore(){
-		
 		return this.points;
 	}
 
