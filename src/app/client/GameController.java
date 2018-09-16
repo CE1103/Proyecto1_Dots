@@ -3,6 +3,7 @@ package app.client;
 
 import java.net.URL;
 import java.util.Arrays;
+import java.util.ArrayList.*;
 import java.util.ResourceBundle;
 
 import app.server.*;
@@ -35,14 +36,25 @@ public class GameController implements Initializable, ControlledScreen {
     }
 
     public void onMouseClick(MouseEvent event) throws Exception {
-        System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-        g1.setPoints(event);
-        labelP1.setText(Integer.toString(g1.p1.getScore()) + " pts");
-        labelP2.setText(Integer.toString(g1.p2.getScore()) + " pts");
+    	boolean a = true;
+    	for(int c=0;c<24;c++) {
+    		
+    		if(((Line)event.getSource()).getId()==Game.lines[c]) {
+    			a = false;
+    		}    		
+    	}
+    	if(a) {
+    		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
+    		g1.setPoints(event);
+    		labelP1.setText(Integer.toString(g1.p1.getScore()) + " pts");
+    		labelP2.setText(Integer.toString(g1.p2.getScore()) + " pts");
         
-        Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
-        System.out.println(((Line)event.getSource()).getId());
-        System.out.println(Arrays.toString(Game.lines));
-        util.Util.sendToServer();
+    		Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
+    		System.out.println(((Line)event.getSource()).getId());
+    		System.out.println(Arrays.toString(Game.lines));
+    		util.Util.sendToServer();
+    	}else {
+    		System.out.println("Existe");
+    	}
     }
 }
