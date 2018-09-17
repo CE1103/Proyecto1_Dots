@@ -1,4 +1,4 @@
-# Proyecto I - Dots
+# Proyecto I - Dots.
 Dots es un proyecto referente al Curso de _Algoritmos y Estructuras de Datos I del ITCR_ por parte de la Carrera de _Ingeniería 
 en Computadores_. 
 Dots es un juego multijugador el cual consiste en una malla de puntos donde el jugador puede unir dichos puntos 
@@ -9,8 +9,9 @@ la cantidad de figuras.
 ## Pre Requisitos. 
 
 ```
- JavaFX Api 8.0.181 o mayor
- Jacson core 2.9.6
+ Java 1.8.0_181
+ JavaFX Api 8.0.181 o superior
+ Jackson core 2.9.6
  Jackson Databind 2.9.6
  Jackson Annotation 2.9.6
 ```
@@ -29,7 +30,12 @@ la cantidad de figuras.
 
 ## Licencia.
 
-Este proyecto está bajo la Licencia ( GNU General Public License v3.0) - mira el archivo [LICENSE](https://github.com/DotsCE1103/Proyecto1_Dots/blob/master/LICENCE) para detalles.
+Este proyecto está bajo la Licencia ( GNU General Public License v3.0) - mira el archivo 
+[LICENSE](https://github.com/DotsCE1103/Proyecto1_Dots/blob/master/LICENSE) para detalles.
 
-## Referencias.
+
+<p align="center">
+<a href = ""><img src="https://github.com/DotsCE1103/Proyecto1_Dots/blob/master/src/img/LOGOcolored.png" width="200"/>
+</p>
+
 
