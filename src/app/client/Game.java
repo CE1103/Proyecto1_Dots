@@ -1,9 +1,13 @@
 package app.client;
 
+import com.sun.javafx.geom.Rectangle;
+
 import app.server.Player;
 import app.server.Turn;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+
+import util.List;
 
 
 public class Game  {
@@ -21,7 +25,6 @@ public class Game  {
 		this.b1 = new Turn(p1, p2);
 		
 	}
-
 	
 	public void setPoints(javafx.scene.input.MouseEvent event) {
 		

@@ -21,8 +21,8 @@
                   <Image url="@../../img/LOGO.png" />
                </image>
             </ImageView>
-            <Line endX="368.79998779296875" endY="48.5999755859375" layoutX="100.0" layoutY="387.0" startX="-100.00001525878906" startY="48.5999755859375" stroke="WHITE" />
-            <Label layoutX="92.0" layoutY="436.0" prefHeight="27.0" prefWidth="284.0" text="Algoritmos y Estructuras de Datos I" textFill="WHITE">
+            <Line endX="368.79998779296875" endY="48.5999755859375" layoutX="100.0" layoutY="387.0" startX="-100.00001525878906" startY="48.5999755859375" stroke="#e8f7f7" />
+            <Label layoutX="92.0" layoutY="436.0" prefHeight="27.0" prefWidth="284.0" text="Algoritmos y Estructuras de Datos I" textFill="#e8f7f7">
                <font>
                   <Font size="18.0" />
                </font>

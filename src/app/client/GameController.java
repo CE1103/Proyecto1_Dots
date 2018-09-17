@@ -5,8 +5,6 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
-import com.sun.prism.paint.Color;
-
 import app.server.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -59,7 +57,7 @@ public class GameController implements Initializable, ControlledScreen {
     	}else {
     		alert.setText("Linea Presionada");
     		alert.setStyle("-fx-text-fill: #FF0000");
-    		System.out.println("Existe");
+    		System.out.println("Linea anteriormente presionada.");
     	}
     }
 }
