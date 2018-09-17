@@ -42,9 +42,4 @@ public class Util {
 		matrix.displaypoint();
 		return matrix;
 	}
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> 1fdd0a6d6cf76b99bf894460a4571fe53d5f12ec
 }
