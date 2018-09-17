@@ -4,8 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import util.List;
-import util.Util;
+import util.*;
 
 
 public class Main extends Application {
@@ -34,5 +33,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
         l1 = util.Util.creteLinkedList();
+        String [][] linkedListArray = Util.linkedListToArray();
     }
 }

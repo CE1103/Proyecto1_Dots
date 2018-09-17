@@ -2,36 +2,36 @@ package util;
 
 public class NodeList {
 
-	public String pointnumber;
-	public List matriz;
+	public String pointNumber;
+	public List matrix;
 	
 	public NodeList next;
 	
-	public NodeList(String pointnumber) {
+	public NodeList(String pointNumber) {
 		
-		this.pointnumber = pointnumber;	
+		this.pointNumber = pointNumber;	
 		
 	}
 	
 	public NodeList(List matriz) {
-		this.matriz = matriz;
+		this.matrix = matriz;
 		
 	}
 	
-	public String getpointnumber() {
+	public String getPointNumber() {
 		
-		return pointnumber;
+		return pointNumber;
 		
 	}
 	
-	public List getNodonumber() {
-		return matriz;
+	public List getNodeNumber() {
+		return matrix;
 	}
 	
 	public void display() {
 		
-		System.out.println(pointnumber + ".");
-		System.out.println(matriz + ".");
+		System.out.println(pointNumber + ".");
+		System.out.println(matrix + ".");
 		
 	}
 	
