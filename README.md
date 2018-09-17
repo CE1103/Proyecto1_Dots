@@ -9,7 +9,10 @@ la cantidad de figuras.
 ## Pre Requisitos. 
 
 ```
- 
+ JavaFX Api 8.0.181 o mayor
+ Jacson core 2.9.6
+ Jackson Databind 2.9.6
+ Jackson Annotation 2.9.6
 ```
 
 ## Instalación.
@@ -23,11 +26,10 @@ la cantidad de figuras.
 * **Angelo Ortiz** - *Desarrollador* - [angelortizv](https://github.com/angelortizv)
 * **Iván Solís** - *Desarrollador* - [isolis2000](https://github.com/isolis2000)
 * **Jonathan Esquivel** - *Desarrollador* - [jesquivel48](https://github.com/jesquivel48)
-* **Omar Hidalgo** - *Desarrollador* - [Omar1605](https://github.com/Omar1605)
 
 ## Licencia.
 
-Este proyecto está bajo la Licencia ( GNU General Public License v3.0) - mira el archivo [LICENSE.md](https://github.com/DotsCE1103/Proyecto1_Dots/blob/master/LICENCE) para detalles.
+Este proyecto está bajo la Licencia ( GNU General Public License v3.0) - mira el archivo [LICENSE](https://github.com/DotsCE1103/Proyecto1_Dots/blob/master/LICENCE) para detalles.
 
 ## Referencias.
 
