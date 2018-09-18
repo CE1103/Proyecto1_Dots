@@ -13,31 +13,31 @@ import util.List;
 
 public class Game  {
 	
-	Player p1;
-	Player p2;
+	Player P1;
+	Player P2;
 	Turn b1;
 	
 	public static String[] lines = new String[24];
 	
 	public Game() {
 		
-		this.p1	= new Player(1);
-		this.p2	= new Player(2);
-		this.b1 = new Turn(p1, p2);
+		this.P1	= new Player(1);
+		this.P2	= new Player(2);
+		this.b1 = new Turn(P1, P2);
 		
 	}
 	
 	public void setPoints(javafx.scene.input.MouseEvent event) {
 		
-		if(this.p1.getTurn()){
-			this.p1.scorePoints();
+		if(this.P1.getTurn()){
+			this.P1.scorePoints();
 			((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
-			p1.switchTurn();
+			P1.switchTurn();
 		}
 		else{
-			this.p2.scorePoints();
+			this.P2.scorePoints();
 			((Line)event.getSource()).setStroke(Color.web("#95F4F1"));
-			p1.switchTurn();
+			P1.switchTurn();
 		}
 	}
 	
