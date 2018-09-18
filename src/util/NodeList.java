@@ -2,7 +2,7 @@ package util;
 
  public class NodeList {
  	public String pointnumber;
-	public List matriz;
+	public List matrix;
 	
 	public NodeList next;
 	
@@ -14,24 +14,24 @@ package util;
 	
 	public NodeList(List matriz) {
 		
-		this.matriz = matriz;
+		this.matrix = matriz;
 		
 	}
 	
-	public String getpointnumber() {
+	public String getPointNumber() {
 		
 		return pointnumber;
 		
 	}
 	
 	public List getNodonumber() {
-		return matriz;
+		return matrix;
 	}
 	
 	public void display() {
 		
 		System.out.println(pointnumber + ".");
-		System.out.println(matriz + ".");
+		System.out.println(matrix + ".");
 		
 	}
 	

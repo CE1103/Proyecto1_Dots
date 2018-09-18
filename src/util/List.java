@@ -2,34 +2,36 @@ package util;
 
  public class List {
 	
-	public NodeList firstpoint;
+	public NodeList firstPoint;
+	public static NodeList firstPointFinal;
 			
 	public boolean firstEmpty() {
 		
-		return (firstpoint == null);
+		return (firstPoint == null);
 		
 	}
 	
 	public void addNode(List matriz) {
 		
 		NodeList newNode = new NodeList(matriz);
-		newNode.next = firstpoint;
-		firstpoint = newNode;
+		newNode.next = firstPoint;
+		firstPoint = newNode;
+		firstPointFinal = newNode;
 		
 	}
 	
 	public void addPoint(String pointnumber) {
 	
 		NodeList newPoint = new NodeList(pointnumber);
-		newPoint.next = firstpoint;
-		firstpoint = newPoint;
+		newPoint.next = firstPoint;
+		firstPoint = newPoint;
 		
 	}
 	
-	public void displaypoint() {
+	public void displayPoint() {
 		
-		NodeList LN = firstpoint;
-		NodeList LN1 = LN.matriz.firstpoint;
+		NodeList LN = firstPoint;
+		NodeList LN1 = LN.matrix.firstPoint;
 		while(LN != null) {
 			while(LN1 != null) {
 				LN1.display();		
@@ -40,7 +42,7 @@ package util;
 			}
 			LN = LN.next;
 			try {
-			LN1 = LN.matriz.firstpoint;
+			LN1 = LN.matrix.firstPoint;
 			}catch (Exception e) {
 				System.out.println(e);
 			}
@@ -50,7 +52,7 @@ package util;
 	
 	public void display() {
 		
-		NodeList LN = firstpoint;
+		NodeList LN = firstPoint;
 		while (LN != null) {
 			LN.display();		
 			System.out.println("Next Link "+ LN.next + "\n\n");
