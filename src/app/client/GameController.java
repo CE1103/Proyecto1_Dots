@@ -52,7 +52,8 @@ public class GameController implements Initializable, ControlledScreen {
     		Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
     		System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Game.lines));
-    		util.Util.sendToServer();
+    		System.out.println(Arrays.toString(Game.dots));
+    		app.communication.Client_com.sendToServer();
     	}else {
     		System.out.println("Existe");
     	}
