@@ -31,12 +31,12 @@ public class Game  {
 		
 		if(this.p1.getTurn()){
 			this.p1.scorePoints();
-			((Line)event.getSource()).setStroke(Color.BLUE);
+			((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
 			p1.switchTurn();
 		}
 		else{
 			this.p2.scorePoints();
-			((Line)event.getSource()).setStroke(Color.RED);
+			((Line)event.getSource()).setStroke(Color.web("#95F4F1"));
 			p1.switchTurn();
 		}
 	}

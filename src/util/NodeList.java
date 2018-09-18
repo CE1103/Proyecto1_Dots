@@ -13,6 +13,7 @@ package util;
 	}
 	
 	public NodeList(List matriz) {
+		
 		this.matriz = matriz;
 		
 	}

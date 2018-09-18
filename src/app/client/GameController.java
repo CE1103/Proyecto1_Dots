@@ -52,14 +52,16 @@ public class GameController implements Initializable, ControlledScreen {
     		labelP1.setText(Integer.toString(g1.p1.getScore()) + " pts");
     		labelP2.setText(Integer.toString(g1.p2.getScore()) + " pts");
         
-    		Game.lines[i] = ((Line)event.getSource()).getId(); System.out.println(Game.lines[i] + i); i++;
-    		System.out.println(((Line)event.getSource()).getId());
+    		Game.lines[i] = ((Line)event.getSource()).getId(); 
+    		//System.out.println(Game.lines[i] + i); 
+    		i++;
+    		//System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Game.lines));
     		util.Util.sendToServer();
     	}else {
-    		alert.setText("Linea Presionada");
-    		alert.setStyle("-fx-text-fill: #FF0000");
-    		System.out.println("Linea anteriormente presionada.");
+    		alert.setText("Linea Anteriormente Presionada");
+    		alert.setStyle("-fx-text-fill: #95F4F1");
+    		System.out.println("Line pressed");
     	}
     }
 }
