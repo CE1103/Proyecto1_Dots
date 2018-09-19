@@ -10,17 +10,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import app.client.*;
-import util.Util;;
+import util.Util;
+import app.server.*;
 
-public class Client_com {
+public class ServerCommunication {
 	
-public static void sendToServer() throws JsonGenerationException, JsonMappingException, IOException{
+public static String jsonData() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
-		Client client = new Client(Arrays.toString(Game.lines));
+		Server server = new Server(Arrays.toString(Game.lines));
 		System.out.println(Game.dots[3]);
 		mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-		String json = mapper.writeValueAsString(client);
+		String json = mapper.writeValueAsString(server);
 		System.out.println(json);
+		return json;
 	}
 }

@@ -1,18 +1,8 @@
 package app.communication;
 
-import java.util.Arrays;
-import app.client.*;
-
-import app.server.*;
-
 public class Client {
-	
-	public String lines;
-	public String dots0;
-	public String dots1;
-	public String dots2;
-	public String dots3;
 
+<<<<<<< HEAD
 	public Client(String lines) {
 		
 		this.lines = lines;
@@ -22,4 +12,6 @@ public class Client {
 		this.dots2 = Arrays.toString(Game.dots[2]);
 		this.dots3 = Arrays.toString(Game.dots[3]);
 	}
+=======
+>>>>>>> 969b2ffc599371255a9c6ae12cb9ba2e27d02ac2
 }

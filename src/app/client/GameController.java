@@ -79,7 +79,7 @@ public class GameController implements Initializable, ControlledScreen {
     	if(a) {
     		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
     		alert.setText(" ");
-    		g1.setPoints(event);
+    		g1.setScore(event);
     		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
     		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
         
@@ -89,6 +89,7 @@ public class GameController implements Initializable, ControlledScreen {
     		//System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Game.lines));
     		System.out.println(Arrays.toString(Game.dots));
+<<<<<<< HEAD
     		app.communication.Client_com.sendToServer();
     		
     		
@@ -97,6 +98,10 @@ public class GameController implements Initializable, ControlledScreen {
     		
     	}
     	else {
+=======
+    		app.communication.ServerCommunication.jsonData();
+    	}else {
+>>>>>>> 969b2ffc599371255a9c6ae12cb9ba2e27d02ac2
     		alert.setText("Linea Anteriormente Presionada");
     		alert.setStyle("-fx-text-fill: #95F4F1");
     		System.out.println("Line pressed");

@@ -1,27 +1,16 @@
 package app.client;
 
+import app.server.Main;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import util.*;
 
-import util.List;
-import util.Util;
-
-
-public class Main extends Application {
-    
-    public static String screen1ID = "main";
-    public static String screen1File = "Screen1.fxml";
-    public static String screen2ID = "screen2";
-    public static String screen2File = "Screen2.fxml";
-    public static String screen3ID = "screen3";
-    public static String screen3File = "Screen3.fxml";
-    public static List l1;
-    
-    @Override
+public class ClientScreen extends Application {
+	
+	@Override
     public void start(Stage primaryStage) {
+
         ScreensController mainContainer = new ScreensController();
         mainContainer.loadScreen(Main.screen1ID, Main.screen1File);
         mainContainer.loadScreen(Main.screen2ID, Main.screen2File);
@@ -38,11 +27,10 @@ public class Main extends Application {
         //primaryStage.setResizable(false);
         primaryStage.show();
     }
-
-    public static void main(String[] args) {
-    	l1 = util.Util.creteLinkedList();
-        Game.linkedListToArray();
+	
+	public static void main(String[] args) {
+		
         launch(args);
-        
-    }
+	}
+
 }
