@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.ArrayList.*;
 import java.util.ResourceBundle;
 
+import app.communication.*;
 import app.server.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -89,8 +90,7 @@ public class GameController implements Initializable, ControlledScreen {
     		//System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Game.lines));
     		System.out.println(Arrays.toString(Game.dots));
-<<<<<<< HEAD
-    		app.communication.Client_com.sendToServer();
+    		app.communication.ServerCommunication.jsonData();
     		
     		
     		System.out.println(isInside(Game.lines,((Line)event.getSource())));
@@ -98,10 +98,6 @@ public class GameController implements Initializable, ControlledScreen {
     		
     	}
     	else {
-=======
-    		app.communication.ServerCommunication.jsonData();
-    	}else {
->>>>>>> 969b2ffc599371255a9c6ae12cb9ba2e27d02ac2
     		alert.setText("Linea Anteriormente Presionada");
     		alert.setStyle("-fx-text-fill: #95F4F1");
     		System.out.println("Line pressed");

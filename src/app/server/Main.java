@@ -18,7 +18,7 @@ public class Main{
     public static String screen3File = "Screen3.fxml";
     public static List l1;
 
-    public static void main(String[] args) { //mover Server
+    public static void main(String[] args) { 
 
     	l1 = app.server.List.creteLinkedList();
         Game.linkedListToArray();
