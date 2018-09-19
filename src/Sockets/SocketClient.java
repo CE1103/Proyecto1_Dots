@@ -19,6 +19,8 @@ public class SocketClient {
 		out = new PrintWriter(clientSocket.getOutputStream());
 		in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 		
+		out.println("h");
+		
 	}
 	
 	public String sendMessage(String msg) throws IOException {

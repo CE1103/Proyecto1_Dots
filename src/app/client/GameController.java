@@ -61,7 +61,7 @@ public class GameController implements Initializable, ControlledScreen {
     		//System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Game.lines));
     		System.out.println(Arrays.toString(Game.dots));
-    		app.communication.Client_com.sendToServer();
+    		app.communication.Server_com.sendToServer();
     	}else {
     		alert.setText("Linea Anteriormente Presionada");
     		alert.setStyle("-fx-text-fill: #95F4F1");

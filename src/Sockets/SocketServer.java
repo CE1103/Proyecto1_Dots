@@ -14,6 +14,8 @@ public class SocketServer {
 	private Socket clientSocket;
 	private PrintWriter out;
 	private BufferedReader in;
+	private static int port1, port2, port3, port4, port5, port6;
+	
 	
 	public void start(int port) throws IOException {
 		
@@ -25,9 +27,11 @@ public class SocketServer {
 		String inputLine;
 		while ((inputLine = in.readLine()) != null) {
 			if (app.client.Game.lines[-1] != null) {
+				stop();
 				break;
 			}
-						
+			out.println(app.communication.Server_com.sendToClient());
+			break;
 			
 		}
 		
