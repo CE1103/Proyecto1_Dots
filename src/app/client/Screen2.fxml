@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -65,19 +67,8 @@
         <Rectangle fx:id="s7" arcHeight="5.0" arcWidth="5.0" fill="#999999" height="46.0" layoutX="120.0" layoutY="233.0" strokeType="INSIDE" width="67.0" />
         <Rectangle fx:id="s8" arcHeight="5.0" arcWidth="5.0" fill="#999999" height="46.0" layoutX="200.0" layoutY="233.0" strokeType="INSIDE" width="67.0" />
         <Rectangle fx:id="s9" arcHeight="5.0" arcWidth="5.0" fill="#999999" height="46.0" layoutX="280.0" layoutY="233.0" strokeType="INSIDE" width="67.0" />
-        <Label fx:id="labelPlayer1" layoutX="122.0" layoutY="356.0" text="">
-          <font>
-            <Font name="System Bold Italic" size="20.0" fx:id="x3" />
-          </font>
-        </Label>
-        <Label fx:id="labelPlayer2" font="$x3" layoutX="122.0" layoutY="401.0" text="" />
             <Text layoutX="68.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
             <Text layoutX="246.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
-            <Text layoutX="160.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DotsCE1103">
-               <font>
-                  <Font name="Arial Black" size="22.0" />
-               </font>
-            </Text>
             <Label fx:id="labelP1" layoutX="146.0" layoutY="393.0" text="0 pts">
                <font>
                   <Font size="18.0" />
@@ -87,6 +78,15 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
+            <Label fx:id="alert" layoutX="98.0" layoutY="313.0" prefHeight="30.0" prefWidth="300.0">
+                           <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <ImageView fitHeight="66.0" fitWidth="140.0" layoutX="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/HEADER2.png" />
+               </image>
+            </ImageView>
       </children>
     </AnchorPane>
   </children>

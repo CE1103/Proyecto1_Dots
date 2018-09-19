@@ -5,7 +5,7 @@ public class Player {
 	public int points;
 	public boolean turn;
 	
-	public Player(int p) {
+	public Player(int P) {
 		
 		this.points = 0;
 		this.turn = false;

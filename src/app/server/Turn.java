@@ -3,16 +3,16 @@ package app.server;
 
 public class Turn{
 	
-	Player p1;
-	Player p2;
+	Player P1;
+	Player P2;
 	
 	public Turn(Player p1, Player p2){
 		
-		this.p1 = p1;
-		this.p2 = p2;
+		this.P1 = p1;
+		this.P2 = p2;
 		
-		this.p1.setTurn(true);
-		this.p2.setTurn(false);
+		this.P1.setTurn(true);
+		this.P2.setTurn(false);
 		
 	}
 	
