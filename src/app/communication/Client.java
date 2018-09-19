@@ -16,7 +16,7 @@ public class Client {
 	public Client(String lines) {
 		
 		this.lines = lines;
-		System.out.println(Arrays.toString(Game.dots[0]));
+		//System.out.println(Arrays.toString(Game.dots[0]));
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);
 		this.dots2 = Arrays.toString(Game.dots[2]);
