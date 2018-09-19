@@ -16,7 +16,6 @@ public class Client {
 	public Client(String lines) {
 		
 		this.lines = lines;
-		Game.linkedListToArray();
 		System.out.println(Arrays.toString(Game.dots[0]));
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);

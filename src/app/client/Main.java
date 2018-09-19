@@ -31,8 +31,8 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        launch(args);
-        l1 = util.Util.creteLinkedList();
+    	l1 = util.Util.creteLinkedList();
         Game.linkedListToArray();
+        launch(args);
     }
 }
