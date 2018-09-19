@@ -23,7 +23,4 @@ public static void sendToServer() throws JsonGenerationException, JsonMappingExc
 		String json = mapper.writeValueAsString(client);
 		System.out.println(json);
 	}
-	
-	
-
 }

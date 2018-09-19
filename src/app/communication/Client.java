@@ -22,9 +22,4 @@ public class Client {
 		this.dots2 = Arrays.toString(Game.dots[2]);
 		this.dots3 = Arrays.toString(Game.dots[3]);
 	}
-	
-	
-	
-	
-
 }

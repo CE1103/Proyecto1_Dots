@@ -1,10 +1,7 @@
 package app.client;
 
-<<<<<<< HEAD
 import java.util.Arrays;
-=======
 import com.sun.javafx.geom.Rectangle;
->>>>>>> refs/heads/GUI
 
 import app.server.Player;
 import app.server.Turn;
@@ -27,20 +24,13 @@ public class Game  {
 	
 	
 	public Game() {
-		
-<<<<<<< HEAD
-		this.p1	= new Player(1);
-		this.p2	= new Player(2);
-		this.b1 = new Turn(p1, p2);
-=======
+
 		this.P1	= new Player(1);
 		this.P2	= new Player(2);
 		this.b1 = new Turn(P1, P2);
 		
->>>>>>> refs/heads/GUI
-	}
-<<<<<<< HEAD
-	
+	}		
+
 public static void linkedListToArray(){
 		
 		NodeList LN = List.firstPointFinal;
@@ -63,8 +53,6 @@ public static void linkedListToArray(){
 			j++; i = 0;
 		}
 	}
-=======
->>>>>>> refs/heads/GUI
 	
 	public void setPoints(javafx.scene.input.MouseEvent event) {
 		

@@ -43,10 +43,6 @@ public class Main extends Application {
     	l1 = util.Util.creteLinkedList();
         Game.linkedListToArray();
         launch(args);
-<<<<<<< HEAD
-=======
-        l1 = util.Util.creteLinkedList();
-        String [][] linkedListArray = Util.linkedListToArray();
->>>>>>> refs/heads/GUI
+        
     }
 }
