@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import app.server.*;
 
 
 public class SocketServer {
@@ -26,11 +27,11 @@ public class SocketServer {
 		
 		String inputLine;
 		while ((inputLine = in.readLine()) != null) {
-			if (app.client.Game.lines[-1] != null) {
+			if (Game.lines[-1] != null) {
 				stop();
 				break;
 			}
-			out.println(app.communication.Server_com.sendToClient());
+			out.println(app.communication.ServerCommunication.jsonData());
 			break;
 			
 		}

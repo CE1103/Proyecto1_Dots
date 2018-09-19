@@ -4,23 +4,6 @@ import java.util.Arrays;
  
  
 public class Util {
- 	
- 	public static List creteLinkedList() { // Mover Server
- 		int p = 0;
- 		int q = 4;
- 		List matrix = new List();
- 		for(int i = 0; i < 4; i++) {
- 			List list = new List();
- 			for(int j = 0; j < 4; j++) {
- 				list.addPoint("p" + Integer.toString((4*q)-p)); p++;
- 			}
- 			q--;
-			p=0;
-			matrix.addNode(list);
-		}
-		matrix.displayPoint();
-		return matrix;
-	}
 	
 	public static void displayArray(String[][] array) {
 		

@@ -10,11 +10,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import app.client.*;
-import util.Util;;
+import util.Util;
+import app.server.*;
 
-public class Server_com {
+public class ServerCommunication {
 	
-public static String sendToClient() throws JsonGenerationException, JsonMappingException, IOException{
+public static String jsonData() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
 		Server server = new Server(Arrays.toString(Game.lines));
