@@ -19,8 +19,8 @@ public class Game  {
 	Player P2;
 	Turn b1;
 	
-	public static String[] lines = new String[24];
-	public static String[][] dots = new String[4][4];
+	public static String[] lines = new String[24]; // Mover Server
+	public static String[][] dots = new String[4][4]; // Mover Server
 	
 	
 	public Game() {
@@ -31,7 +31,7 @@ public class Game  {
 		
 	}		
 
-public static void linkedListToArray(){
+public static void linkedListToArray(){ // Mover Server
 		
 		NodeList LN = List.firstPointFinal;
 		System.out.println(List.firstPointFinal);

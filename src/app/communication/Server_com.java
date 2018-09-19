@@ -12,15 +12,16 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import app.client.*;
 import util.Util;;
 
-public class Client_com {
+public class Server_com {
 	
-public static void sendToServer() throws JsonGenerationException, JsonMappingException, IOException{
+public static String sendToClient() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
-		Client client = new Client(Arrays.toString(Game.lines));
+		Server server = new Server(Arrays.toString(Game.lines));
 		System.out.println(Game.dots[3]);
 		mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-		String json = mapper.writeValueAsString(client);
+		String json = mapper.writeValueAsString(server);
 		System.out.println(json);
+		return json;
 	}
 }

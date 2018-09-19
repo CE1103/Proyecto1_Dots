@@ -22,6 +22,7 @@ public class Main extends Application {
     
     @Override
     public void start(Stage primaryStage) {
+
         ScreensController mainContainer = new ScreensController();
         mainContainer.loadScreen(Main.screen1ID, Main.screen1File);
         mainContainer.loadScreen(Main.screen2ID, Main.screen2File);
@@ -39,7 +40,8 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //mover Server
+
     	l1 = util.Util.creteLinkedList();
         Game.linkedListToArray();
         launch(args);
