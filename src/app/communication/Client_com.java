@@ -9,7 +9,8 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import app.client.*;;
+import app.client.*;
+import util.Util;;
 
 public class Client_com {
 	
@@ -17,12 +18,9 @@ public static void sendToServer() throws JsonGenerationException, JsonMappingExc
 		
 		ObjectMapper mapper = new ObjectMapper();
 		Client client = new Client(Arrays.toString(Game.lines));
+		System.out.println(Game.dots[3]);
 		mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 		String json = mapper.writeValueAsString(client);
 		System.out.println(json);
-		InetAddress host = InetAddress.getLocalHost();
 	}
-	
-	
-
 }
