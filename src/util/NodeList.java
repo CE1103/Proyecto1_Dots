@@ -13,8 +13,8 @@ public class NodeList {
 		
 	}
 	
-	public NodeList(List matriz) {
-		this.matrix = matriz;
+	public NodeList(List matrix) {
+		this.matrix = matrix;
 		
 	}
 	

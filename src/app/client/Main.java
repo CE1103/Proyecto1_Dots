@@ -42,7 +42,7 @@ public class Main extends Application {
 
     public static void main(String[] args) { //mover Server
 
-    	l1 = util.Util.creteLinkedList();
+    	l1 = util.Util.createLinkedList();
         Game.linkedListToArray();
         launch(args);
         

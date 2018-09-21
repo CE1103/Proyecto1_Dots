@@ -7,19 +7,16 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class SocketClient {
+public class SocketClient implements Runnable{
 	
 	private Socket clientSocket;
 	private PrintWriter out;
 	private BufferedReader in;
+	private int port;
 	
-	public void startConnection(int port) throws UnknownHostException, IOException {
+	public void setPort(int port) throws UnknownHostException, IOException {
 		
-		clientSocket = new Socket("172.18.58.87",port);
-		out = new PrintWriter(clientSocket.getOutputStream());
-		in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-		
-		out.println("h");
+		this.port = port;
 		
 	}
 	
@@ -36,6 +33,30 @@ public class SocketClient {
 		in.close();
 		out.close();
 		clientSocket.close();
+		
+	}
+
+	@Override
+	public void run() {
+		try {
+		clientSocket = new Socket("127.0.0.1",port);
+		out = new PrintWriter(clientSocket.getOutputStream());
+		in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+		String pedir = "h\n";
+		Thread.sleep(500);
+		while(true) {
+			System.out.println("holaclient");
+			out.println(pedir);
+			System.out.println("holaclient2");
+			System.out.println(in.readLine());
+			System.out.println("holaclient3");
+			System.out.println(pedir);
+		}
+		
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		
 		
 	}
 
