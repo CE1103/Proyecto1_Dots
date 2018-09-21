@@ -9,7 +9,7 @@ la cantidad de figuras.
 ## Pre Requisitos. 
 
 ```
- Java 1.8.0_181
+ Java 1.8.0_181 o superior
  JavaFX Api 8.0.181 o superior
  Jackson core 2.9.6
  Jackson Databind 2.9.6
@@ -18,9 +18,20 @@ la cantidad de figuras.
 
 ## Instalación.
 
-```
- 
-```
+Prerequisitos: Debe tener instalado [Git](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git) en su consola.
+
+1. En GitHub, vaya a la página principal del [repositorio](https://github.com/DotsCE1103/Proyecto1_Dots).
+2. Debajo del nombre del repositorio, haga clic en Clonar o descargar.
+3. En la sección Clonar con HTTPs, haga clic para copiar la URL de clonación del repositorio.
+4. Abre Git Bash.
+5. Cambie el directorio de trabajo actual a la ubicación donde desea que se realice el directorio clonado.
+6. Escriba 'git clone', y luego pegue la URL que copió en el Paso 2.
+
+
+    ```$ git clone https://github.com/DotsCE1103/Proyecto1_Dots.git```
+
+
+7. Presione Enter. Se creará su clon local para [Dots](https://github.com/DotsCE1103/Proyecto1_Dots).
 
 ## Autores.
 
