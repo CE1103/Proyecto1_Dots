@@ -20,7 +20,7 @@ public class Main{
 
     public static void main(String[] args) { 
 
-    	l1 = app.server.List.creteLinkedList();
+    	l1 = app.server.List.createLinkedList();
         Game.linkedListToArray();
         
     }
