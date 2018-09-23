@@ -18,7 +18,6 @@ public static String sendToClient() throws JsonGenerationException, JsonMappingE
 		
 		ObjectMapper mapper = new ObjectMapper();
 		Server server = new Server(Arrays.toString(Game.lines));
-		System.out.println(Game.dots[3]);
 		mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 		String json = mapper.writeValueAsString(server);
 		System.out.println(json);

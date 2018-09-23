@@ -2,10 +2,12 @@ package Sockets;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 import app.communication.Server_com;
 
@@ -40,14 +42,15 @@ public class SocketServer implements Runnable {
 		clientSocket = serverSocket.accept();
 		out = new PrintWriter(clientSocket.getOutputStream());
 		in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-		String inputLine;
+		InputStream inputLine;
 		while (true) {
 			System.out.println("holaserver");
-			inputLine = in.readLine();
+			inputLine = clientSocket.getInputStream();
 			System.out.println("holaserver2");
-			System.out.println(inputLine);
+			System.out.println();
 			System.out.println("holaserver3");
 			out.println(Server_com.sendToClient());
+			break;
 			
 		}
 		}catch (Exception e) {
