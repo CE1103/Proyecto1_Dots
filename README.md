@@ -23,7 +23,6 @@ la cantidad de figuras.
 * **Angelo Ortiz** - *Desarrollador* - [angelortizv](https://github.com/angelortizv)
 * **Iván Solís** - *Desarrollador* - [isolis2000](https://github.com/isolis2000)
 * **Jonathan Esquivel** - *Desarrollador* - [jesquivel48](https://github.com/jesquivel48)
-* **Omar Hidalgo** - *Desarrollador* - [Omar1605](https://github.com/Omar1605)
 
 ## Licencia.
 
