@@ -5,7 +5,7 @@ import app.client.*;
 
 import app.server.*;
 
-public class Server { // mover server
+public class Server {
 	
 	public String lines;
 	public String dots0;
@@ -20,5 +20,6 @@ public class Server { // mover server
 		this.dots1 = Arrays.toString(Game.dots[1]);
 		this.dots2 = Arrays.toString(Game.dots[2]);
 		this.dots3 = Arrays.toString(Game.dots[3]);
+		
 	}
 }

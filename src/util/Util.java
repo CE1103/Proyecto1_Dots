@@ -4,6 +4,7 @@ import java.util.Arrays;
  
  
 public class Util {
+<<<<<<< HEAD
  	
  	public static List createLinkedList() { // Mover Server
  		int p = 0;
@@ -21,6 +22,8 @@ public class Util {
 		matrix.displayPoint();
 		return matrix;
 	}
+=======
+>>>>>>> refs/heads/Client_Screens
 	
 	public static void displayArray(String[][] array) {
 		
