@@ -42,15 +42,16 @@ public class SocketClient implements Runnable{
 		clientSocket = new Socket("127.0.0.1",port);
 		out = new PrintWriter(clientSocket.getOutputStream());
 		in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-		String pedir = "h\n";
+		String pedir = "h";
 		Thread.sleep(500);
 		while(true) {
 			System.out.println("holaclient");
-			out.println(pedir);
+			out.println(pedir+"\n");
 			System.out.println("holaclient2");
 			System.out.println(in.readLine());
 			System.out.println("holaclient3");
 			System.out.println(pedir);
+			break;
 		}
 		
 		}catch(Exception e) {

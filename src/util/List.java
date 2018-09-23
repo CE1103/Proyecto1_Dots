@@ -11,9 +11,9 @@ public class List {
 		
 	}
 	
-	public void addNode(List matriz) {
+	public void addNode(List matrix) {
 		
-		NodeList newNode = new NodeList(matriz);
+		NodeList newNode = new NodeList(matrix);
 		newNode.next = firstPoint;
 		firstPoint = newNode;
 		firstPointFinal = newNode;
