@@ -3,7 +3,9 @@ package app.client;
 
 import java.net.URL;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.ResourceBundle;
+import util.Util;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -34,6 +36,7 @@ public class GameController implements Initializable, ControlledScreen {
     
     ScreensController myController;
     public int i = 0;
+    static boolean response = false;
     
     Game g1 = new Game();
     
@@ -66,7 +69,9 @@ public class GameController implements Initializable, ControlledScreen {
     		i++;
     		//System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Game.lines));
-    		util.Util.sendToServer();
+    		
+    		Main.path.addPathList(Main.m1.get(((Line)event.getSource()).getId()));
+    		Main.path.display();
     		
     		
     	}else {
@@ -75,4 +80,5 @@ public class GameController implements Initializable, ControlledScreen {
     		System.out.println("Line pressed");
     	}
     }
+    
 }

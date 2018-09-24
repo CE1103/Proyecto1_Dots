@@ -25,7 +25,7 @@ public class Main extends Application {
     public static String screen4File = "Screen4.fxml";
     public static List l1;
     public static HashMap<String, HashMapAndPath.ListHashMap> m1;
-    public static PathList p1 = new PathList();
+    public static PathList path = new PathList();
     
     @Override
     public void start(Stage primaryStage) {
@@ -48,14 +48,16 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        launch(args);
+        
+        
         l1 = util.Util.creteLinkedList();
         String [][] linkedListArray = Util.linkedListToArray();
+        
         m1 = util.Util.createHashMap();
         System.out.println();
-        p1.addPathList(m1.get("h1"));
-        p1.addPathList(m1.get("v1"));
-        p1.display();
+        
+        
+        launch(args);
         
     }
 }

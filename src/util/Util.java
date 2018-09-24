@@ -1,21 +1,19 @@
  package util;
  
- import com.fasterxml.jackson.core.*;
- import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.core.type.TypeReference;
  
- import java.io.File;
- import java.io.IOException;
- import java.util.Arrays;
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import com.fasterxml.jackson.annotation.*;
- import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.*;
 
-import Test.ListHashMap;
 import app.client.Game;
- import app.communication.Client;
- import app.server.*;
- import javafx.scene.shape.Line;
+import app.communication.Client;
+import app.server.*;
  
  public class Util {
  	
