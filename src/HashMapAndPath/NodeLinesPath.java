@@ -11,11 +11,12 @@ public class NodeLinesPath {
 		
 	}
 	
-	public void display() {
+	public String display() {
 		
 		System.out.println(matrix.firstNode.punto1);
 		System.out.println(matrix.firstNode.punto2);
 		
+		return matrix.firstNode.punto1;
 	}
 	
 
