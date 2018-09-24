@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="679.0" prefWidth="777.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.client.GameController">
+  <children>
+    <AnchorPane prefHeight="467.0" prefWidth="467.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#999999" height="522.0" layoutX="63.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="659.0" />
+        <Circle fx:id="p1" layoutX="113.0" layoutY="107.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p2" layoutX="193.0" layoutY="107.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p3" layoutX="273.0" layoutY="107.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p4" layoutX="353.0" layoutY="107.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p9" layoutX="113.0" layoutY="166.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p10" layoutX="193.0" layoutY="166.0" radius="6.499950000001263" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p11" layoutX="273.0" layoutY="166.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p12" layoutX="353.0" layoutY="166.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p17" layoutX="113.0" layoutY="226.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p18" layoutX="193.0" layoutY="226.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p19" layoutX="273.0" layoutY="226.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p20" layoutX="353.0" layoutY="226.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p25" layoutX="113.0" layoutY="286.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p26" layoutX="193.0" layoutY="286.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p27" layoutX="273.0" layoutY="286.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Circle fx:id="p28" layoutX="353.0" layoutY="286.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+        <Line fx:id="h1" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="108.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h2" endX="-37.0" endY="0.0" layoutX="302.0" layoutY="107.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h3" endX="-37.0" endY="0.0" layoutX="382.0" layoutY="107.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h8" endX="-37.0" endY="0.0" layoutX="222.0" layoutY="166.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h9" endX="-37.0" endY="0.0" layoutX="302.0" layoutY="166.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h10" endX="-37.0" endY="0.0" layoutX="382.0" layoutY="166.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h15" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="226.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h16" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="226.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h17" endX="-37.0" endY="0.0" layoutX="382.0" layoutY="226.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h22" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h23" endX="-37.0" endY="0.0" layoutX="302.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h24" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v1" endX="-100.0" endY="42.0" layoutX="213.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v2" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v3" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v4" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v9" endX="-100.0" endY="42.0" layoutX="213.0" layoutY="175.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v17" endX="-100.0" endY="42.0" layoutX="213.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v10" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="175.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v11" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="175.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v12" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="175.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v18" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v19" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="v20" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Text layoutX="14.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
+            <Text layoutX="135.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
+            <Label fx:id="labelP1" layoutX="78.0" layoutY="608.0" text="0 pts">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            
+            <Label fx:id="labelP2" layoutX="200.0" layoutY="608.0" text="0 pts">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="alert" layoutX="256.0" layoutY="606.0" prefHeight="30.0" prefWidth="300.0">
+                           <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <ImageView fitHeight="66.0" fitWidth="140.0" layoutX="336.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/HEADER2.png" />
+               </image>
+            </ImageView>
+            <Line fx:id="h4" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="107.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v25" endX="-100.0" endY="42.0" layoutX="213.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Circle fx:id="p5" layoutX="434.0" layoutY="106.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p6" layoutX="514.0" layoutY="106.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p7" layoutX="594.0" layoutY="106.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p8" layoutX="674.0" layoutY="106.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p13" layoutX="434.0" layoutY="165.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p14" layoutX="514.0" layoutY="165.0" radius="6.499950000001263" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p15" layoutX="594.0" layoutY="165.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p16" layoutX="674.0" layoutY="165.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p21" layoutX="434.0" layoutY="225.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p22" layoutX="514.0" layoutY="225.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p23" layoutX="594.0" layoutY="225.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p24" layoutX="674.0" layoutY="225.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p29" layoutX="434.0" layoutY="285.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p30" layoutX="514.0" layoutY="285.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p31" layoutX="594.0" layoutY="285.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p32" layoutX="674.0" layoutY="285.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Line fx:id="h5" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="107.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h6" endX="-37.0" endY="0.0" layoutX="623.0" layoutY="106.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h7" endX="-37.0" endY="0.0" layoutX="703.0" layoutY="106.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h12" endX="-37.0" endY="0.0" layoutX="543.0" layoutY="165.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h13" endX="-37.0" endY="0.0" layoutX="623.0" layoutY="165.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h14" endX="-37.0" endY="0.0" layoutX="703.0" layoutY="165.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h19" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h20" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h21" endX="-37.0" endY="0.0" layoutX="703.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h26" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h27" endX="-37.0" endY="0.0" layoutX="623.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h28" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v5" endX="-100.0" endY="42.0" layoutX="534.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v6" endX="-100.0" endY="42.0" layoutX="614.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v7" endX="-100.0" endY="42.0" layoutX="694.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v8" endX="-100.0" endY="42.0" layoutX="774.0" layoutY="114.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v13" endX="-100.0" endY="42.0" layoutX="534.0" layoutY="174.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v21" endX="-100.0" endY="42.0" layoutX="534.0" layoutY="234.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v14" endX="-100.0" endY="42.0" layoutX="614.0" layoutY="174.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v15" endX="-100.0" endY="42.0" layoutX="694.0" layoutY="174.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v16" endX="-100.0" endY="42.0" layoutX="774.0" layoutY="174.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v22" endX="-100.0" endY="42.0" layoutX="614.0" layoutY="234.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v23" endX="-100.0" endY="42.0" layoutX="694.0" layoutY="234.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v24" endX="-100.0" endY="42.0" layoutX="774.0" layoutY="234.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Circle fx:id="p33" layoutX="112.0" layoutY="346.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p34" layoutX="192.0" layoutY="346.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p35" layoutX="272.0" layoutY="346.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p36" layoutX="352.0" layoutY="346.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p41" layoutX="112.0" layoutY="405.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p42" layoutX="192.0" layoutY="405.0" radius="6.499950000001263" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p43" layoutX="272.0" layoutY="405.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p44" layoutX="352.0" layoutY="405.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p49" layoutX="112.0" layoutY="465.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p50" layoutX="192.0" layoutY="465.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p51" layoutX="272.0" layoutY="465.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p52" layoutX="352.0" layoutY="465.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p57" layoutX="112.0" layoutY="525.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p58" layoutX="192.0" layoutY="525.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p59" layoutX="272.0" layoutY="525.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p60" layoutX="352.0" layoutY="525.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Line fx:id="h29" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="347.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h30" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h31" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h36" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h37" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h38" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h43" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h44" endX="-37.0" endY="0.0" layoutX="300.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h45" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h50" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h51" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h52" endX="-37.0" endY="0.0" layoutX="380.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v33" endX="-100.0" endY="42.0" layoutX="212.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v34" endX="-100.0" endY="42.0" layoutX="292.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v35" endX="-100.0" endY="42.0" layoutX="372.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v36" endX="-100.0" endY="42.0" layoutX="452.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v41" endX="-100.0" endY="42.0" layoutX="212.0" layoutY="414.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v49" endX="-100.0" endY="42.0" layoutX="212.0" layoutY="474.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v42" endX="-100.0" endY="42.0" layoutX="292.0" layoutY="414.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v43" endX="-100.0" endY="42.0" layoutX="372.0" layoutY="414.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v44" endX="-100.0" endY="42.0" layoutX="452.0" layoutY="414.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v50" endX="-100.0" endY="42.0" layoutX="292.0" layoutY="474.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v51" endX="-100.0" endY="42.0" layoutX="372.0" layoutY="474.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v52" endX="-100.0" endY="42.0" layoutX="452.0" layoutY="474.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Circle fx:id="p37" layoutX="433.0" layoutY="345.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p38" layoutX="513.0" layoutY="345.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p39" layoutX="593.0" layoutY="345.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p40" layoutX="673.0" layoutY="345.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p45" layoutX="433.0" layoutY="404.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p46" layoutX="513.0" layoutY="404.0" radius="6.499950000001263" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p47" layoutX="593.0" layoutY="404.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p48" layoutX="673.0" layoutY="404.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p53" layoutX="433.0" layoutY="464.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p54" layoutX="513.0" layoutY="464.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p55" layoutX="593.0" layoutY="464.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p56" layoutX="673.0" layoutY="464.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p61" layoutX="433.0" layoutY="524.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p62" layoutX="513.0" layoutY="524.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p63" layoutX="593.0" layoutY="524.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="p64" layoutX="673.0" layoutY="524.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
+            <Line fx:id="h33" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h34" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h35" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h40" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h41" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h42" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h47" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h48" endX="-37.0" endY="0.0" layoutX="621.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h49" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h54" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h55" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h56" endX="-37.0" endY="0.0" layoutX="701.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v37" endX="-100.0" endY="42.0" layoutX="533.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v38" endX="-100.0" endY="42.0" layoutX="613.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v39" endX="-100.0" endY="42.0" layoutX="693.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v40" endX="-100.0" endY="42.0" layoutX="773.0" layoutY="353.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v45" endX="-100.0" endY="42.0" layoutX="533.0" layoutY="413.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v53" endX="-100.0" endY="42.0" layoutX="533.0" layoutY="473.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v46" endX="-100.0" endY="42.0" layoutX="613.0" layoutY="413.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v47" endX="-100.0" endY="42.0" layoutX="693.0" layoutY="413.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v48" endX="-100.0" endY="42.0" layoutX="773.0" layoutY="413.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v54" endX="-100.0" endY="42.0" layoutX="613.0" layoutY="473.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v55" endX="-100.0" endY="42.0" layoutX="693.0" layoutY="473.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v56" endX="-100.0" endY="42.0" layoutX="773.0" layoutY="473.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h11" endX="-37.0" endY="0.0" layoutX="463.0" layoutY="165.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h18" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h25" endX="-37.0" endY="0.0" layoutX="463.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h32" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h39" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h46" endX="-37.0" endY="0.0" layoutX="461.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h53" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v26" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v27" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v28" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v29" endX="-100.0" endY="42.0" layoutX="534.0" layoutY="294.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v30" endX="-100.0" endY="42.0" layoutX="614.0" layoutY="294.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v31" endX="-100.0" endY="42.0" layoutX="694.0" layoutY="294.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="v32" endX="-100.0" endY="42.0" layoutX="774.0" layoutY="294.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d1" endX="-45.40000915527344" endY="41.79998779296875" layoutX="231.0" layoutY="118.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c1a" fill="#999999" layoutX="164.0" layoutY="138.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c2a" fill="#999999" layoutX="243.0" layoutY="137.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c3a" fill="#999999" layoutX="323.0" layoutY="137.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c4a" fill="#999999" layoutX="403.0" layoutY="137.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c5a" fill="#999999" layoutX="483.0" layoutY="137.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c6a" fill="#999999" layoutX="563.0" layoutY="137.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c7a" fill="#999999" layoutX="643.0" layoutY="136.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d2" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="311.0" layoutY="118.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d3" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="391.0" layoutY="117.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d5" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="553.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d4" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="472.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d6" endX="-44.5" endY="43.49998474121094" fill="BLACK" layoutX="632.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d7" endX="-44.50006103515625" endY="44.49998474121094" fill="BLACK" layoutX="712.0" layoutY="114.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c1b" fill="#999999" layoutX="176.0" layoutY="131.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c2b" fill="#999999" layoutX="255.0" layoutY="130.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c3b" fill="#999999" layoutX="335.0" layoutY="129.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c4b" fill="#999999" layoutX="415.0" layoutY="128.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c5b" fill="#999999" layoutX="500.0" layoutY="128.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c6b" fill="#999999" layoutX="573.0" layoutY="128.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c7b" fill="#999999" layoutX="655.0" layoutY="128.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d8" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="231.0" layoutY="178.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c8a" fill="#999999" layoutX="164.0" layoutY="198.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c9a" fill="#999999" layoutX="243.0" layoutY="197.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c10a" fill="#999999" layoutX="323.0" layoutY="197.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c11a" fill="#999999" layoutX="403.0" layoutY="197.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c12a" fill="#999999" layoutX="483.0" layoutY="197.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c13a" fill="#999999" layoutX="563.0" layoutY="197.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c14a" fill="#999999" layoutX="643.0" layoutY="196.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d9" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="311.0" layoutY="178.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d10" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="391.0" layoutY="177.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d12" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="553.0" layoutY="176.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d11" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="472.0" layoutY="176.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d13" endX="-44.5" endY="43.49998474121094" fill="BLACK" layoutX="632.0" layoutY="175.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d14" endX="-44.50006103515625" endY="44.49998474121094" fill="BLACK" layoutX="712.0" layoutY="174.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c8b" fill="#999999" layoutX="176.0" layoutY="191.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c9b" fill="#999999" layoutX="255.0" layoutY="190.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c10b" fill="#999999" layoutX="335.0" layoutY="189.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c11b" fill="#999999" layoutX="415.0" layoutY="188.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c12b" fill="#999999" layoutX="500.0" layoutY="188.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c13b" fill="#999999" layoutX="573.0" layoutY="188.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c14b" fill="#999999" layoutX="655.0" layoutY="188.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d15" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="230.0" layoutY="238.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c15a" fill="#999999" layoutX="163.0" layoutY="258.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c16a" fill="#999999" layoutX="242.0" layoutY="257.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c17a" fill="#999999" layoutX="322.0" layoutY="257.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c18a" fill="#999999" layoutX="402.0" layoutY="257.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c19a" fill="#999999" layoutX="482.0" layoutY="257.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c20a" fill="#999999" layoutX="562.0" layoutY="257.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c21a" fill="#999999" layoutX="642.0" layoutY="256.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d16" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="310.0" layoutY="238.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d17" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="390.0" layoutY="237.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d19" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="552.0" layoutY="236.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d18" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="471.0" layoutY="236.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d20" endX="-44.5" endY="43.49998474121094" fill="BLACK" layoutX="631.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d21" endX="-44.50006103515625" endY="44.49998474121094" fill="BLACK" layoutX="711.0" layoutY="234.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c15b" fill="#999999" layoutX="175.0" layoutY="251.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c16b" fill="#999999" layoutX="254.0" layoutY="250.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c17b" fill="#999999" layoutX="334.0" layoutY="249.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c18b" fill="#999999" layoutX="414.0" layoutY="248.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c19b" fill="#999999" layoutX="499.0" layoutY="248.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c20b" fill="#999999" layoutX="572.0" layoutY="248.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c21b" fill="#999999" layoutX="654.0" layoutY="248.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d22" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="229.0" layoutY="298.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c22a" fill="#999999" layoutX="162.0" layoutY="318.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c23a" fill="#999999" layoutX="241.0" layoutY="317.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c24a" fill="#999999" layoutX="321.0" layoutY="317.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c25a" fill="#999999" layoutX="401.0" layoutY="317.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c26a" fill="#999999" layoutX="481.0" layoutY="317.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c27a" fill="#999999" layoutX="561.0" layoutY="317.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c28a" fill="#999999" layoutX="641.0" layoutY="316.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d23" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="309.0" layoutY="298.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d24" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="389.0" layoutY="297.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d26" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="551.0" layoutY="296.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d25" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="470.0" layoutY="296.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d27" endX="-44.5" endY="43.49998474121094" fill="BLACK" layoutX="630.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d28" endX="-44.50006103515625" endY="44.49998474121094" fill="BLACK" layoutX="710.0" layoutY="294.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c22b" fill="#999999" layoutX="174.0" layoutY="311.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c23b" fill="#999999" layoutX="253.0" layoutY="310.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c24b" fill="#999999" layoutX="333.0" layoutY="309.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c25b" fill="#999999" layoutX="413.0" layoutY="308.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c26b" fill="#999999" layoutX="498.0" layoutY="308.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c27b" fill="#999999" layoutX="571.0" layoutY="308.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c28b" fill="#999999" layoutX="653.0" layoutY="308.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d29" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="230.0" layoutY="357.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c29a" fill="#999999" layoutX="163.0" layoutY="377.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c30a" fill="#999999" layoutX="242.0" layoutY="376.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c31a" fill="#999999" layoutX="322.0" layoutY="376.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c32a" fill="#999999" layoutX="402.0" layoutY="376.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c33a" fill="#999999" layoutX="482.0" layoutY="376.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c34a" fill="#999999" layoutX="562.0" layoutY="376.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c35a" fill="#999999" layoutX="642.0" layoutY="375.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d30" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="310.0" layoutY="357.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d31" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="390.0" layoutY="356.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d33" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="552.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d32" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="471.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d34" endX="-44.5" endY="43.49998474121094" fill="BLACK" layoutX="631.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d35" endX="-44.50006103515625" endY="44.49998474121094" fill="BLACK" layoutX="711.0" layoutY="353.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c29b" fill="#999999" layoutX="175.0" layoutY="370.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c30b" fill="#999999" layoutX="254.0" layoutY="369.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c31b" fill="#999999" layoutX="334.0" layoutY="368.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c32b" fill="#999999" layoutX="414.0" layoutY="367.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c33b" fill="#999999" layoutX="499.0" layoutY="367.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c34b" fill="#999999" layoutX="572.0" layoutY="367.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c35b" fill="#999999" layoutX="654.0" layoutY="367.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d36" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="230.0" layoutY="417.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c36a" fill="#999999" layoutX="163.0" layoutY="437.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c37a" fill="#999999" layoutX="242.0" layoutY="436.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c38a" fill="#999999" layoutX="322.0" layoutY="436.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c39a" fill="#999999" layoutX="402.0" layoutY="436.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c40a" fill="#999999" layoutX="482.0" layoutY="436.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c41a" fill="#999999" layoutX="562.0" layoutY="436.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c42a" fill="#999999" layoutX="642.0" layoutY="435.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d37" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="310.0" layoutY="417.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d38" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="390.0" layoutY="416.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d40" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="552.0" layoutY="415.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d39" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="471.0" layoutY="415.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d41" endX="-44.5" endY="43.49998474121094" fill="BLACK" layoutX="631.0" layoutY="414.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d42" endX="-44.50006103515625" endY="44.49998474121094" fill="BLACK" layoutX="711.0" layoutY="413.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c36b" fill="#999999" layoutX="175.0" layoutY="430.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c37b" fill="#999999" layoutX="254.0" layoutY="429.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c38b" fill="#999999" layoutX="334.0" layoutY="428.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c39b" fill="#999999" layoutX="414.0" layoutY="427.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c40b" fill="#999999" layoutX="499.0" layoutY="427.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c41b" fill="#999999" layoutX="572.0" layoutY="427.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c42b" fill="#999999" layoutX="654.0" layoutY="427.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d43" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="231.0" layoutY="477.0" onMouseClicked="#onMouseClick" startX="-112.49998474121094" startY="-5.5" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c43a" fill="#999999" layoutX="164.0" layoutY="497.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c44a" fill="#999999" layoutX="243.0" layoutY="496.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c45a" fill="#999999" layoutX="323.0" layoutY="496.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c46a" fill="#999999" layoutX="403.0" layoutY="496.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c47a" fill="#999999" layoutX="483.0" layoutY="496.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c48a" fill="#999999" layoutX="563.0" layoutY="496.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c49a" fill="#999999" layoutX="643.0" layoutY="495.0" points="-43.19999694824219, -18.20001220703125, 13.599990844726562, 22.599990844726562, -43.19999694824219, 22.599990844726562, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Line fx:id="d44" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="311.0" layoutY="477.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d45" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="391.0" layoutY="476.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d47" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="553.0" layoutY="475.0" onMouseClicked="#onMouseClick" startX="-111.4000244140625" startY="-4.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d46" endX="-45.40000915527344" endY="41.79998779296875" fill="BLACK" layoutX="472.0" layoutY="475.0" onMouseClicked="#onMouseClick" startX="-112.0" startY="-6.4000244140625" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d48" endX="-44.5" endY="43.49998474121094" fill="BLACK" layoutX="632.0" layoutY="474.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="d49" endX="-44.50006103515625" endY="44.49998474121094" fill="BLACK" layoutX="712.0" layoutY="473.0" onMouseClicked="#onMouseClick" startX="-110.19999694824219" startY="-4.6000213623046875" stroke="WHITE" strokeWidth="5.0" />
+            <Polyline fx:id="c43b" fill="#999999" layoutX="176.0" layoutY="490.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c44b" fill="#999999" layoutX="255.0" layoutY="489.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c45b" fill="#999999" layoutX="335.0" layoutY="488.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c46b" fill="#999999" layoutX="415.0" layoutY="487.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c47b" fill="#999999" layoutX="500.0" layoutY="487.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c48b" fill="#999999" layoutX="573.0" layoutY="487.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+            <Polyline fx:id="c49b" fill="#999999" layoutX="655.0" layoutY="487.0" points="-43.19999694824219, -18.20001220703125, 7.2000274658203125, 18.399978637695312, 7.2000274658203125, -18.200027465820312, -43.19999694824219, -18.20001220703125" stroke="#999999" strokeType="INSIDE" />
+      </children>
+    </AnchorPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
