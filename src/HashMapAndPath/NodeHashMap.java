@@ -1,4 +1,4 @@
-package util;
+package HashMapAndPath;
 
 public class NodeHashMap {
 	
