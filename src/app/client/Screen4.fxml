@@ -44,9 +44,9 @@
         <Line fx:id="h15" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="226.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="h16" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="226.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="h17" endX="-37.0" endY="0.0" layoutX="382.0" layoutY="226.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-        <Line fx:id="h23" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-        <Line fx:id="h24" endX="-37.0" endY="0.0" layoutX="302.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-        <Line fx:id="h25" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h22" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h23" endX="-37.0" endY="0.0" layoutX="302.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+        <Line fx:id="h24" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="286.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v1" endX="-100.0" endY="42.0" layoutX="213.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v2" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v3" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="116.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
@@ -59,22 +59,22 @@
         <Line fx:id="v18" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v19" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v20" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Text layoutX="14.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
-            <Text layoutX="135.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
-            <Label fx:id="labelP1" layoutX="78.0" layoutY="608.0" text="0 pts">
+            <Text layoutX="148.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
+            <Text layoutX="479.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
+            <Label fx:id="labelP1" layoutX="260.0" layoutY="608.0" text="0 pts">
                <font>
                   <Font size="18.0" />
                </font></Label>
             
-            <Label fx:id="labelP2" layoutX="200.0" layoutY="608.0" text="0 pts">
+            <Label fx:id="labelP2" layoutX="570.0" layoutY="608.0" text="0 pts">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Label fx:id="alert" layoutX="256.0" layoutY="606.0" prefHeight="30.0" prefWidth="300.0">
+            <Label fx:id="alert" layoutX="238.0" layoutY="543.0" prefHeight="30.0" prefWidth="300.0">
                            <font>
                   <Font size="20.0" />
                </font></Label>
-            <ImageView fitHeight="66.0" fitWidth="140.0" layoutX="336.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="66.0" fitWidth="140.0" layoutX="308.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../img/HEADER2.png" />
                </image>
@@ -104,11 +104,11 @@
             <Line fx:id="h13" endX="-37.0" endY="0.0" layoutX="623.0" layoutY="165.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="h14" endX="-37.0" endY="0.0" layoutX="703.0" layoutY="165.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="h19" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h21" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h22" endX="-37.0" endY="0.0" layoutX="703.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h27" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h28" endX="-37.0" endY="0.0" layoutX="623.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h29" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h20" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h21" endX="-37.0" endY="0.0" layoutX="703.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h26" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h27" endX="-37.0" endY="0.0" layoutX="623.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h28" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v5" endX="-100.0" endY="42.0" layoutX="534.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v6" endX="-100.0" endY="42.0" layoutX="614.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v7" endX="-100.0" endY="42.0" layoutX="694.0" layoutY="115.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
@@ -137,18 +137,18 @@
             <Circle fx:id="p58" layoutX="192.0" layoutY="525.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="p59" layoutX="272.0" layoutY="525.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="p60" layoutX="352.0" layoutY="525.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
-            <Line fx:id="h30" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="347.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h31" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h32" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h37" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h38" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h39" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h44" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h45" endX="-37.0" endY="0.0" layoutX="300.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h46" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h51" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h52" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h53" endX="-37.0" endY="0.0" layoutX="380.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h29" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="347.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h30" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h31" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h36" endX="-37.0" endY="0.0" layoutX="221.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h37" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h38" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="405.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h43" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h44" endX="-37.0" endY="0.0" layoutX="300.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h45" endX="-37.0" endY="0.0" layoutX="381.0" layoutY="465.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h50" endX="-37.0" endY="0.0" layoutX="220.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h51" endX="-37.0" endY="0.0" layoutX="301.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h52" endX="-37.0" endY="0.0" layoutX="380.0" layoutY="525.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v33" endX="-100.0" endY="42.0" layoutX="212.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v34" endX="-100.0" endY="42.0" layoutX="292.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v35" endX="-100.0" endY="42.0" layoutX="372.0" layoutY="355.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
@@ -177,18 +177,18 @@
             <Circle fx:id="p62" layoutX="513.0" layoutY="524.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="p63" layoutX="593.0" layoutY="524.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="p64" layoutX="673.0" layoutY="524.0" radius="6.5" stroke="BLACK" strokeType="INSIDE" />
-            <Line fx:id="h34" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h35" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h36" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h41" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h42" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h43" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h48" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h49" endX="-37.0" endY="0.0" layoutX="621.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h50" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h55" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h56" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h57" endX="-37.0" endY="0.0" layoutX="701.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h33" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="346.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h34" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h35" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h40" endX="-37.0" endY="0.0" layoutX="542.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h41" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h42" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h47" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h48" endX="-37.0" endY="0.0" layoutX="621.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h49" endX="-37.0" endY="0.0" layoutX="702.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h54" endX="-37.0" endY="0.0" layoutX="541.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h55" endX="-37.0" endY="0.0" layoutX="622.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h56" endX="-37.0" endY="0.0" layoutX="701.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v37" endX="-100.0" endY="42.0" layoutX="533.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v38" endX="-100.0" endY="42.0" layoutX="613.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v39" endX="-100.0" endY="42.0" layoutX="693.0" layoutY="354.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
@@ -203,11 +203,11 @@
             <Line fx:id="v56" endX="-100.0" endY="42.0" layoutX="773.0" layoutY="473.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="h11" endX="-37.0" endY="0.0" layoutX="463.0" layoutY="165.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="h18" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="225.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h26" endX="-37.0" endY="0.0" layoutX="463.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h33" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h40" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h47" endX="-37.0" endY="0.0" layoutX="461.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Line fx:id="h54" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h25" endX="-37.0" endY="0.0" layoutX="463.0" layoutY="285.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h32" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="345.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h39" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="404.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h46" endX="-37.0" endY="0.0" layoutX="461.0" layoutY="464.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+            <Line fx:id="h53" endX="-37.0" endY="0.0" layoutX="462.0" layoutY="524.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v26" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v27" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
             <Line fx:id="v28" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="295.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
