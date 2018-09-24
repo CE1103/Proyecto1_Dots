@@ -1,5 +1,7 @@
 package app.client;
 
+import java.util.HashMap;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -47,5 +49,6 @@ public class Main extends Application {
         launch(args);
         l1 = util.Util.creteLinkedList();
         String [][] linkedListArray = Util.linkedListToArray();
+        HashMap<String, util.ListHashMap> m1 = util.Util.createHashMap();
     }
 }
