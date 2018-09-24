@@ -35,19 +35,13 @@ public class MainController implements Initializable, ControlledScreen {
     }
 
     @FXML
-<<<<<<< HEAD
-    private void goToScreen2(ActionEvent event){
-       myController.setScreen(Main.screen4ID);
-=======
     private void goToScreen2(ActionEvent event) throws IOException{      
-       
+
+		myController.setScreen(Main.screen4ID);
 		SocketClient g = new SocketClient();
 		Thread t2 = new Thread(g);
 		g.setPort(8081);
 		t2.start();
-		myController.setScreen(Main.screen2ID);
-              
->>>>>>> refs/heads/communication_server_client
     }
     @FXML
     private void goToScreen3(ActionEvent event){
