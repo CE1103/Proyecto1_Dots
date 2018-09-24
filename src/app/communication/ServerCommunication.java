@@ -5,6 +5,7 @@ import java.net.InetAddress;
 import java.util.Arrays;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -15,12 +16,25 @@ import app.server.*;
 
 public class ServerCommunication {
 	
-public static String jsonData() throws JsonGenerationException, JsonMappingException, IOException{
-		
-		ObjectMapper mapper = new ObjectMapper();
-		Server server = new Server(Arrays.toString(Game.lines));
-		mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-		String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(server);
-		return json;
+	public static String jsonDataServer;
+	
+//	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
+//		
+//		ObjectMapper mapper = new ObjectMapper();
+//		Server server = mapper.readValue(jsonDataServer, Server.class);
+//		jsonDataServer = mapper.writeValueAsString(server);
+//	}
+	
+	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
+			
+			ObjectMapper mapper = new ObjectMapper();
+//			String lines = Arrays.toString(Main.linesStatic);
+//			lines = Server.linesStatic;
+//			System.out.println(lines);
+			Server server = new Server();
+			String json = mapper.writeValueAsString(server);
+			return json;
 	}
+	
+	
 }

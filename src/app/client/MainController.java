@@ -35,21 +35,17 @@ public class MainController implements Initializable, ControlledScreen {
     }
 
     @FXML
-    private void goToScreen2(ActionEvent event) throws IOException{
-       SocketServer h = new SocketServer();
-       SocketClient g = new SocketClient();
-       Thread t1 = new Thread(h);
-       Thread t2 = new Thread(g);
-       h.setPort1(8081);
-       g.setPort(8081);
-       t1.start();
-       t2.start();
+    private void goToScreen2(ActionEvent event) throws IOException{      
        
-       
-       myController.setScreen(Main.screen2ID);
+		SocketClient g = new SocketClient();
+		Thread t2 = new Thread(g);
+		g.setPort(8081);
+		t2.start();
+		myController.setScreen(Main.screen2ID);
+              
     }
     @FXML
     private void goToScreen3(ActionEvent event){
-       myController.setScreen(Main.screen3ID);
+    	myController.setScreen(Main.screen3ID);
     }
 }

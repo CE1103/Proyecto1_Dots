@@ -1,5 +1,9 @@
 package app.client;
 
+import java.io.IOException;
+import java.net.UnknownHostException;
+
+import Sockets.SocketClient;
 import app.server.Main;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -28,7 +32,7 @@ public class ClientScreen extends Application {
         primaryStage.show();
     }
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnknownHostException, IOException {
 		
         launch(args);
 	}

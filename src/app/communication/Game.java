@@ -1,5 +1,9 @@
-package app.server;
+package app.communication;
 
+import app.server.List;
+import app.server.NodeList;
+import app.server.Player;
+import app.server.Turn;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
@@ -10,8 +14,7 @@ public class Game {
 	public Player P2;
 	public Turn b1;
 
-	public static String[] lines = new String[161]; // Mover Server
-	public static String[][] dots = new String[8][8]; // Mover Server
+	public static String[][] dots = new String[8][8];
 	
 	public void setScore(javafx.scene.input.MouseEvent event) {
 			

@@ -48,8 +48,7 @@ public class SocketServer implements Runnable {
 				System.out.println("holaserver2");
 				System.out.println(inputLine);
 				System.out.println("holaserver3");
-				out.println(ServerCommunication.jsonData());
-				
+				out.println(ServerCommunication.jsonDataSend());
 			}
 		}catch (Exception e) {
 			System.out.println(e);

@@ -73,27 +73,22 @@ public class GameController implements Initializable, ControlledScreen {
     	boolean a = true;
     	for(int c=0;c<24;c++) {
     		
-    		if(((Line)event.getSource()).getId()==Game.lines[c]) {
+    		if(((Line)event.getSource()).getId()==Main.linesStatic[c]) {
     			a = false;
     		}    		
     	}
     	if(a) {
     		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-    		alert.setText(" ");
-    		g1.setScore(event);
-    		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
-    		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
-        
-    		Game.lines[i] = ((Line)event.getSource()).getId(); 
-    		//System.out.println(Game.lines[i] + i); 
+    		alert.setText(" ");      
+    		Main.linesStatic[i] = ((Line)event.getSource()).getId();
+    		//System.out.println(Main.lines[i] + i); 
     		i++;
     		//System.out.println(((Line)event.getSource()).getId());
-    		System.out.println(Arrays.toString(Game.lines));
+    		System.out.println(Arrays.toString(Main.linesStatic));
     		System.out.println(Arrays.toString(Game.dots));
-    		app.communication.ServerCommunication.jsonData();
+    		ClientCommunication.jsonDataSend();
     	}else {
-    		app.communication.ServerCommunication.jsonData();
-    		System.out.println(isInside(Game.lines,((Line)event.getSource())));
+    		System.out.println(isInside(Main.linesStatic,((Line)event.getSource())));
     		alert.setText("Linea Anteriormente Presionada");
     		alert.setStyle("-fx-text-fill: #95F4F1");
     		System.out.println("Line pressed");

@@ -17,9 +17,9 @@ public class Server {
 	public String dots6;
 	public String dots7;
 
-	public Server(String lines) {
+	public Server() {
 		
-		this.lines = lines;
+		lines = Arrays.toString(Main.linesStatic);
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);
 		this.dots2 = Arrays.toString(Game.dots[2]);
