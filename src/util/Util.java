@@ -1,8 +1,13 @@
- package util;
+package util;
  
+<<<<<<< HEAD
 import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.core.type.TypeReference;
+=======
+import java.util.Arrays;
+>>>>>>> refs/heads/communication_server_client
  
+<<<<<<< HEAD
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -66,6 +71,11 @@ import app.server.*;
 		return arrays;
 	}
 	
+=======
+ 
+public class Util {
+	
+>>>>>>> refs/heads/communication_server_client
 	public static void displayArray(String[][] array) {
 		
 		for (int i = 0; i < 4; i++) {
@@ -76,6 +86,7 @@ import app.server.*;
 		}
 	}
 	
+<<<<<<< HEAD
 	public static HashMap<String, HashMapAndPath.ListHashMap> createHashMap(){
 		HashMap<String, HashMapAndPath.ListHashMap> m1 = new HashMap<>();
 		
@@ -196,3 +207,13 @@ import app.server.*;
 		return m1;
 	}
  }
+=======
+	public static void displayArray1(String[][] array) {
+		
+		for (int i = 0; i < 4; i++) {
+			System.out.println(Arrays.toString(array[i]));
+		}
+	}
+
+ }
+>>>>>>> refs/heads/communication_server_client

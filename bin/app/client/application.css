@@ -9,6 +9,7 @@
     -fx-background-insets: 0,1,1;
     -fx-text-fill: black;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+<<<<<<< HEAD
 }
 
 #footer{
@@ -40,3 +41,6 @@
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
 	
 }*/
+=======
+}
+>>>>>>> refs/heads/communication_server_client
