@@ -17,7 +17,7 @@ public class Game  {
 	Player P2;
 	Turn b1;
 	
-	public static String[] lines = new String[24];
+	public static String[] lines = new String[161];
 	
 	public Game() {
 		

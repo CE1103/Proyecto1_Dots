@@ -32,7 +32,7 @@ public class MainController implements Initializable, ControlledScreen {
 
     @FXML
     private void goToScreen2(ActionEvent event){
-       myController.setScreen(Main.screen2ID);
+       myController.setScreen(Main.screen4ID);
     }
     @FXML
     private void goToScreen3(ActionEvent event){
