@@ -59,22 +59,22 @@
         <Line fx:id="v18" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v19" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v20" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Text layoutX="14.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
-            <Text layoutX="135.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
-            <Label fx:id="labelP1" layoutX="78.0" layoutY="608.0" text="0 pts">
+            <Text layoutX="148.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
+            <Text layoutX="479.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
+            <Label fx:id="labelP1" layoutX="260.0" layoutY="608.0" text="0 pts">
                <font>
                   <Font size="18.0" />
                </font></Label>
             
-            <Label fx:id="labelP2" layoutX="200.0" layoutY="608.0" text="0 pts">
+            <Label fx:id="labelP2" layoutX="570.0" layoutY="608.0" text="0 pts">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Label fx:id="alert" layoutX="256.0" layoutY="606.0" prefHeight="30.0" prefWidth="300.0">
+            <Label fx:id="alert" layoutX="238.0" layoutY="543.0" prefHeight="30.0" prefWidth="300.0">
                            <font>
                   <Font size="20.0" />
                </font></Label>
-            <ImageView fitHeight="66.0" fitWidth="140.0" layoutX="336.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="66.0" fitWidth="140.0" layoutX="308.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../img/HEADER2.png" />
                </image>
