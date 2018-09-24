@@ -90,7 +90,7 @@ public class GameController implements Initializable, ControlledScreen {
     		//System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Game.lines));
     		System.out.println(Arrays.toString(Game.dots));
-    		app.communication.Server_com.sendToClient();
+    		app.communication.ServerCommunication.jsonData();
     	}else {
     		app.communication.ServerCommunication.jsonData();
     		System.out.println(isInside(Game.lines,((Line)event.getSource())));

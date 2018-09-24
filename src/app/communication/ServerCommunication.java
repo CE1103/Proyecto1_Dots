@@ -19,10 +19,8 @@ public static String jsonData() throws JsonGenerationException, JsonMappingExcep
 		
 		ObjectMapper mapper = new ObjectMapper();
 		Server server = new Server(Arrays.toString(Game.lines));
-		System.out.println(Game.dots[3]);
 		mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-		String json = mapper.writeValueAsString(server);
-		System.out.println(json);
+		String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(server);
 		return json;
 	}
 }

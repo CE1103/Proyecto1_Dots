@@ -10,8 +10,8 @@ public class Game {
 	public Player P2;
 	public Turn b1;
 
-	public static String[] lines = new String[24]; // Mover Server
-	public static String[][] dots = new String[4][4]; // Mover Server
+	public static String[] lines = new String[161]; // Mover Server
+	public static String[][] dots = new String[8][8]; // Mover Server
 	
 	public void setScore(javafx.scene.input.MouseEvent event) {
 			

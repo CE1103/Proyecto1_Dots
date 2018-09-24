@@ -66,12 +66,12 @@ public class List {
 	
 	public static List createLinkedList() { // Mover Server
  		int p = 0;
- 		int q = 4;
+ 		int q = 8;
  		List matrix = new List();
- 		for(int i = 0; i < 4; i++) {
+ 		for(int i = 0; i < 8; i++) {
  			List list = new List();
- 			for(int j = 0; j < 4; j++) {
- 				list.addPoint("p" + Integer.toString((4*q)-p)); p++;
+ 			for(int j = 0; j < 8; j++) {
+ 				list.addPoint("p" + Integer.toString((8*q)-p)); p++;
  			}
  			q--;
 			p=0;
