@@ -8,7 +8,7 @@ public class Path {
 		
 		NodeLinesPath lastEntry = Main.path.firstNode;
 		String point1 = lastEntry.matrix.firstNode.point1;
-		String point2 = lastEntry.matrix.firstNode.point1;
+		String point2 = lastEntry.matrix.firstNode.point2;
 		
 	    PathList pathLocal = new PathList();
 	    
@@ -26,7 +26,7 @@ public class Path {
 	    
 		while(point1 != "") {
 			
-			point1 = isInNode(localCurrent.matrix.firstNode.point1,localCurrent);
+			point1 = isInNode(point1,localCurrent);
 			
 			
 		}
