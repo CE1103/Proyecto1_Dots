@@ -1,6 +1,5 @@
 package HashMapAndPath;
 
-import util.NodeList;
 
 public class PathList {
 	
@@ -33,6 +32,36 @@ public class PathList {
 			
 		}
 		
+	}
+	
+	public NodeLinesPath removeNode(String p1, String p2) {
+		
+		NodeLinesPath current = firstNode;
+		NodeLinesPath previous = firstNode;
+		
+		while(current.matrix.firstNode.point1 != p1 & current.matrix.firstNode.point2 != p2) {
+			
+			if(current.next == null) {
+				
+				return null;
+				
+			}else {
+				
+				previous = current;
+				current = current.next;
+				
+			}
+			
+		}
+		
+		if(current == firstNode) {
+			
+			firstNode = firstNode.next;
+			
+		}else {
+			previous.next = current.next;
+		}
+		return current;
 	}
 
 }

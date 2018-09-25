@@ -13,8 +13,8 @@ public class NodeLinesPath {
 	
 	public void display() {
 		
-		System.out.println(matrix.firstNode.punto1);
-		System.out.println(matrix.firstNode.punto2);
+		System.out.println(matrix.firstNode.point1);
+		System.out.println(matrix.firstNode.point2);
 		
 	}
 	
