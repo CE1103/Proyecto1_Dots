@@ -7,6 +7,7 @@ import java.util.HashMap;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
+import app.server.ScoreTracker;
 import HashMapAndPath.PathList;
 import Sockets.SocketClient;
 import Sockets.SocketServer;
@@ -14,6 +15,8 @@ import app.client.ScreensController;
 import app.communication.ClientCommunication;
 import app.communication.Game;
 import app.communication.ServerCommunication;
+import app.queue.Queue;
+import app.queue.QueueElements;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -46,8 +49,17 @@ public class Main{
 //        System.out.println(ServerCommunication.jsonDataSend());
 //        System.out.println(ClientCommunication.jsonDataSend());
         
-
+        
         SocketServer h = new SocketServer();
+        
+        
+        QueueElements queue = new QueueElements();
+        queue.Elements();
+        queue.showAll();
+        System.out.println("");
+        queue.dequeue();
+        queue.showAll();
+        
         
         Thread t1 = new Thread(h);
         
@@ -55,4 +67,5 @@ public class Main{
         t1.start();
         
     }
+    
 }

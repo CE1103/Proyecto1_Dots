@@ -17,6 +17,7 @@ public class Server {
 	public String dots6;
 	public String dots7;
 
+	
 	public Server() {
 		
 		lines = Arrays.toString(Main.linesStatic);
@@ -28,6 +29,6 @@ public class Server {
 		this.dots5 = Arrays.toString(Game.dots[5]);
 		this.dots6 = Arrays.toString(Game.dots[6]);
 		this.dots7 = Arrays.toString(Game.dots[7]);
-		
+
 	}
 }

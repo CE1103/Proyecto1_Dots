@@ -3,6 +3,7 @@ package app.communication;
 import java.util.Arrays;
 
 import app.server.Main;
+import app.server.Player;
 
 public class Client {
 	
@@ -15,6 +16,8 @@ public class Client {
 	public String dots5;
 	public String dots6;
 	public String dots7;
+	public String turnPlayer1;
+	public String turnPlayer2;
 
 	public Client() {
 		
@@ -27,6 +30,7 @@ public class Client {
 		this.dots5 = Arrays.toString(Game.dots[5]);
 		this.dots6 = Arrays.toString(Game.dots[6]);
 		this.dots7 = Arrays.toString(Game.dots[7]);
+		
 		
 	}
 		

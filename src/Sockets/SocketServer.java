@@ -24,7 +24,6 @@ public class SocketServer implements Runnable {
 	public void setPort1(int port1) throws IOException {
 		this.port1 = port1;
 	}
-
 	
 	public void stop() throws IOException {
 		

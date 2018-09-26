@@ -4,31 +4,18 @@ import app.server.List;
 import app.server.NodeList;
 import app.server.Player;
 import app.server.Turn;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
 
 public class Game {
 	
-	public Player P1;
-	public Player P2;
-	public Turn b1;
+	public static Player P1 = new Player(1);
+	public static Player P2 = new Player(2);
+	public static Turn b1 = new Turn(P1, P2);
 
 	public static String[][] dots = new String[8][8];
-	
-	public void setScore(javafx.scene.input.MouseEvent event) {
-			
-			if(this.P1.getTurn()){
-				this.P1.scorePoints();
-//				((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
-				P1.switchTurn();
-			}
-			else{
-				this.P2.scorePoints();
-//				((Line)event.getSource()).setStroke(Color.web("#95F4F1"));
-				P1.switchTurn();
-			}
-		}
 		
 	public static void linkedListToArray(){ // Mover Server
 		
