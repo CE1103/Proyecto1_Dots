@@ -3,7 +3,8 @@ package HashMapAndPath;
 import app.client.Main;
 
 public class Path {
-		
+
+
 	public void figureRecognition() {
 		
 		NodeLinesPath lastEntry = Main.path.firstNode;
@@ -12,6 +13,7 @@ public class Path {
 		PathList pathLocal = new PathList();
 		PathList pathCreated = new PathList();
 		lastEntry = lastEntry.next;
+
 	    while (lastEntry != null) {
 	    	   		
 	    	pathLocal.addPathList(new ListHashMap(lastEntry.matrix.firstNode.point1,lastEntry.matrix.firstNode.point2));
@@ -20,6 +22,7 @@ public class Path {
 	    }
 	    NodeLinesPath localCurrent = pathLocal.firstNode;
 		while(point1 != "") {
+
 			if (point1 == point2) {
 				System.out.println("Path Found");
 				break;
