@@ -75,7 +75,7 @@ public class GameController implements Initializable, ControlledScreen {
     		
     		Main.path.addPathList(Main.m1.get(((Line)event.getSource()).getId()));
     		Main.path.display();
-    		pathTest.figurerecognition();
+    		pathTest.figureRecognition();
     		
     		
     	}else {

@@ -6,7 +6,7 @@ public class Path {
 	
 	private PathList pathLocal;
 	
-	public void figurerecognition() {
+	public void figureRecognition() {
 		
 		NodeLinesPath lastEntry = Main.path.firstNode;
 		String point1 = lastEntry.matrix.firstNode.point1;
