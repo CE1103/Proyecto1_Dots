@@ -7,6 +7,7 @@ import java.util.HashMap;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
+import app.server.ScoreTracker;
 import HashMapAndPath.PathList;
 import Sockets.SocketClient;
 import Sockets.SocketServer;
@@ -14,6 +15,7 @@ import app.client.ScreensController;
 import app.communication.ClientCommunication;
 import app.communication.Game;
 import app.communication.ServerCommunication;
+import app.queue.Queue;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -46,8 +48,18 @@ public class Main{
 //        System.out.println(ServerCommunication.jsonDataSend());
 //        System.out.println(ClientCommunication.jsonDataSend());
         
-
+        
         SocketServer h = new SocketServer();
+        
+        Queue queue = new Queue();
+        queue.enqueue(0);
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.showAll();
+        System.out.println("");
+       // queue.dequeue();
+        System.out.println("Elemento desencolado: " + queue.dequeue());
+        System.out.println("Ultimo Elemento en Cola: " + queue.peek());
         
         Thread t1 = new Thread(h);
         
@@ -55,4 +67,5 @@ public class Main{
         t1.start();
         
     }
+    
 }

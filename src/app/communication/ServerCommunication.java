@@ -33,6 +33,7 @@ public class ServerCommunication {
 //			System.out.println(lines);
 			Server server = new Server();
 			String json = mapper.writeValueAsString(server);
+			System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(server));
 			return json;
 	}
 	

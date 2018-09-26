@@ -20,6 +20,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Polyline;
 import javafx.scene.shape.Rectangle;
 import util.*;
+import app.server.ScoreTracker;
 
 public class GameController implements Initializable, ControlledScreen {
 	
@@ -43,9 +44,11 @@ public class GameController implements Initializable, ControlledScreen {
     
     ScreensController myController;
     public int i = 0;
-    static boolean response = false;
     
     Game g1 = new Game();
+    
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -56,6 +59,8 @@ public class GameController implements Initializable, ControlledScreen {
         myController = screenParent;
     }
 
+    
+	
     public void onMouseClick(MouseEvent event) throws Exception {
     	boolean a = true;
     	for(int c=0;c<161;c++) {
@@ -66,37 +71,29 @@ public class GameController implements Initializable, ControlledScreen {
     	}
     	if(a) {
     		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-    		alert.setText(" ");      
+    		alert.setText(" ");  
+    		//ScoreTracker.Search(event);
+//    		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
+//    		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
+    		
     		Main.linesStatic[i] = ((Line)event.getSource()).getId();
     		//System.out.println(Main.lines[i] + i); 
     		i++;
+    		
     		//System.out.println(((Line)event.getSource()).getId());
     		System.out.println(Arrays.toString(Main.linesStatic));
-    		Main.path.addPathList(Main.m1.get(((Line)event.getSource()).getId()));
-    		Main.path.display();
+    		//Main.path.addPathList(Main.m1.get(((Line)event.getSource()).getId()));
+    		//Main.path.display();
     		
     		
     		System.out.println(Arrays.toString(Main.linesStatic));
     		System.out.println(Arrays.toString(Game.dots));
     		ClientCommunication.jsonDataSend();
     	}else {
-    		System.out.println(isInside(Main.linesStatic,((Line)event.getSource())));
     		alert.setText("Linea Anteriormente Presionada");
     		alert.setStyle("-fx-text-fill: #95F4F1");
-    		System.out.println("Line pressed");
+    		//System.out.println("Line pressed");
     	}
     }
 	
-	public static boolean isInside(String[] lines, Line line) {
-		
-		for(int a = 0; a < lines.length-1; a++) {
-			if(lines[a] == line.getId()) {
-				response = true;
-				s1.setStroke(Color.web("#95F4F1"));
-			}
-		}
-		return response;
-		
-		
-	}
 }
