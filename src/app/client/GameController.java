@@ -15,6 +15,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polyline;
 import util.*;
+import HashMapAndPath.*;
 
 public class GameController implements Initializable, ControlledScreen {
 	
@@ -39,6 +40,8 @@ public class GameController implements Initializable, ControlledScreen {
     static boolean response = false;
     
     Game g1 = new Game();
+    Path pathTest = new Path();
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -72,6 +75,7 @@ public class GameController implements Initializable, ControlledScreen {
     		
     		Main.path.addPathList(Main.m1.get(((Line)event.getSource()).getId()));
     		Main.path.display();
+    		pathTest.figurerecognition();
     		
     		
     	}else {

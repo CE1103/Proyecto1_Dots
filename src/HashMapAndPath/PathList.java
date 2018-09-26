@@ -25,8 +25,7 @@ public class PathList {
 		
 		NodeLinesPath NLP = firstNode;
 		while (NLP != null) {
-			NLP.display();		
-			System.out.println("Next Link "+ NLP.next + "\n\n");
+			NLP.display();
  			
 			NLP = NLP.next;
 			
@@ -39,7 +38,8 @@ public class PathList {
 		NodeLinesPath current = firstNode;
 		NodeLinesPath previous = firstNode;
 		
-		while(current.matrix.firstNode.point1 != p1 & current.matrix.firstNode.point2 != p2) {
+
+		while(current.matrix.firstNode.point1 != p1 || current.matrix.firstNode.point2 != p2) {
 			
 			if(current.next == null) {
 				
@@ -59,7 +59,9 @@ public class PathList {
 			firstNode = firstNode.next;
 			
 		}else {
+			
 			previous.next = current.next;
+			
 		}
 		return current;
 	}
