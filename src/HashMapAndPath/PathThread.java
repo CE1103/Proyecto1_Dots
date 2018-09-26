@@ -2,19 +2,23 @@ package HashMapAndPath;
 
 public class PathThread implements Runnable {
 	
-	public void search() {
+	@SuppressWarnings("deprecation")
+	public void func() {
 		
-		
+		Thread t = new Thread(new PathThread());
+		t.start();
+		while (t.isAlive()) {}
+		System.out.println("path");
 	}
 
 	@Override
 	public void run() {
-		
-		try {
 			
-			while(point1 != point2) {
+			while () {
+			
+			while (point1 != point2) {
 				
-				if (encuentrapunto) {
+				if (Path.isInNode()) {
 					
 					Thread t = new Thread(new PathThread());
 					t.setDaemon(true); t.start();
@@ -26,12 +30,7 @@ public class PathThread implements Runnable {
 			
 			throw new PathFinishException();
 			
-		}catch (PathFinishException ex){
-			
-			System.out.println("path");
-			
-			
-		}
+			}
 
 	}
 
