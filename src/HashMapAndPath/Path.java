@@ -34,7 +34,6 @@ public class Path {
 			}
 			
 		}
-		pathLocal = null;
 	}
 	
 	public String isInNode(String lookFor, PathList pathLocal,NodeLinesPath localCurrent,PathList pathCreated) {
@@ -59,4 +58,18 @@ public class Path {
 		
 	}
 
+	public PathList newPathLocal(PathList a) {
+		
+		PathList pathLocal = new PathList();
+		NodeLinesPath lastEntry = a.firstNode;
+
+	    while (lastEntry != null) {
+	    	   		
+	    	pathLocal.addPathList(new ListHashMap(lastEntry.matrix.firstNode.point1,lastEntry.matrix.firstNode.point2));
+	    	lastEntry = lastEntry.next;
+
+	    }
+	    return pathLocal;
+	}
+	
 }

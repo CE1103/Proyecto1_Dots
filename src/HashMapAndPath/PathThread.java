@@ -1,18 +1,24 @@
 package HashMapAndPath;
 
 public class PathThread implements Runnable {
+	
+	public void search() {
+		
+		
+	}
 
 	@Override
 	public void run() {
 		
 		try {
 			
-			while(noencuentrapath) {
+			while(point1 != point2) {
 				
 				if (encuentrapunto) {
 					
 					Thread t = new Thread(new PathThread());
 					t.setDaemon(true); t.start();
+					//recorrido
 					
 				}
 				
