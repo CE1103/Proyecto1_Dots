@@ -3,7 +3,7 @@ package HashMapAndPath;
 public class PathThread implements Runnable {
 	
 	@SuppressWarnings("deprecation")
-	public void func() {
+	public void startThread() {
 		
 		Thread t = new Thread(new PathThread());
 		t.start();
@@ -13,12 +13,9 @@ public class PathThread implements Runnable {
 
 	@Override
 	public void run() {
-			
-			while () {
-			
 			while (point1 != point2) {
 				
-				if (Path.isInNode()) {
+				if (buscarPunto) {
 					
 					Thread t = new Thread(new PathThread());
 					t.setDaemon(true); t.start();
@@ -28,9 +25,7 @@ public class PathThread implements Runnable {
 				
 			}
 			
-			throw new PathFinishException();
-			
-			}
+			return;
 
 	}
 
