@@ -16,6 +16,7 @@ import app.communication.ClientCommunication;
 import app.communication.Game;
 import app.communication.ServerCommunication;
 import app.queue.Queue;
+import app.queue.QueueElements;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -51,15 +52,14 @@ public class Main{
         
         SocketServer h = new SocketServer();
         
-        Queue queue = new Queue();
-        queue.enqueue(0);
-        queue.enqueue(1);
-        queue.enqueue(2);
+        
+        QueueElements queue = new QueueElements();
+        queue.Elements();
         queue.showAll();
         System.out.println("");
-       // queue.dequeue();
-        System.out.println("Elemento desencolado: " + queue.dequeue());
-        System.out.println("Ultimo Elemento en Cola: " + queue.peek());
+        queue.dequeue();
+        queue.showAll();
+        
         
         Thread t1 = new Thread(h);
         

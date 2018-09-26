@@ -1,8 +1,6 @@
 package app.queue;
 
-import Sockets.SocketServer;
-
-public class Queue extends SocketServer{
+public class Queue {
     
 	class Node {
         Object element;
