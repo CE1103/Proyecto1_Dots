@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.ArrayList.*;
 import java.util.ResourceBundle;
+
+import Sockets.SocketClient;
 import util.Util;
 import app.communication.*;
 import app.server.*;
@@ -40,6 +42,7 @@ public class GameController implements Initializable, ControlledScreen {
     private Polyline c1b, c2b, c3b, c4b, c5b, c6b, c7b, c8b, c9b, c10b, c11b, c12b, c13b, c14b, c15b, c16b, c17b, c18b, c19b, c20b, c21b, c22b, c23b, c24b, c25b, c26b, c27b, c28b, c29b, c30b, c31b, c32b, c33b, c34b, c35b, c36b, c37b, c38b, c39b, c40b, c41b, c42b, c43b, c44b, c45b, c46b, c47b, c48b, c49b;
     @FXML
     private static Rectangle s1;
+    
     
     
     ScreensController myController;
@@ -89,6 +92,7 @@ public class GameController implements Initializable, ControlledScreen {
     		System.out.println(Arrays.toString(Main.linesStatic));
     		System.out.println(Arrays.toString(Game.dots));
     		ClientCommunication.jsonDataSend();
+    		MainController.thread.start();
     	}else {
     		alert.setText("Linea Anteriormente Presionada");
     		alert.setStyle("-fx-text-fill: #95F4F1");
