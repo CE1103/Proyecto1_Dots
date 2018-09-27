@@ -1,7 +1,6 @@
-package app.queue;
+package app.communication;
 
 import Sockets.SocketServer;
-import app.queue.Queue;
 
 public class QueueElements extends Queue{
 	
