@@ -2,7 +2,7 @@ package HashMapAndPath;
 
 public class RemoveInside {
 	
-	public void removeInside() {
+	public void removeInside(PathList pathCreated) {
 		
 		
 		

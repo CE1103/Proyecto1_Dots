@@ -10,9 +10,9 @@ public boolean firstEmpty() {
 	
 }
 
-public DotsToLinesList(String line) {
+public DotsToLinesList(String line,int lineValue) {
 
-	DotsToLinesNode newDTLNode = new DotsToLinesNode(line);
+	DotsToLinesNode newDTLNode = new DotsToLinesNode(line,lineValue);
 	newDTLNode.next = firstNode;
 	firstNode = newDTLNode;
 	
