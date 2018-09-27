@@ -38,25 +38,41 @@ public class MainController implements Initializable, ControlledScreen {
     }
 
     @FXML
-    private void goToScreen2(ActionEvent event) throws IOException{      
+    private void goToScreen2(ActionEvent event) throws IOException, InterruptedException{      
 
 		myController.setScreen(Main.screen4ID);
 		g = new SocketClient();
 		Thread t2 = new Thread(g);
-		thread = new Thread(new Runnable(){
-
-			@Override
-			public void run() {
-				try {
-					g.timer();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				
-			}
-		});
 		g.setPort(8081);
+		Thread threadreset = new Thread(new Runnable() {			
+
+		@Override
+		public void run() {
+			try {
+				resetThread();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}});
+		threadreset.start();
 		t2.start();
+		
+    }
+    
+    public void resetThread() throws InterruptedException {
+    	while(true) {
+    		thread = new Thread(new Runnable(){
+    			@Override
+    			public void run() {
+    				try {
+    					g.timer();
+    				} catch (InterruptedException e) {
+    					e.printStackTrace();
+    				}
+    			}
+    		});
+    		Thread.sleep(500);
+    	}
     }
     
     @FXML

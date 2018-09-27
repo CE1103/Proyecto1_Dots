@@ -92,11 +92,7 @@ public class GameController implements Initializable, ControlledScreen {
     		System.out.println(Arrays.toString(Main.linesStatic));
     		System.out.println(Arrays.toString(Game.dots));
     		ClientCommunication.jsonDataSend();
-    		Thread temp = MainController.thread;
-    		System.out.println(temp);
     		MainController.thread.start();
-    		System.out.println(temp);
-    		MainController.thread = temp;
     	}else {
     		alert.setText("Linea Anteriormente Presionada");
     		alert.setStyle("-fx-text-fill: #95F4F1");
