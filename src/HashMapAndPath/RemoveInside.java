@@ -4,9 +4,11 @@ public class RemoveInside {
 	
 	public void removeInside(PathList pathCreated) {
 		
-		pathCreatedcurrent = pathCreated.firstNode;
+		NodeLinesPath pathCreatedCurrent = pathCreated.firstNode;
 		
-		while()
+		while(pathCreatedCurrent != null) {
+			
+		}
 		
 	}
 
