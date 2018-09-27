@@ -9,11 +9,11 @@ public class QueueThread implements Runnable{
 	@Override
 	public void run() {
 		
+		q.start();
 		p1.setDaemon(true);
 		p2.setDaemon(true);
 		p1.start(); 
 		p2.start();
-		q.start();
 		while (true) {
 			
 			

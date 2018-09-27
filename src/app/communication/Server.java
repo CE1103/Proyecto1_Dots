@@ -16,11 +16,13 @@ public class Server {
 	public String dots5;
 	public String dots6;
 	public String dots7;
+	public String turnPlayer1;
+	public String turnPlayer2;
 
 	
 	public Server() {
 		
-		lines = Arrays.toString(Main.linesStatic);
+		this.lines = Arrays.toString(Main.linesStatic);
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);
 		this.dots2 = Arrays.toString(Game.dots[2]);

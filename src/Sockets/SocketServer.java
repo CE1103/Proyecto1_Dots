@@ -24,6 +24,7 @@ public class SocketServer implements Runnable {
 	private DataOutputStream out;
 	private DataInputStream in;
 	public static int port1, port2, port3, port4, port5, port6;
+	public static String jsonData;
 	
 	public void setPort1(int port1) throws IOException {
 		this.port1 = port1;
@@ -49,7 +50,9 @@ public class SocketServer implements Runnable {
 				System.out.println("holaserver");
 				inputLine = in.readUTF();
 				System.out.println("holaserver2");
-				System.out.println(inputLine);
+				jsonData = inputLine;
+				ServerCommunication.jsonDataReceive();
+				System.out.println(ServerCommunication.jsonDataSend());
 				System.out.println("holaserver3");
 				out.writeUTF(ServerCommunication.jsonDataSend());
 				out.flush();

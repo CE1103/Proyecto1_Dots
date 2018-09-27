@@ -20,7 +20,7 @@ public class Game {
 	public static void linkedListToArray(){ // Mover Server
 		
 		NodeList LN = List.firstPointFinal;
-		System.out.println(List.firstPointFinal);
+//		System.out.println(List.firstPointFinal);
 		NodeList LN1 = LN.matrix.firstPoint;
 		int i = 0;
 		int j = 0;

@@ -45,7 +45,7 @@ public class Main{
     	l1 = app.server.List.createLinkedList();
         Game.linkedListToArray();
         m1 = util.Util.createHashMap();
-        System.out.println(Arrays.toString(linesStatic));
+//        System.out.println(Arrays.toString(linesStatic));
 //        System.out.println(ServerCommunication.jsonDataSend());
 //        System.out.println(ClientCommunication.jsonDataSend());
         

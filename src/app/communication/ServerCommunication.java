@@ -10,28 +10,27 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+import Sockets.SocketServer;
 import app.client.*;
 import util.Util;
 import app.server.*;
+import app.communication.*;
 
 public class ServerCommunication {
 	
-	public static String jsonDataServer;
+	public static Client client;
+	public static Server server;
 	
-//	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
-//		
-//		ObjectMapper mapper = new ObjectMapper();
-//		Server server = mapper.readValue(jsonDataServer, Server.class);
-//		jsonDataServer = mapper.writeValueAsString(server);
-//	}
+	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
+		
+		ObjectMapper mapper = new ObjectMapper();
+		client = mapper.readValue(SocketServer.jsonData, Client.class);
+	}
 	
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
 			
 			ObjectMapper mapper = new ObjectMapper();
-//			String lines = Arrays.toString(Main.linesStatic);
-//			lines = Server.linesStatic;
-//			System.out.println(lines);
-			Server server = new Server();
+			server = mapper.readValue(SocketServer.jsonData, Server.class);
 			String json = mapper.writeValueAsString(server);
 			System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(server));
 			return json;
