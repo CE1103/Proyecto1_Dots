@@ -18,7 +18,7 @@ import util.ControlledScreen;
 
 public class ScreensController  extends StackPane {
 
-   private HashMap<String, Node> screens = new HashMap<>();
+   private HashMap<String, Node> screens = new HashMap<>(); //Diccionario server
    
    public ScreensController() {
        super();
