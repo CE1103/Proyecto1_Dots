@@ -1,6 +1,6 @@
 package HashMapAndPath;
 
-import app.client.Main;
+import app.server.Main;;
 
 public class Path {
 

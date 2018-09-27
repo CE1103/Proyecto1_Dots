@@ -1,15 +1,16 @@
 package app.server;
 
-public class Player {
+import app.communication.Game;
+
+public class Player extends Game {
 	
-	public int points;
+	public static int points;
 	public boolean turn;
 	
 	public Player(int P) {
 		
-		this.points = 0;
+		points = 0;
 		this.turn = false;
-		
 	}
 	
 	public void switchTurn(){
@@ -31,11 +32,11 @@ public class Player {
 	}
 	
 	public void scorePoints(){
-		this.points += 2;
+		points += 2;
 	}
 	
-	public int getScore(){
-		return this.points;
+	public static int getScore(){
+		return points;
 	}
 
 }

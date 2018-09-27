@@ -1,8 +1,8 @@
- package util;
+package util;
  
 import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.core.type.TypeReference;
- 
+import java.util.Arrays;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -11,20 +11,10 @@ import java.util.HashMap;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
 
-import app.client.Game;
 import app.communication.Client;
 import app.server.*;
  
  public class Util {
- 	
- 	public static void sendToServer() throws JsonGenerationException, JsonMappingException, IOException{
- 		
- 		ObjectMapper mapper = new ObjectMapper();
- 		Client client = new Client(Arrays.toString(Game.lines));
- 		mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
- 		String json = mapper.writeValueAsString(client);
- 		System.out.println(json);
- 	}
  	
  	public static List creteLinkedList() {
  		int p = 0;
@@ -318,4 +308,12 @@ import app.server.*;
 		
 		return m1;
 	}
+	
+	public static void displayArray1(String[][] array) {
+		
+		for (int i = 0; i < 4; i++) {
+			System.out.println(Arrays.toString(array[i]));
+		}
+	}
+
  }
