@@ -18,16 +18,16 @@ public class PathThread implements Runnable {
 
 	@SuppressWarnings("deprecation")
 	public void startThread() {
-		
+		Main.path.display();
 		PathList a = copyPathList(Main.path);
 		NodeLinesPath lastEntry = Main.path.firstNode;
 		String point1 = lastEntry.matrix.firstNode.point1;
 		String point2 = lastEntry.matrix.firstNode.point2;
 		
-		Thread t = new Thread(new PathThread(point1, a, point2));
-		t.start();
-		while (t.isAlive()) {}
-		System.out.println("path");
+//		Thread t = new Thread(new PathThread(point1, a, point2));
+//		t.start();
+//		while (t.isAlive()) {}
+//		System.out.println("path");
 	}
 
 	@Override
