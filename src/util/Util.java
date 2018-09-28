@@ -182,6 +182,9 @@ import app.server.*;
 		m1.put("v54", new HashMapAndPath.ListHashMap("p54","p62"));
 		m1.put("v55", new HashMapAndPath.ListHashMap("p55","p63"));
 		m1.put("v56", new HashMapAndPath.ListHashMap("p56","p64"));	
+		
+		
+		m1.put("d1", new HashMapAndPath.ListHashMap("p1","p10"));
 
 
 		
