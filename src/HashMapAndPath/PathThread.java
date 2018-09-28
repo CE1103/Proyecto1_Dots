@@ -2,6 +2,8 @@ package HashMapAndPath;
 
 public class PathThread implements Runnable {
 	
+	public Path p = new Path();
+	
 	@SuppressWarnings("deprecation")
 	public void startThread() {
 		
