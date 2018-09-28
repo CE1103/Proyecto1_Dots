@@ -26,6 +26,8 @@ public class ServerCommunication {
 	
 	public static Client client;
 	public static Server server;
+	public static int contador = -1;
+	public static PathList temp1 = new PathList();
 	
 	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
 		
@@ -35,27 +37,30 @@ public class ServerCommunication {
 		Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(s);
 		String[] lines = FluentIterable.from(i).toArray(String.class);
 		System.out.println("\n\n lines \n\n");
-		System.out.println(Arrays.toString(lines));
 		try{
 			List LN = new List();
+
 			for (int n = (lines.length-1); n >= 0; n--) {
 				String str = lines[n];
-				if(!str.equals("null")) {
+				if((!str.equals("null")) && contador != n) {
 					System.out.println(lines[n]);
 					LN.addPoint(lines[n]);
+				}else {
+					temp1.addPathList(Main.m1.get(lines[n])); 
 				}
 				
 			}
+			contador++;
 			NodeList current = LN.firstPoint;
 			PathList p1 = new PathList();
-			while(current != null) {
+			while(current != null && current.pointNumber != null) {
 				p1.addPathList(Main.m1.get(current.pointNumber));
-				Main.m1.get(current.pointNumber).display();
 				current = current.next;
 			}
-		
 			Main.path = p1;
-			PathThread pathTest = new PathThread(null,null,null);
+			PathThread pathTest = new PathThread(null,new PathList(),null);
+			System.out.println("Se cayó esta mierda");
+			Main.path.display();
 			pathTest.startThread();
 			
 		}catch(NullPointerException e) {
