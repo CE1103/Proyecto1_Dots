@@ -26,6 +26,7 @@ public class ServerCommunication {
 	
 	public static Client client;
 	public static Server server;
+	public static int contador;
 	
 	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
 		
@@ -40,12 +41,13 @@ public class ServerCommunication {
 			List LN = new List();
 			for (int n = (lines.length-1); n >= 0; n--) {
 				String str = lines[n];
-				if(!str.equals("null")) {
+				if(!str.equals("null") && contador != n) {
 					System.out.println(lines[n]);
 					LN.addPoint(lines[n]);
 				}
 				
 			}
+			contador++;
 			NodeList current = LN.firstPoint;
 			PathList p1 = new PathList();
 			while(current != null) {
