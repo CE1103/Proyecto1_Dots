@@ -1,7 +1,7 @@
-package util;
+package app.server;
 
- public class List {
-	
+public class List {
+		
 	public NodeList firstPoint;
 	public static NodeList firstPointFinal;
 			
@@ -20,12 +20,11 @@ package util;
 		
 	}
 	
-	public void addPoint(String pointnumber) {
+	public void addPoint(String pointNumber) {
 	
-		NodeList newPoint = new NodeList(pointnumber);
+		NodeList newPoint = new NodeList(pointNumber);
 		newPoint.next = firstPoint;
 		firstPoint = newPoint;
-		
 	}
 	
 	public void displayPoint() {
@@ -36,7 +35,8 @@ package util;
 			while(LN1 != null) {
 				LN1.display();		
 				System.out.println("Next Link "+ LN1.next + "\n\n");
- 				
+
+				
 				LN1 = LN1.next;
 				
 			}
@@ -56,10 +56,28 @@ package util;
 		while (LN != null) {
 			LN.display();		
 			System.out.println("Next Link "+ LN.next + "\n\n");
- 			
+
+			
 			LN = LN.next;
 			
-		}
+		}		
 		
+	}
+	
+	public static List createLinkedList() { // Mover Server
+ 		int p = 0;
+ 		int q = 8;
+ 		List matrix = new List();
+ 		for(int i = 0; i < 8; i++) {
+ 			List list = new List();
+ 			for(int j = 0; j < 8; j++) {
+ 				list.addPoint("p" + Integer.toString((8*q)-p)); p++;
+ 			}
+ 			q--;
+			p=0;
+			matrix.addNode(list);
+		}
+		matrix.displayPoint();
+		return matrix;
 	}
 }

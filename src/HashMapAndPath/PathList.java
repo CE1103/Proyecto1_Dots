@@ -1,5 +1,6 @@
 package HashMapAndPath;
 
+import app.server.NodeList;
 
 public class PathList {
 	
