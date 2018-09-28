@@ -4,7 +4,7 @@ import app.server.NodeList;
 
 public class PathList {
 	
-	NodeLinesPath firstNode;
+	public NodeLinesPath firstNode;
 	
 	public boolean firstEmpty() {
 		

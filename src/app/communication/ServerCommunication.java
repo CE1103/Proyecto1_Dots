@@ -12,8 +12,10 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.common.base.*;
 import com.google.common.collect.FluentIterable;
 
+import HashMapAndPath.NodeLinesPath;
 import HashMapAndPath.Path;
 import HashMapAndPath.PathList;
+import HashMapAndPath.PathThread;
 import Sockets.SocketServer;
 import app.client.*;
 import util.Util;
@@ -48,13 +50,13 @@ public class ServerCommunication {
 			PathList p1 = new PathList();
 			while(current != null) {
 				p1.addPathList(Main.m1.get(current.pointNumber));
-				Main.m1.get(current.pointNumber).display();;
+				Main.m1.get(current.pointNumber).display();
 				current = current.next;
 			}
 		
 			Main.path = p1;
-			Path pathTest = new Path();
-			pathTest.figureRecognition();
+			PathThread pathTest = new PathThread(null,null,null);
+			pathTest.startThread();
 			
 		}catch(NullPointerException e) {
 			System.out.println(e);
