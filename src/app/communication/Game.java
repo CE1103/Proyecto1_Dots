@@ -39,6 +39,4 @@ public class Game {
 			j++; i = 0;
 		}
 	}
-	
-
 }

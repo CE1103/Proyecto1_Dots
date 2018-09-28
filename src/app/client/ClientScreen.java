@@ -17,7 +17,6 @@ public class ClientScreen extends Application {
 
         ScreensController mainContainer = new ScreensController();
         mainContainer.loadScreen(Main.screen1ID, Main.screen1File);
-        mainContainer.loadScreen(Main.screen2ID, Main.screen2File);
         mainContainer.loadScreen(Main.screen3ID, Main.screen3File);
         mainContainer.loadScreen(Main.screen4ID, Main.screen4File);
         
