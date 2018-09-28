@@ -1,5 +1,6 @@
 package app.communication;
 
+import app.client.GameOver;
 import app.server.List;
 import app.server.NodeList;
 import app.server.Player;
@@ -39,6 +40,5 @@ public class Game {
 			j++; i = 0;
 		}
 	}
-	
 
 }
