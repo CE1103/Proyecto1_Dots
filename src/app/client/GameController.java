@@ -49,9 +49,7 @@ public class GameController implements Initializable, ControlledScreen {
     ScreensController myController;
     public int i = 0;
     
-    Game g1 = new Game();
-    Path pathTest = new Path();
-    
+    Game g1 = new Game();   
     
     
     
@@ -85,10 +83,7 @@ public class GameController implements Initializable, ControlledScreen {
     		Main.linesStatic[i] = ((Line)event.getSource()).getId();
     		//System.out.println(Main.lines[i] + i); 
     		i++;
-
-    		Main.path.addPathList(Main.m1.get(((Line)event.getSource()).getId()));
-    		Main.path.display();
-    		pathTest.figureRecognition();  		    		
+		
     		System.out.println(Arrays.toString(Main.linesStatic));
     		System.out.println(Arrays.toString(Game.dots));
     		ClientCommunication.jsonDataSend();

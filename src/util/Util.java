@@ -12,26 +12,10 @@ import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
 
 import app.communication.Client;
+import app.communication.ServerCommunication;
 import app.server.*;
  
  public class Util {
- 	
- 	public static List creteLinkedList() {
- 		int p = 0;
- 		int q = 4;
- 		List matrix = new List();
- 		for(int i = 0; i < 4; i++) {
- 			List list = new List();
- 			for(int j = 0; j < 4; j++) {
- 				list.addPoint("p" + Integer.toString((4*q)-p)); p++;
- 			}
- 			q--;
-			p=0;
-			matrix.addNode(list);
-		}
-		matrix.displayPoint();
-		return matrix;
-	}
 	
 	public static String[][] linkedListToArray(){
 		
@@ -56,7 +40,22 @@ import app.server.*;
 		return arrays;
 	}
 	
-	public static void displayArray(String[][] array) {
+	public static List arrayToNode(String[] array) {
+		List NL = new List();
+		System.out.println(Arrays.toString(array));
+		for (int n = (array.length-1); n >= 0; n--) {
+			String str = array[array.length-1];
+			if(str != array[n]) {
+				System.out.println(array[n]);
+				NL.addPoint(array[n]);
+			}
+			
+		}
+		return NL;
+	}
+	
+	
+	public static void displayMatrixArray(String[][] array) {
 		
 		for (int i = 0; i < 4; i++) {
 			for (int n = 0; n < 4; n++) {
@@ -65,6 +64,7 @@ import app.server.*;
 			System.out.println("siguiente array" + "\n\n");
 		}
 	}
+	
 	
 	public static HashMap<String, HashMapAndPath.ListHashMap> createHashMap(){
 		HashMap<String, HashMapAndPath.ListHashMap> m1 = new HashMap<>();

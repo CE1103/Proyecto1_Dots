@@ -25,7 +25,6 @@ public class Path {
 
 			if (point1 == point2) {
 				System.out.println("Path Found");
-				new RemoveInside().removeInside(pathCreated);
 				break;
 			}else if(localCurrent == null) {
 				point1="";
