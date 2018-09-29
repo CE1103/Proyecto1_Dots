@@ -14,7 +14,6 @@ public class ScoreTracker {
 		while(true) {
 			if(Main.linesStatic[i] != null) {
 				i ++;
-				ClientPrinter.setScore(event);
 			}
 		}
 	}

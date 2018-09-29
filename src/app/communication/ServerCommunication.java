@@ -34,16 +34,15 @@ public class ServerCommunication {
 		ObjectMapper mapper = new ObjectMapper();
 		client = mapper.readValue(SocketServer.jsonData, Client.class);
 		String s = client.lines;
+		Player.switchTurn();
 		Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(s);
 		String[] lines = FluentIterable.from(i).toArray(String.class);
-		System.out.println("\n\n lines \n\n");
 		try{
 			List LN = new List();
 
 			for (int n = (lines.length-1); n >= 0; n--) {
 				String str = lines[n];
 				if((!str.equals("null")) && contador != n) {
-					System.out.println(lines[n]);
 					LN.addPoint(lines[n]);
 				}else {
 					temp1.addPathList(Main.m1.get(lines[n])); 
@@ -59,13 +58,9 @@ public class ServerCommunication {
 			}
 			Main.path = p1;
 			PathThread pathTest = new PathThread(null,new PathList(),null);
-			System.out.println("Se cayó esta mierda");
-			Main.path.display();
 			pathTest.startThread();
 			
-		}catch(NullPointerException e) {
-			System.out.println(e);
-		}
+		}catch(NullPointerException e) {}
 	}
 	
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{

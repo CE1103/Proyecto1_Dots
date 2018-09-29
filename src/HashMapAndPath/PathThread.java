@@ -20,17 +20,11 @@ public class PathThread implements Runnable {
 	public void startThread() {
 
 		PathList a = copyPathList(Main.path);
-		System.out.println("f1");
 		NodeLinesPath lastEntry = Main.path.firstNode;
-		System.out.println("f3");
 
 		Util.pathThreadOn = true;
-		System.out.println("f4");
 		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.matrix.firstNode.point1, a, ServerCommunication.temp1.firstNode.matrix.firstNode.point2));
-		System.out.println("f5");
 		t.start();
-		System.out.println("f6");
-		while (t.isAlive()) {}
 	}
 
 	@Override
@@ -43,9 +37,6 @@ public class PathThread implements Runnable {
 						if (localCurrent.matrix.firstNode.point1 == currentPoint) {
 
 							PathList a = copyPathList(pathList);
-							System.out.println(currentPoint);
-							System.out.println(localCurrent.matrix.firstNode.point1);
-							System.out.println(localCurrent.matrix.firstNode.point2);
 							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
 							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point2,a,lookingFor));
 							t.setDaemon(false); t.start();
@@ -55,11 +46,6 @@ public class PathThread implements Runnable {
 
 
 							PathList a = copyPathList(pathList);
-							System.out.println("\n\n"+currentPoint+"\n\n");
-							System.out.println(localCurrent.matrix.firstNode.point1+"\n\n");
-							System.out.println(localCurrent.matrix.firstNode.point2+"\n\n");
-							a.display();
-							System.out.println("\n\n");
 							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
 							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point1,a,lookingFor));
 							t.setDaemon(false); t.start();
@@ -68,9 +54,8 @@ public class PathThread implements Runnable {
 						}else {
 							localCurrent = localCurrent.next;		 
 						}
-					} System.out.println("fin de thread"); return;
+					} return;
 				} else {
-					System.out.println("fin");
 					return;
 				}
 			}

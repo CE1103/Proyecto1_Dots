@@ -49,17 +49,13 @@ public class SocketServer implements Runnable {
 			while (true) {
 				System.out.println("holaserver");
 				inputLine = in.readUTF();
-				System.out.println("holaserver2");
 				jsonData = inputLine;
 				ServerCommunication.jsonDataReceive();
 				System.out.println(ServerCommunication.jsonDataSend());
-				System.out.println("holaserver3");
 				out.writeUTF(ServerCommunication.jsonDataSend());
 				out.flush();
 			}
-		}catch (Exception e) {
-			System.out.println(e);
-		}
+		}catch (Exception e) {}
 		
 	}
 	

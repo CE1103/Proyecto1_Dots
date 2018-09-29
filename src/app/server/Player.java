@@ -13,13 +13,15 @@ public class Player extends Game {
 		this.turn = false;
 	}
 	
-	public void switchTurn(){
+	public static void switchTurn(){
 		
-		if(this.turn){
-			this.turn = false;
+		if(Game.P1.turn == true){
+			Game.P1.turn = false;
+			Game.P2.turn = true;
 		}
 		else {
-			this.turn = true;
+			Game.P1.turn = true;
+			Game.P2.turn = false;
 		}
 	}
 	
