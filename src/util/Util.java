@@ -185,8 +185,54 @@ import app.server.*;
 		
 		
 		m1.put("d1", new HashMapAndPath.ListHashMap("p1","p10"));
-
-
+		m1.put("d2", new HashMapAndPath.ListHashMap("p2","p11"));
+		m1.put("d3", new HashMapAndPath.ListHashMap("p3","p12"));
+		m1.put("d4", new HashMapAndPath.ListHashMap("p4","p13"));
+		m1.put("d5", new HashMapAndPath.ListHashMap("p5","p14"));
+		m1.put("d6", new HashMapAndPath.ListHashMap("p6","p15"));
+		m1.put("d7", new HashMapAndPath.ListHashMap("p7","p16"));
+		m1.put("d8", new HashMapAndPath.ListHashMap("p9","p18"));
+		m1.put("d9", new HashMapAndPath.ListHashMap("p10","p19"));
+		m1.put("d10", new HashMapAndPath.ListHashMap("p11","p20"));
+		m1.put("d11", new HashMapAndPath.ListHashMap("p12","p21"));
+		m1.put("d12", new HashMapAndPath.ListHashMap("p13","p22"));
+		m1.put("d13", new HashMapAndPath.ListHashMap("p14","p23"));
+		m1.put("d14", new HashMapAndPath.ListHashMap("p15","p24"));
+		m1.put("d15", new HashMapAndPath.ListHashMap("p17","p26"));
+		m1.put("d16", new HashMapAndPath.ListHashMap("p18","p27"));
+		m1.put("d17", new HashMapAndPath.ListHashMap("p19","p28"));
+		m1.put("d18", new HashMapAndPath.ListHashMap("p20","p29"));
+		m1.put("d19", new HashMapAndPath.ListHashMap("p21","p30"));
+		m1.put("d20", new HashMapAndPath.ListHashMap("p22","p31"));
+		m1.put("d21", new HashMapAndPath.ListHashMap("p23","p32"));
+		m1.put("d22", new HashMapAndPath.ListHashMap("p25","p34"));
+		m1.put("d23", new HashMapAndPath.ListHashMap("p26","p35"));
+		m1.put("d24", new HashMapAndPath.ListHashMap("p27","p36"));
+		m1.put("d25", new HashMapAndPath.ListHashMap("p28","p37"));
+		m1.put("d26", new HashMapAndPath.ListHashMap("p29","p38"));
+		m1.put("d27", new HashMapAndPath.ListHashMap("p30","p39"));
+		m1.put("d28", new HashMapAndPath.ListHashMap("p31","p40"));
+		m1.put("d29", new HashMapAndPath.ListHashMap("p33","p42"));
+		m1.put("d30", new HashMapAndPath.ListHashMap("p34","p43"));
+		m1.put("d31", new HashMapAndPath.ListHashMap("p35","p44"));
+		m1.put("d32", new HashMapAndPath.ListHashMap("p36","p45"));
+		m1.put("d33", new HashMapAndPath.ListHashMap("p37","p46"));
+		m1.put("d34", new HashMapAndPath.ListHashMap("p38","p47"));
+		m1.put("d35", new HashMapAndPath.ListHashMap("p39","p48"));
+		m1.put("d36", new HashMapAndPath.ListHashMap("p41","p50"));
+		m1.put("d37", new HashMapAndPath.ListHashMap("p42","p51"));
+		m1.put("d38", new HashMapAndPath.ListHashMap("p43","p52"));
+		m1.put("d39", new HashMapAndPath.ListHashMap("p44","p53"));
+		m1.put("d40", new HashMapAndPath.ListHashMap("p45","p54"));
+		m1.put("d41", new HashMapAndPath.ListHashMap("p46","p55"));
+		m1.put("d42", new HashMapAndPath.ListHashMap("p47","p56"));
+		m1.put("d43", new HashMapAndPath.ListHashMap("p49","p58"));
+		m1.put("d44", new HashMapAndPath.ListHashMap("p50","p59"));
+		m1.put("d45", new HashMapAndPath.ListHashMap("p51","p60"));
+		m1.put("d46", new HashMapAndPath.ListHashMap("p52","p61"));
+		m1.put("d47", new HashMapAndPath.ListHashMap("p53","p62"));
+		m1.put("d48", new HashMapAndPath.ListHashMap("p54","p63"));
+		m1.put("d49", new HashMapAndPath.ListHashMap("p55","p64"));
 		
 		
 		return m1;
