@@ -16,6 +16,8 @@ import app.communication.ServerCommunication;
 import app.server.*;
  
  public class Util {
+	 
+	 public static boolean pathThreadOn = false;
 	
 	public static String[][] linkedListToArray(){
 		
