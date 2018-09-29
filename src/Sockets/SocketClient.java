@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import app.communication.Client;
 import app.communication.ClientCommunication;
+import app.communication.Game;
 
 public class SocketClient implements Runnable{
 	
@@ -57,16 +58,18 @@ public class SocketClient implements Runnable{
 				String str;
 				while(true) {
 					System.out.println("holaclient");
-					out.writeUTF(ClientCommunication.jsonDataSend());
-					out.flush();
+					
+					if(Game.P1.turn) {
+						out.writeUTF(ClientCommunication.jsonDataSend());
+						out.flush();
+					}
+
 					Thread.sleep(500);
-					System.out.println("holaclient2");
 					str = in.readUTF();
+					
 					Client client = mapper.readValue(str, Client.class);
-					System.out.println("holaclient6");
 					System.out.println(str);
 					System.out.println(ClientCommunication.jsonDataSend());
-					System.out.println("holaclient3");
 					wait();
 				}	
 			}catch(Exception e) {

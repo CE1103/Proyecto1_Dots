@@ -18,6 +18,7 @@ public class ClientCommunication {
 		
 		ObjectMapper mapper = new ObjectMapper();
 		Client client = mapper.readValue(jsonDataClient, Client.class);
+		
 	}
 	
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
