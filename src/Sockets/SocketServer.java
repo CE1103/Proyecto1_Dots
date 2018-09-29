@@ -33,6 +33,7 @@ public class SocketServer implements Runnable {
 	public void stop() throws IOException {
 		
 		out.close();
+		in.close();
 		clientSocket.close();
 		serverSocket.close();
 		
@@ -57,7 +58,6 @@ public class SocketServer implements Runnable {
 			}
 		}catch (Exception e) {}
 		
-	}
-	
+	}	
 
 }
