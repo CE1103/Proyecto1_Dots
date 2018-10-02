@@ -1,11 +1,12 @@
 package app.communication;
 
-import Sockets.SocketServer;
 import util.PortList;
+import util.PortNode;
 
 public class QueueElements extends Queue{
 	
-	PortList p1 = new PortList();
+	private PortList p1 = new PortList();
+	public static int currentPort = 8099;
 	
 	public void Elements() {
 		
@@ -13,10 +14,17 @@ public class QueueElements extends Queue{
 			p1.addPortList(i);
 		}
 		
-		while (true) {
-			
-			
+	}
+	
+	
+	public void givePort() {
+		PortNode currentNode = p1.firstNode;
+		if(currentNode.port>currentPort) {
+			currentPort = currentNode.port;
+		}else if(currentPort == 8106){
+			currentPort = 8100;
+		}else {
+			currentNode = currentNode.next;
 		}
-		
 	}
 }

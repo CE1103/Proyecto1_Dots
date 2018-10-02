@@ -1,11 +1,9 @@
 package util;
 
-import HashMapAndPath.NodeHashMap;
-
 public class PortNode {
 	
-	int port;
-	PortNode next;
+	public int port;
+	public PortNode next;
 	
 	
 	public PortNode(int port) {
