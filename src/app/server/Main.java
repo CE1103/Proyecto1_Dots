@@ -54,11 +54,11 @@ public class Main{
         
         
         QueueElements queue = new QueueElements();
-        queue.Elements();
-        queue.showAll();
-        System.out.println("");
-        queue.dequeue();
-        queue.showAll();
+//        queue.Elements();
+//        queue.showAll();
+//        System.out.println("");
+//        queue.dequeue();
+//        queue.showAll();
         
         
         Thread t1 = new Thread(h);
