@@ -16,8 +16,6 @@ public class Client {
 	public String dots5;
 	public String dots6;
 	public String dots7;
-	public String turnPlayer1;
-	public String turnPlayer2;
 
 	public Client() {
 		
