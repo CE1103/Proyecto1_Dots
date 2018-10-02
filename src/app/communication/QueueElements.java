@@ -1,15 +1,22 @@
 package app.communication;
 
 import Sockets.SocketServer;
+import util.PortList;
 
 public class QueueElements extends Queue{
 	
+	PortList p1 = new PortList();
+	
 	public void Elements() {
 		
-		enqueue(SocketServer.port3);
-		enqueue(SocketServer.port4);
-		enqueue(SocketServer.port5);
-		enqueue(SocketServer.port6);
+		for(int i = 8100; i < 8107; i++) {
+			p1.addPortList(i);
+		}
+		
+		while (true) {
+			
+			
+		}
 		
 	}
 }

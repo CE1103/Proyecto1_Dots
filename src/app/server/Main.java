@@ -48,23 +48,8 @@ public class Main{
 //        System.out.println(Arrays.toString(linesStatic));
 //        System.out.println(ServerCommunication.jsonDataSend());
 //        System.out.println(ClientCommunication.jsonDataSend());
-        
-        
-        SocketServer h = new SocketServer();
-        
-        
-        QueueElements queue = new QueueElements();
-        queue.Elements();
-        queue.showAll();
-        System.out.println("");
-        queue.dequeue();
-        queue.showAll();
-        
-        
-        Thread t1 = new Thread(h);
-        
-        h.setPort1(8081);
-        t1.start();
+	     QueueElements queue = new QueueElements();
+	     ClientThreads.createClientThreads();
         
     }
     
