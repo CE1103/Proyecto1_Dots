@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -70,6 +71,14 @@ public class ServerCommunication {
 			String json = mapper.writeValueAsString(server);
 			System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(server));
 			return json;
+	}
+	
+	public static String jsonPortSend() throws JsonProcessingException {
+		ObjectMapper mapper = new ObjectMapper();
+		JsonQueue jsonQueue = new JsonQueue();
+		String json = mapper.writeValueAsString(jsonQueue);
+		System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonQueue));
+		return json;
 	}
 	
 	
