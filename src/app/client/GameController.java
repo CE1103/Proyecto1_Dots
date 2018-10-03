@@ -68,37 +68,40 @@ public class GameController implements Initializable, ControlledScreen {
 	
     public void onMouseClick(MouseEvent event) throws Exception {
     	
-    	boolean a = true;
-    	for(int c=0;c<161;c++) {
-    		
-    		if(((Line)event.getSource()).getId()==Main.linesStatic[c]) {
-    			a = false;
-    		}    		
-    	}
-    	if(a) {
-    		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-    		alert.setText(" ");  
-    		
-    		ClientPrinter.setScore(event);
-    		
-//    		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
-//    		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
+    	if(Player.turn) {
+    		boolean a = true;
+        	for(int c=0;c<161;c++) {
+        		
+        		if(((Line)event.getSource()).getId()==Main.linesStatic[c]) {
+        			a = false;
+        		}    		
+        	}
+        	if(a) {
+        		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
+        		alert.setText(" ");  
+        		
+//        		ClientPrinter.setScore(event);
+        		
+//        		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
+//        		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
 
-    		
-    		Main.linesStatic[i] = ((Line)event.getSource()).getId();
-    		i++;
-    		
-    		System.out.println(Arrays.toString(Main.linesStatic));
-    		
-    		
-    		System.out.println(Arrays.toString(Main.linesStatic));
-    		System.out.println(Arrays.toString(Game.dots));
-    		ClientCommunication.jsonDataSend();
-    		MainController.thread.start();
-    	}else {
-    		alert.setText("Linea Anteriormente Presionada");
-    		alert.setStyle("-fx-text-fill: #95F4F1");
+        		
+        		Main.linesStatic[i] = ((Line)event.getSource()).getId();
+        		i++;
+        		
+        		System.out.println(Arrays.toString(Main.linesStatic));
+        		
+        		
+        		System.out.println(Arrays.toString(Main.linesStatic));
+        		System.out.println(Arrays.toString(Game.dots));
+        		ClientCommunication.jsonDataSend();
+        		MainController.thread.start();
+        	}else {
+        		alert.setText("Linea Anteriormente Presionada");
+        		alert.setStyle("-fx-text-fill: #95F4F1");
+        	}
     	}
+    	
     }
 	
 }
