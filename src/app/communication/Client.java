@@ -6,7 +6,7 @@ import app.server.Main;
 import app.server.Player;
 
 public class Client {
-	
+
 	public String lines;
 	public String dots0;
 	public String dots1;

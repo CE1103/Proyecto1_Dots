@@ -1,4 +1,4 @@
-package app.queue;
+package app.communication;
 
 public class Queue {
     

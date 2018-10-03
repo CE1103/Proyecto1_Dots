@@ -1,14 +1,8 @@
-package app.queue;
+package app.communication;
 
 import Sockets.SocketServer;
-import app.queue.Queue;
 
 public class QueueElements extends Queue{
-	
-	public void GamePorts() {
-		enqueue(SocketServer.port1);
-		enqueue(SocketServer.port2);
-	}
 	
 	public void Elements() {
 		
