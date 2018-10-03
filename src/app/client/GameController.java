@@ -101,6 +101,9 @@ public class GameController implements Initializable, ControlledScreen {
         		alert.setText("Linea Anteriormente Presionada");
         		alert.setStyle("-fx-text-fill: #95F4F1");
         	}
+        	
+        	
+        	
     	}
     	
     }

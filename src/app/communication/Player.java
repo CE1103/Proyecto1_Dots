@@ -12,7 +12,6 @@ public class Player extends Game {
 	}
 	
 	public static void switchTurn(){
-		
 		if(turn){
 			turn = false;
 		}

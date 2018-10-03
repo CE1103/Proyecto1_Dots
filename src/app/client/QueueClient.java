@@ -6,6 +6,7 @@ import java.net.Socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import app.communication.Game;
 import app.communication.JsonQueue;
 import app.communication.Player;
 
@@ -28,16 +29,18 @@ public class QueueClient implements Runnable{
 			System.out.println("1");
 			jsonQueue = mapper.readValue(str, JsonQueue.class);
 			System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(str));
-			
-			if (jsonQueue.port == 8100) {
-				player = 1;
-				Player.turn = true;
-			} else if (jsonQueue.port == 8101) {
-				player = 2;	
-				Player.turn = false;
-			} else {
-				player = 3;
-			}
+//			
+//			if (jsonQueue.port == 8100) {
+//				player = 1;
+//				
+//				Player.turn = true;
+//			} else if (jsonQueue.port == 8101) {
+//				player = 2;	
+//				
+//				Player.turn = false;
+//			} else {
+//				player = 3;
+//			}
 			clientSocket.close();
 			in.close();
 			
