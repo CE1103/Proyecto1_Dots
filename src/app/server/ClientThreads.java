@@ -7,6 +7,8 @@ import app.communication.QueueElements;
 
 public class ClientThreads{
 	
+	public static int co = 0;
+	
 	public static void createClientThreads() throws IOException {
 		
 		 SocketServer h = new SocketServer();
