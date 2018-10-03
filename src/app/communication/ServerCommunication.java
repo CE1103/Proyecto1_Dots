@@ -58,7 +58,7 @@ public class ServerCommunication {
 				current = current.next;
 			}
 			Main.path = p1;
-			PathThread pathTest = new PathThread(null,new PathList(),null);
+			PathThread pathTest = new PathThread(null,new PathList(),null,null);
 			pathTest.startThread();
 			
 		}catch(NullPointerException e) {}
