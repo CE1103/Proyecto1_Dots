@@ -44,7 +44,7 @@ public class MainController implements Initializable, ControlledScreen {
 		g = new SocketClient();
 		Thread t2 = new Thread(g);
 		g.setPort(QueueClient.jsonQueue.port);
-		Thread threadreset = new Thread(new Runnable() {			
+		Thread threadReset = new Thread(new Runnable() {			
 
 		@Override
 		public void run() {
@@ -55,7 +55,7 @@ public class MainController implements Initializable, ControlledScreen {
 				e.printStackTrace();
 			}
 		}});
-		threadreset.start();
+		threadReset.start();
 		t2.start();
 		
     }

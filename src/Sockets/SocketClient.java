@@ -73,7 +73,7 @@ public class SocketClient implements Runnable{
 					Thread.sleep(500);
 					str = in.readUTF();
 					
-					Client client = mapper.readValue(str, Client.class);
+					ClientCommunication.client = mapper.readValue(str, Client.class);
 					System.out.println(str);
 					System.out.println(ClientCommunication.jsonDataSend());
 					wait();
