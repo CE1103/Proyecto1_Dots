@@ -66,6 +66,7 @@ public class SocketServer implements Runnable {
 				System.out.println(ServerCommunication.jsonDataSend());
 				out.writeUTF(ServerCommunication.jsonDataSend());
 				out.flush();
+				ClientThreads.co++;
 			}
 		}catch (Exception e) {}
 		
