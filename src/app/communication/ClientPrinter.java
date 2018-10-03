@@ -1,6 +1,5 @@
-package app.server;
+package app.communication;
 
-import app.communication.Game;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
@@ -13,11 +12,9 @@ public class ClientPrinter extends Game {
 			((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
 			
 		}
-		else{
-			if(P2.getTurn()) {
+		else if(P2.getTurn()) {
 				((Line)event.getSource()).setStroke(Color.web("#95F4F1"));
-			}
-			
 		}
+		
 	}
 }
