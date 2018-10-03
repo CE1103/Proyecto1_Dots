@@ -48,10 +48,21 @@ public class SocketServer implements Runnable {
 			in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 			String inputLine;
 			while (true) {
+				if (port1 == 8100) {
+					if ((ClientThreads.co % 2) == 0) {
+						inputLine = in.readUTF();
+						jsonData = inputLine;
+						ServerCommunication.jsonDataReceive();						
+					}
+				} else if (port1 == 8101) {
+					if ((ClientThreads.co % 2) != 0) {
+						inputLine = in.readUTF();
+						jsonData = inputLine;
+						ServerCommunication.jsonDataReceive();	
+					}
+				}
 				System.out.println("holaserver");
-				inputLine = in.readUTF();
-				jsonData = inputLine;
-				ServerCommunication.jsonDataReceive();
+				
 				System.out.println(ServerCommunication.jsonDataSend());
 				out.writeUTF(ServerCommunication.jsonDataSend());
 				out.flush();
