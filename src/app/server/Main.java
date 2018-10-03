@@ -7,7 +7,6 @@ import java.util.HashMap;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-import app.server.ScoreTracker;
 import HashMapAndPath.PathList;
 import Sockets.SocketClient;
 import Sockets.SocketServer;

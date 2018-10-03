@@ -23,7 +23,6 @@ import javafx.scene.shape.Polyline;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import util.*;
-import app.server.ScoreTracker;
 
 public class GameController implements Initializable, ControlledScreen {
 	
@@ -79,10 +78,11 @@ public class GameController implements Initializable, ControlledScreen {
     		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
     		alert.setText(" ");  
     		
+    		ClientPrinter.setScore(event);
+    		
 //    		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
 //    		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
-    		
-    		
+
     		
     		Main.linesStatic[i] = ((Line)event.getSource()).getId();
     		i++;

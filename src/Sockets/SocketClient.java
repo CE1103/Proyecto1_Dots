@@ -51,7 +51,7 @@ public class SocketClient implements Runnable{
 		synchronized (this){
 			try {
 				ObjectMapper mapper = new ObjectMapper();
-				clientSocket = new Socket("192.168.43.163", port);
+				clientSocket = new Socket("192.168.1.230", port);
 				out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 				in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 				Thread.sleep(500);
