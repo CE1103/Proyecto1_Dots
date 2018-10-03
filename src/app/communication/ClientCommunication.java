@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+import app.client.QueueClient;
 import app.server.Main;
 
 public class ClientCommunication {
@@ -25,8 +26,7 @@ public class ClientCommunication {
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
-		client = mapper.readValue(jsonDataClient, Client.class);
-		Client c = new Client(client.lines);
+		Client c = new Client(QueueClient.linesCl);
 		String json = mapper.writeValueAsString(c);
 		return json;
 	}
