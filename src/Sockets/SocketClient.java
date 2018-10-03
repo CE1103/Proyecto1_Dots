@@ -61,6 +61,7 @@ public class SocketClient implements Runnable{
 				Thread.sleep(500);
 				String str;
 				while(true) {
+					Thread.sleep(1000);
 					System.out.println("holaclient");
 					
 					if(Player.turn) {
@@ -75,8 +76,10 @@ public class SocketClient implements Runnable{
 					
 					ClientCommunication.client = mapper.readValue(str, Client.class);
 					System.out.println(str);
+					Player.turn = ClientCommunication.client.turn;
 					System.out.println(ClientCommunication.jsonDataSend());
-					if(ClientCommunication.client.turn) {
+
+					if (Player.turn) {
 						wait();
 					}
 				}	
