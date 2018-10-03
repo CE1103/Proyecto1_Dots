@@ -35,13 +35,13 @@ public class SocketClient implements Runnable{
 		
 	}
 	
-	public void timer() throws InterruptedException {
-		synchronized(this) {
-			Thread.sleep(1000);
-			System.out.println("hola3");
-			notify();
-		}
-	}
+//	public void timer() throws InterruptedException {
+//		synchronized(this) {
+//			Thread.sleep(1000);
+//			System.out.println("hola3");
+//			notify();
+//		}
+//	}
 	
 	public void stopConnection() throws IOException {
 		
@@ -63,10 +63,10 @@ public class SocketClient implements Runnable{
 				while(true) {
 					System.out.println("holaclient");
 					
-//					if(Player.turn) {
+					if(Player.turn) {
 						out.writeUTF(ClientCommunication.jsonDataSend());
 						out.flush();
-//					}
+					}
 //					
 //					Player.switchTurn();					
 
@@ -75,8 +75,11 @@ public class SocketClient implements Runnable{
 					
 					ClientCommunication.client = mapper.readValue(str, Client.class);
 					System.out.println(str);
+					Player.turn = ClientCommunication.client.turn;
 					System.out.println(ClientCommunication.jsonDataSend());
-					wait();
+					if (Player.turn) {
+						wait();
+					}
 				}	
 			}catch(Exception e) {
 			System.out.println(e);
