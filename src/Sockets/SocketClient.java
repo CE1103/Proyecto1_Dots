@@ -62,13 +62,12 @@ public class SocketClient implements Runnable{
 				while(true) {
 					System.out.println("holaclient");
 					
-					if(Player.turn) {
+//					if(Player.turn) {
 						out.writeUTF(ClientCommunication.jsonDataSend());
 						out.flush();
-					}
-					
-					Player.switchTurn();
-					
+//					}
+//					
+//					Player.switchTurn();					
 
 					Thread.sleep(500);
 					str = in.readUTF();

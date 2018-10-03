@@ -68,7 +68,8 @@ public class GameController implements Initializable, ControlledScreen {
 	
     public void onMouseClick(MouseEvent event) throws Exception {
     	
-    	if(Player.turn) {
+    	if(!Player.turn) {
+    		
     		boolean a = true;
         	for(int c=0;c<161;c++) {
         		
@@ -100,6 +101,9 @@ public class GameController implements Initializable, ControlledScreen {
         		alert.setText("Linea Anteriormente Presionada");
         		alert.setStyle("-fx-text-fill: #95F4F1");
         	}
+        	
+        	
+        	
     	}
     	
     }
