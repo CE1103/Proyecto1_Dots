@@ -61,6 +61,7 @@ public class SocketServer implements Runnable {
 						ServerCommunication.jsonDataReceive();	
 					}
 				}
+				Player.switchTurn();
 				System.out.println("holaserver");
 				
 				System.out.println(ServerCommunication.jsonDataSend());

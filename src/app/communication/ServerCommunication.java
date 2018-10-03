@@ -35,7 +35,6 @@ public class ServerCommunication {
 		ObjectMapper mapper = new ObjectMapper();
 		client = mapper.readValue(SocketServer.jsonData, Client.class);
 		String s = client.lines;
-		Player.switchTurn();
 		Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(s);
 		String[] lines = FluentIterable.from(i).toArray(String.class);
 		try{
