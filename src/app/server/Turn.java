@@ -1,5 +1,6 @@
 package app.server;
 
+import app.communication.Player;
 
 public class Turn{
 	

@@ -15,9 +15,12 @@ import java.util.Scanner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import app.client.QueueClient;
 import app.communication.Client;
 import app.communication.ClientCommunication;
+import app.communication.ClientPrinter;
 import app.communication.Game;
+import app.communication.Player;
 
 public class SocketClient implements Runnable{
 	
@@ -59,10 +62,13 @@ public class SocketClient implements Runnable{
 				while(true) {
 					System.out.println("holaclient");
 					
-					if(Game.P1.turn) {
+					if(Player.turn) {
 						out.writeUTF(ClientCommunication.jsonDataSend());
 						out.flush();
 					}
+					
+					Player.switchTurn();
+					
 
 					Thread.sleep(500);
 					str = in.readUTF();

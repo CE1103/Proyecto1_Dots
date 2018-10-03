@@ -1,11 +1,9 @@
-package app.server;
-
-import app.communication.Game;
+package app.communication;
 
 public class Player extends Game {
 	
 	public static int points;
-	public boolean turn;
+	public static boolean turn;
 	
 	public Player(int P) {
 		
@@ -13,13 +11,13 @@ public class Player extends Game {
 		this.turn = false;
 	}
 	
-	public void switchTurn(){
+	public static void switchTurn(){
 		
-		if(this.turn){
-			this.turn = false;
+		if(turn){
+			turn = false;
 		}
 		else {
-			this.turn = true;
+			turn = true;
 		}
 	}
 	
