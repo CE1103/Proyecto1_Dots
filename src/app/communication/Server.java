@@ -18,6 +18,7 @@ public class Server {
 	public String dots7;
 	public String turnPlayer1;
 	public String turnPlayer2;
+	public int counter;
 
 	
 	public Server() {
