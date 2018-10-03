@@ -16,6 +16,7 @@ import app.communication.ClientCommunication;
 import app.communication.Game;
 import app.communication.Queue;
 import app.communication.QueueElements;
+import app.communication.QueueThread;
 import app.communication.ServerCommunication;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -48,8 +49,11 @@ public class Main{
 //        System.out.println(Arrays.toString(linesStatic));
 //        System.out.println(ServerCommunication.jsonDataSend());
 //        System.out.println(ClientCommunication.jsonDataSend());
+        
 	     QueueElements queue = new QueueElements();
 	     ClientThreads.createClientThreads();
+	     Thread z = new Thread(new QueueThread());
+	     z.start();
         
     }
     

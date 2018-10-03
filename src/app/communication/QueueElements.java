@@ -3,7 +3,7 @@ package app.communication;
 
 public class QueueElements extends Queue{
 	
-	public static int currentPort = 8100;
+	public static int currentPort = 8099;
 
 	
 	public static int givePort() {

@@ -23,7 +23,7 @@ public class SocketServer implements Runnable {
 	private Socket clientSocket;
 	private DataOutputStream out;
 	private DataInputStream in;
-	public static int port1, port2, port3, port4, port5, port6;
+	public int port1;
 	public static String jsonData;
 	
 	public void setPort1(int port1) throws IOException {
