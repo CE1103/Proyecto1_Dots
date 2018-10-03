@@ -65,11 +65,11 @@ public class MainController implements Initializable, ControlledScreen {
     		thread = new Thread(new Runnable(){
     			@Override
     			public void run() {
-//    				try {
-//    					g.timer();
-//    				} catch (InterruptedException e) {
-//    					e.printStackTrace();
-//    				}
+    				try {
+    					g.timer();
+    				} catch (InterruptedException e) {
+    					e.printStackTrace();
+    				}
     			}
     		});
     		Thread.sleep(500);

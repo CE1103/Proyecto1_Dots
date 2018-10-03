@@ -68,7 +68,7 @@ public class GameController implements Initializable, ControlledScreen {
 	
     public void onMouseClick(MouseEvent event) throws Exception {
     	
-    	if(ClientCommunication.client.turn) {
+    	if(Player.turn) {
     		boolean a = true;
         	for(int c=0;c<161;c++) {
         		

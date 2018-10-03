@@ -35,13 +35,13 @@ public class SocketClient implements Runnable{
 		
 	}
 	
-//	public void timer() throws InterruptedException {
-//		synchronized(this) {
-//			Thread.sleep(1000);
-//			System.out.println("hola3");
-//			notify();
-//		}
-//	}
+	public void timer() throws InterruptedException {
+		synchronized(this) {
+			Thread.sleep(1000);
+			System.out.println("hola3");
+			notify();
+		}
+	}
 	
 	public void stopConnection() throws IOException {
 		
@@ -61,6 +61,7 @@ public class SocketClient implements Runnable{
 				Thread.sleep(500);
 				String str;
 				while(true) {
+					Thread.sleep(1000);
 					System.out.println("holaclient");
 					
 					if(Player.turn) {
