@@ -107,6 +107,9 @@ public class GameController implements Initializable, ControlledScreen {
         	
         	
     	}
+    	else{
+    		System.out.println("Ni picha NEGROOO");
+    	}
     	
     }
 	
