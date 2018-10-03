@@ -63,10 +63,10 @@ public class SocketClient implements Runnable{
 				while(true) {
 					System.out.println("holaclient");
 					
-//					if(Player.turn) {
+					if(Player.turn) {
 						out.writeUTF(ClientCommunication.jsonDataSend());
 						out.flush();
-//					}
+					}
 //					
 //					Player.switchTurn();					
 
@@ -76,7 +76,9 @@ public class SocketClient implements Runnable{
 					ClientCommunication.client = mapper.readValue(str, Client.class);
 					System.out.println(str);
 					System.out.println(ClientCommunication.jsonDataSend());
-					wait();
+					if(ClientCommunication.client.turn) {
+						wait();
+					}
 				}	
 			}catch(Exception e) {
 			System.out.println(e);
