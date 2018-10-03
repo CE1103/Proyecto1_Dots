@@ -13,11 +13,12 @@ import app.server.Main;
 public class ClientCommunication {
 	
 	public static String jsonDataClient;
+	public static Client client;
 	
 	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
-		Client client = mapper.readValue(jsonDataClient, Client.class);
+		client = mapper.readValue(jsonDataClient, Client.class);
 		
 	}
 	
