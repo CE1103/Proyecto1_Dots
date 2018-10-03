@@ -15,8 +15,7 @@ public class Client {
 	public String dots5;
 	public String dots6;
 	public String dots7;
-	public boolean turnPlayer1;
-	public boolean turnPlayer2;
+	public boolean turn;
 
 	public Client() {
 		
