@@ -9,6 +9,8 @@ public class PathThread implements Runnable {
 	String lookingFor;
 	PathList pathList;
 	String currentPoint;
+	PathList currentPath;
+	
 	public PathThread(String firstPoint, PathList pathList, String lookingFor) {
 
 		this.currentPoint = firstPoint;
