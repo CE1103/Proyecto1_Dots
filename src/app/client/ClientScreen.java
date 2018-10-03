@@ -36,6 +36,7 @@ public class ClientScreen extends Application {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		
         launch(args);
+        Thread t = new Thread(new QueueClient());
 	}
 
 }

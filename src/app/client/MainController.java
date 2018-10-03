@@ -43,7 +43,7 @@ public class MainController implements Initializable, ControlledScreen {
 		myController.setScreen(Main.screen4ID);
 		g = new SocketClient();
 		Thread t2 = new Thread(g);
-		g.setPort(8081);
+		g.setPort(QueueClient.jsonQueue.port);
 		Thread threadreset = new Thread(new Runnable() {			
 
 		@Override
