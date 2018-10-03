@@ -17,9 +17,9 @@ public class Client {
 	public String dots7;
 	public boolean turn;
 
-	public Client() {
+	public Client(String lines) {
 		
-		lines = Arrays.toString(Main.linesStatic);
+		this.lines = lines;
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);
 		this.dots2 = Arrays.toString(Game.dots[2]);
