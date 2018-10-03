@@ -49,6 +49,7 @@ public class MainController implements Initializable, ControlledScreen {
 		@Override
 		public void run() {
 			try {
+				System.out.println("hola2");
 				resetThread();
 			} catch (InterruptedException e) {
 				e.printStackTrace();

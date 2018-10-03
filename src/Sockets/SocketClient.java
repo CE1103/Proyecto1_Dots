@@ -38,6 +38,7 @@ public class SocketClient implements Runnable{
 	public void timer() throws InterruptedException {
 		synchronized(this) {
 			Thread.sleep(1000);
+			System.out.println("hola3");
 			notify();
 		}
 	}
