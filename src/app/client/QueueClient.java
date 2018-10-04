@@ -15,6 +15,7 @@ public class QueueClient implements Runnable{
 	
 	public static JsonQueue jsonQueue;
 	public static int player;
+	public static String linesCl;
 
 	@Override
 	public void run() {
@@ -48,11 +49,8 @@ public class QueueClient implements Runnable{
 					q.showAll();
 				}
 			}
-<<<<<<< HEAD
 			
 			linesCl = jsonQueue.linesJson;
-=======
->>>>>>> branch '8x8_Merge' of https://github.com/DotsCE1103/Proyecto1_Dots.git
 			clientSocket.close();
 			in.close();
 			
