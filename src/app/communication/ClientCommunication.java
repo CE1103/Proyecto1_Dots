@@ -26,8 +26,7 @@ public class ClientCommunication {
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
-		Client c = new Client(QueueClient.linesCl);
-		String json = mapper.writeValueAsString(c);
+		String json = mapper.writeValueAsString(Client.class);
 		return json;
 	}
 

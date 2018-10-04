@@ -73,8 +73,12 @@ public class SocketClient implements Runnable{
 
 					Thread.sleep(500);
 					str = in.readUTF();					
+<<<<<<< HEAD
 //					ClientCommunication.client = mapper.readValue(str, Client.class);
 					QueueClient.linesCl = ClientCommunication.client.lines;
+=======
+					ClientCommunication.client = mapper.readValue(str, Client.class);
+>>>>>>> branch '8x8_Merge' of https://github.com/DotsCE1103/Proyecto1_Dots.git
 					System.out.println(str);
 					Player.turn = ClientCommunication.client.turn;
 					System.out.println(ClientCommunication.jsonDataSend());
