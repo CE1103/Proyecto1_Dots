@@ -29,7 +29,6 @@ public class ClientCommunication {
 		String lines = Arrays.toString(Main.linesStatic);
 		client = new Client(lines);
 		String json = mapper.writeValueAsString(client);
-		return json;	
+		return json;
 	}
-
 }
