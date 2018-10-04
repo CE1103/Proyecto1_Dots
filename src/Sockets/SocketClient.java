@@ -55,7 +55,7 @@ public class SocketClient implements Runnable{
 		synchronized (this){
 			try {
 				ObjectMapper mapper = new ObjectMapper();
-				clientSocket = new Socket("192.168.1.230", port);
+				clientSocket = new Socket("192.168.43.55", port);
 				out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 				in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 				Thread.sleep(500);
@@ -65,14 +65,18 @@ public class SocketClient implements Runnable{
 					System.out.println("holaclient");
 					
 					if(Player.turn) {
+						System.out.println("hola45");
 						out.writeUTF(ClientCommunication.jsonDataSend());
 						out.flush();
 					}
 //					
-//					Player.switchTurn();					
+//					Player.switchTurn();
+				
 
 					Thread.sleep(500);
-					str = in.readUTF();					
+					System.out.println("asdf");
+					str = in.readUTF();		
+					System.out.println("asdfjgie");
 
 //					ClientCommunication.client = mapper.readValue(str, Client.class);
 					QueueClient.linesCl = ClientCommunication.client.lines;
