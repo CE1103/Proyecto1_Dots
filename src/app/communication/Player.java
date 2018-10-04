@@ -1,6 +1,6 @@
 package app.communication;
 
-public class Player extends Game {
+public class Player {
 	
 	public static int points;
 	public static boolean turn;

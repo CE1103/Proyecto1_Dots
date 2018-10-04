@@ -73,7 +73,7 @@ public class SocketClient implements Runnable{
 
 					Thread.sleep(500);
 					str = in.readUTF();					
-					ClientCommunication.client = mapper.readValue(str, Client.class);
+//					ClientCommunication.client = mapper.readValue(str, Client.class);
 					QueueClient.linesCl = ClientCommunication.client.lines;
 					System.out.println(str);
 					Player.turn = ClientCommunication.client.turn;
