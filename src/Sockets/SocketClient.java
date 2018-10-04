@@ -79,14 +79,14 @@ public class SocketClient implements Runnable{
 					System.out.println("asdfjgie");
 
 //					ClientCommunication.client = mapper.readValue(str, Client.class);
-					QueueClient.linesCl = ClientCommunication.client.lines;
+//					QueueClient.linesCl = ClientCommunication.client.lines;
 
 					ClientCommunication.client = mapper.readValue(str, Client.class);
 					System.out.println(str);
-					Player.turn = ClientCommunication.client.turn;
+//					Player.turn = ClientCommunication.client.turn;
 					System.out.println(ClientCommunication.jsonDataSend());
 
-					if (Player.turn) {
+					if (ClientCommunication.client.turn) {
 						wait();
 					}
 				}	
