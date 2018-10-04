@@ -49,8 +49,6 @@ public class Main{
         
         
         SocketServer h = new SocketServer();
-       
-        
         
         Thread t1 = new Thread(h);
         

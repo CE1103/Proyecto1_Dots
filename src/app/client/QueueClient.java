@@ -23,7 +23,7 @@ public class QueueClient implements Runnable{
 			
 			ObjectMapper mapper = new ObjectMapper();
 			System.out.println("hola");
-			Socket clientSocket = new Socket("192.168.1.230", 7000);
+			Socket clientSocket = new Socket("192.168.43.55", 7000);
 			System.out.println("3");
 			DataInputStream in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 			System.out.println("2");
@@ -43,10 +43,10 @@ public class QueueClient implements Runnable{
 			} else {
 				player = 3;
 				
-				while(jsonQueue.port > 8101) {
+				if(jsonQueue.port > 8101) {
 					Queue q = new Queue();
 					q.enqueue(jsonQueue.port);
-					q.showAll();
+//					q.showAll();
 				}
 			}
 			
