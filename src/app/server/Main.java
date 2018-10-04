@@ -14,7 +14,6 @@ import app.client.ScreensController;
 import app.communication.ClientCommunication;
 import app.communication.Game;
 import app.communication.Queue;
-import app.communication.QueueElements;
 import app.communication.ServerCommunication;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -50,14 +49,7 @@ public class Main{
         
         
         SocketServer h = new SocketServer();
-        
-        
-        QueueElements queue = new QueueElements();
-//        queue.Elements();
-//        queue.showAll();
-//        System.out.println("");
-//        queue.dequeue();
-//        queue.showAll();
+       
         
         
         Thread t1 = new Thread(h);

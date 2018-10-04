@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import app.communication.Game;
 import app.communication.JsonQueue;
 import app.communication.Player;
+import app.communication.Queue;
 
 public class QueueClient implements Runnable{
 	
@@ -41,7 +42,14 @@ public class QueueClient implements Runnable{
 				Player.turn = false;
 			} else {
 				player = 3;
+				
+				while(jsonQueue.port > 8101) {
+					Queue q = new Queue();
+					q.enqueue(jsonQueue.port);
+					q.showAll();
+				}
 			}
+			
 			linesCl = jsonQueue.linesJson;
 			clientSocket.close();
 			in.close();
