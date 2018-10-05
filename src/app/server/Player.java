@@ -33,12 +33,16 @@ public class Player extends Game {
 		return this.turn;
 	}
 	
-	public void scorePointsHV(){
-		score += 2;
+	public void scorePointsF(int scoreToAdd){
+		score += scoreToAdd;
 	}
 	
-	public void scorePointsD() {
-		score ++;
+	public static void scorePoints(int scoreToAdd) {
+		if (Game.P1.getTurn()){
+			Game.P1.scorePointsF(scoreToAdd);
+		} else if (Game.P2.getTurn()) {
+			Game.P2.scorePointsF(scoreToAdd);
+		}
 	}
 	
 	public static int getScore(){

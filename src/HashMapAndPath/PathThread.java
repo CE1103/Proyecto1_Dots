@@ -2,6 +2,7 @@ package HashMapAndPath;
 
 import app.communication.ServerCommunication;
 import app.server.Main;
+import app.server.ScoreTracker;
 import util.Util;
 
 public class PathThread implements Runnable {
@@ -23,9 +24,13 @@ public class PathThread implements Runnable {
 	public void startThread() {
 
 		PathList a = copyPathList(Main.path);
-
+		PathList b = new PathList();
+		b.addPathList(new ListHashMap(ServerCommunication.temp1.firstNode.matrix.firstNode.point1, 
+				ServerCommunication.temp1.firstNode.matrix.firstNode.point2));
 		Util.pathThreadOn = true;
-		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.matrix.firstNode.point1, a, ServerCommunication.temp1.firstNode.matrix.firstNode.point2,new PathList()));
+		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.matrix.firstNode.point1, a,
+				ServerCommunication.temp1.firstNode.matrix.firstNode.point2, b
+				));
 		t.start();
 	}
 
@@ -33,7 +38,6 @@ public class PathThread implements Runnable {
 	public void run() {
 		if(Util.pathThreadOn) {			
 			NodeLinesPath localCurrent = pathList.firstNode;
-			int score = 0;
 			while (currentPoint != lookingFor) {
 				if (Util.pathThreadOn) {
 					while(localCurrent != null) {
@@ -43,7 +47,6 @@ public class PathThread implements Runnable {
 							PathList b = copyPathList(currentPath);
 							b.addPathList(new ListHashMap(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2));
 							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
-							score++;
 							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point2,a,lookingFor,b));
 							t.setDaemon(false); t.start();
 							localCurrent = localCurrent.next;
@@ -55,7 +58,6 @@ public class PathThread implements Runnable {
 							PathList b = copyPathList(currentPath);
 							b.addPathList(new ListHashMap(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2));
 							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
-							score++;
 							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point1,a,lookingFor,b));
 							t.setDaemon(false); t.start();
 							localCurrent = localCurrent.next;
@@ -68,14 +70,22 @@ public class PathThread implements Runnable {
 					return;
 				}
 			}
-			System.out.println(score);
-			currentPath.display();
+			
+			ScoreTracker.scoredPoints(currentPath);
+
 			Util.pathThreadOn = false;
-			return;
-		}else{
+
 			return;
 
+		}else{
+
+			return;
+
+
+
 		}
+
+
 
 	}
 

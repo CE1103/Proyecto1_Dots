@@ -17,6 +17,14 @@ public class NodeLinesPath {
 		System.out.println(matrix.firstNode.point2);
 		
 	}
+
+	public ListHashMap getMatrix() {
+		return matrix;
+	}
+
+	public void setMatrix(ListHashMap matrix) {
+		this.matrix = matrix;
+	}
 	
 
 }
