@@ -1,28 +1,15 @@
 package app.server;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashMap;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-import app.server.ScoreTracker;
 import HashMapAndPath.PathList;
-import Sockets.SocketClient;
-import Sockets.SocketServer;
-import app.client.ScreensController;
-import app.communication.ClientCommunication;
 import app.communication.Game;
-import app.communication.Queue;
 import app.communication.QueueElements;
 import app.communication.QueueThread;
-import app.communication.ServerCommunication;
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import util.*;
 
 
 public class Main{

@@ -1,19 +1,10 @@
 package util;
  
-import com.fasterxml.jackson.core.*;
-import com.fasterxml.jackson.core.type.TypeReference;
-import java.util.Arrays;
-import java.io.File;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.*;
-
-import app.communication.Client;
-import app.communication.ServerCommunication;
-import app.server.*;
+import app.server.List;
+import app.server.NodeList;
  
  public class Util {
 	 

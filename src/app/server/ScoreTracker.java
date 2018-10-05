@@ -1,7 +1,5 @@
 package app.server;
 
-import javafx.scene.input.MouseEvent;
-
 public class ScoreTracker {
 	
 	public static int i = 0;

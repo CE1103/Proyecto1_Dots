@@ -2,19 +2,15 @@ package Sockets;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
+
 import app.communication.ServerCommunication;
-import app.server.*;
+import app.server.ClientThreads;
+import app.server.Player;
 
 
 public class SocketServer implements Runnable {

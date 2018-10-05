@@ -3,7 +3,6 @@ package app.communication;
 import java.util.Arrays;
 
 import app.server.Main;
-import app.server.Player;
 
 public class Client {
 	

@@ -1,27 +1,21 @@
 package app.communication;
 
 import java.io.IOException;
-import java.net.InetAddress;
-import java.util.Arrays;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.google.common.base.*;
+import com.google.common.base.CharMatcher;
+import com.google.common.base.Splitter;
 import com.google.common.collect.FluentIterable;
 
-import HashMapAndPath.NodeLinesPath;
-import HashMapAndPath.Path;
 import HashMapAndPath.PathList;
 import HashMapAndPath.PathThread;
 import Sockets.SocketServer;
-import app.client.*;
-import util.Util;
-import app.server.*;
-import app.communication.*;
+import app.server.List;
+import app.server.Main;
+import app.server.NodeList;
 
 public class ServerCommunication {
 	

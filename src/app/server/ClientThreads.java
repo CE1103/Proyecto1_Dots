@@ -3,7 +3,6 @@ package app.server;
 import java.io.IOException;
 
 import Sockets.SocketServer;
-import app.communication.QueueElements;
 
 public class ClientThreads{
 	

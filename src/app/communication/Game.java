@@ -4,9 +4,6 @@ import app.server.List;
 import app.server.NodeList;
 import app.server.Player;
 import app.server.Turn;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
 
 
 public class Game {
