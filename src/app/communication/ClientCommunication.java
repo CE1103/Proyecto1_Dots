@@ -8,25 +8,26 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+import app.client.QueueClient;
 import app.server.Main;
 
 public class ClientCommunication {
 	
 	public static String jsonDataClient;
+	public static Client client;
 	
-	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
-		
-		ObjectMapper mapper = new ObjectMapper();
-		Client client = mapper.readValue(jsonDataClient, Client.class);
-	}
+//	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
+//		
+//		ObjectMapper mapper = new ObjectMapper();
+//		client = mapper.readValue(jsonDataClient, Client.class);
+//		
+//	}
 	
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
-		String lines = Arrays.toString(Main.linesStatic);
-		Client client = new Client();
-		String json = mapper.writeValueAsString(client);
+		Client c = new Client();
+		String json = mapper.writeValueAsString(c);
 		return json;
 	}
-
 }

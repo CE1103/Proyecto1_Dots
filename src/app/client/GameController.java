@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 
 import Sockets.SocketClient;
 import util.Util;
+import app.client.data.SharedData;
 import app.communication.*;
 import app.server.*;
 import javafx.fxml.FXML;
@@ -21,8 +22,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polyline;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import util.*;
-import app.server.ScoreTracker;
 
 public class GameController implements Initializable, ControlledScreen {
 	
@@ -42,16 +43,13 @@ public class GameController implements Initializable, ControlledScreen {
     private Polyline c1b, c2b, c3b, c4b, c5b, c6b, c7b, c8b, c9b, c10b, c11b, c12b, c13b, c14b, c15b, c16b, c17b, c18b, c19b, c20b, c21b, c22b, c23b, c24b, c25b, c26b, c27b, c28b, c29b, c30b, c31b, c32b, c33b, c34b, c35b, c36b, c37b, c38b, c39b, c40b, c41b, c42b, c43b, c44b, c45b, c46b, c47b, c48b, c49b;
     @FXML
     private static Rectangle s1;
-    
-    
+    @FXML
+    private Text textPlayer1, textPlayer2;
     
     ScreensController myController;
-    public int i = 0;
+    public static int x = 0;
     
     Game g1 = new Game();
-    
-    
-    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -65,39 +63,54 @@ public class GameController implements Initializable, ControlledScreen {
     
 	
     public void onMouseClick(MouseEvent event) throws Exception {
-    	boolean a = true;
-    	for(int c=0;c<161;c++) {
-    		
-    		if(((Line)event.getSource()).getId()==Main.linesStatic[c]) {
-    			a = false;
-    		}    		
+    	
+    	if(ClientCommunication.client.turn) {
+    		boolean a = true;
+        	for(int c=0;c<161;c++) {
+        		
+        		if(((Line)event.getSource()).getId().equals(Main.linesStatic[c])) {
+        			a = false;
+        		}    		
+        	}
+        	if(a) {
+        		//System.out.println("This line id is - " + ((Line)event.getSource()).getId());
+        		alert.setText(" ");  
+        		
+
+        		
+//        		labelP1.setText(Integer.toString(Player.getScore()) + " pts");
+//        		labelP2.setText(Integer.toString(Player.getScore()) + " pts");
+
+        		
+        		Main.linesStatic[x] = ((Line)event.getSource()).getId();
+        		x++;
+        		
+        		System.out.println(Arrays.toString(Main.linesStatic));
+        		
+        		
+        		ClientPrinter.setScore(event);
+        		ClientPrinter.updateLineColor(((Line)event.getSource()).getId());
+        		
+        		System.out.println(Arrays.toString(Main.linesStatic));
+        		System.out.println(Arrays.toString(Game.dots));
+        		ClientCommunication.jsonDataSend();
+        		System.out.println("hola");
+        		MainController.thread.start();
+        	}
+        	
+        	else {
+        		alert.setText("Linea Anteriormente Presionada");
+        		alert.setStyle("-fx-text-fill: #95F4F1");
+        	}
+        	
+        	
+        	
     	}
-    	if(a) {
-    		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-    		alert.setText(" ");  
-    		//ScoreTracker.Search(event);
-//    		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
-//    		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
-    		
-    		Main.linesStatic[i] = ((Line)event.getSource()).getId();
-    		//System.out.println(Main.lines[i] + i); 
-    		i++;
-    		
-    		//System.out.println(((Line)event.getSource()).getId());
-    		System.out.println(Arrays.toString(Main.linesStatic));
-    		//Main.path.addPathList(Main.m1.get(((Line)event.getSource()).getId()));
-    		//Main.path.display();
-    		
-    		
-    		System.out.println(Arrays.toString(Main.linesStatic));
-    		System.out.println(Arrays.toString(Game.dots));
-    		ClientCommunication.jsonDataSend();
-    		MainController.thread.start();
-    	}else {
-    		alert.setText("Linea Anteriormente Presionada");
-    		alert.setStyle("-fx-text-fill: #95F4F1");
-    		//System.out.println("Line pressed");
+    	else{
+    		System.out.println("Ni picha NEGROOO");
     	}
+    	
     }
+    
 	
 }

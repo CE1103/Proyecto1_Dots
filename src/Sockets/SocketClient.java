@@ -11,12 +11,22 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.CharMatcher;
+import com.google.common.base.Splitter;
+import com.google.common.collect.FluentIterable;
 
+import app.client.GameController;
+import app.client.QueueClient;
 import app.communication.Client;
 import app.communication.ClientCommunication;
+import app.communication.ClientPrinter;
+import app.communication.Player;
+import app.server.Game;
+import app.server.Main;
 
 public class SocketClient implements Runnable{
 	
@@ -34,6 +44,7 @@ public class SocketClient implements Runnable{
 	public void timer() throws InterruptedException {
 		synchronized(this) {
 			Thread.sleep(1000);
+			System.out.println("hola3");
 			notify();
 		}
 	}
@@ -50,28 +61,51 @@ public class SocketClient implements Runnable{
 		synchronized (this){
 			try {
 				ObjectMapper mapper = new ObjectMapper();
-				clientSocket = new Socket("192.168.1.83", port);
+				clientSocket = new Socket("192.168.1.11", port);
 				out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 				in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 				Thread.sleep(500);
 				String str;
 				while(true) {
+					Thread.sleep(1000);
 					System.out.println("holaclient");
-					out.writeUTF(ClientCommunication.jsonDataSend());
-					out.flush();
+					
+					if(Player.turn) {
+						System.out.println("hola45");
+						out.writeUTF(ClientCommunication.jsonDataSend());
+						out.flush();
+					}
+					
+					Player.switchTurn();
+				
+
 					Thread.sleep(500);
-					System.out.println("holaclient2");
-					str = in.readUTF();
-					Client client = mapper.readValue(str, Client.class);
-					System.out.println("holaclient6");
+					System.out.println("asdf");
+					str = in.readUTF();		
+					System.out.println("asdfjgie");
+//					System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(str));
+					
+//					ClientCommunication.client = mapper.readValue(str, Client.class);
+//					QueueClient.linesCl = ClientCommunication.client.lines;
+
+					ClientCommunication.client = mapper.readValue(str, Client.class);
 					System.out.println(str);
+					Player.turn = ClientCommunication.client.turn;
 					System.out.println(ClientCommunication.jsonDataSend());
-					System.out.println("holaclient3");
-					wait();
+
+					if (Player.turn) {
+					    String linesString = ClientCommunication.client.lines;
+						Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(linesString);
+						Main.linesStatic = FluentIterable.from(i).toArray(String.class);
+						wait();
+					} else {
+						GameController.x++;
+					}
 				}	
 			}catch(Exception e) {
 			System.out.println(e);
 			}
 		}
+		
 	}
 }
