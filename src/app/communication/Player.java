@@ -1,5 +1,8 @@
 package app.communication;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+
 public class Player {
 	
 	public static int points;
@@ -28,7 +31,7 @@ public class Player {
 		return this.turn;
 	}
 	
-	public void scorePoints(){
+	public static void scorePoints(){
 		points += 2;
 	}
 	

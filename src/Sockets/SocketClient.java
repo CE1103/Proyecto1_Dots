@@ -24,8 +24,8 @@ import app.client.QueueClient;
 import app.communication.Client;
 import app.communication.ClientCommunication;
 import app.communication.ClientPrinter;
-import app.communication.Game;
 import app.communication.Player;
+import app.server.Game;
 import app.server.Main;
 
 public class SocketClient implements Runnable{
@@ -61,7 +61,7 @@ public class SocketClient implements Runnable{
 		synchronized (this){
 			try {
 				ObjectMapper mapper = new ObjectMapper();
-				clientSocket = new Socket("192.168.1.230", port);
+				clientSocket = new Socket("192.168.1.11", port);
 				out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 				in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 				Thread.sleep(500);
@@ -106,5 +106,6 @@ public class SocketClient implements Runnable{
 			System.out.println(e);
 			}
 		}
+		
 	}
 }

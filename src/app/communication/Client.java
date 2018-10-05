@@ -2,6 +2,7 @@ package app.communication;
 
 import java.util.Arrays;
 
+import app.server.Game;
 import app.server.Main;
 
 public class Client {

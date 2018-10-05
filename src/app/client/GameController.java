@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 
 import Sockets.SocketClient;
 import util.Util;
+import app.client.data.SharedData;
 import app.communication.*;
 import app.server.*;
 import javafx.fxml.FXML;
@@ -45,15 +46,10 @@ public class GameController implements Initializable, ControlledScreen {
     @FXML
     private Text textPlayer1, textPlayer2;
     
-    
-    
     ScreensController myController;
     public static int x = 0;
     
     Game g1 = new Game();
-    
-    
-    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -77,13 +73,13 @@ public class GameController implements Initializable, ControlledScreen {
         		}    		
         	}
         	if(a) {
-        		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
+        		//System.out.println("This line id is - " + ((Line)event.getSource()).getId());
         		alert.setText(" ");  
         		
-        		ClientPrinter.setScore(event);
+
         		
-//        		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
-//        		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
+//        		labelP1.setText(Integer.toString(Player.getScore()) + " pts");
+//        		labelP2.setText(Integer.toString(Player.getScore()) + " pts");
 
         		
         		Main.linesStatic[x] = ((Line)event.getSource()).getId();
@@ -91,6 +87,9 @@ public class GameController implements Initializable, ControlledScreen {
         		
         		System.out.println(Arrays.toString(Main.linesStatic));
         		
+        		
+        		ClientPrinter.setScore(event);
+        		ClientPrinter.updateLineColor(((Line)event.getSource()).getId());
         		
         		System.out.println(Arrays.toString(Main.linesStatic));
         		System.out.println(Arrays.toString(Game.dots));
@@ -112,5 +111,6 @@ public class GameController implements Initializable, ControlledScreen {
     	}
     	
     }
+    
 	
 }

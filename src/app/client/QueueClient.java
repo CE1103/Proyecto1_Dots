@@ -6,10 +6,10 @@ import java.net.Socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import app.communication.Game;
 import app.communication.JsonQueue;
 import app.communication.Player;
 import app.communication.Queue;
+import app.server.Game;
 
 public class QueueClient implements Runnable{
 	
@@ -43,10 +43,11 @@ public class QueueClient implements Runnable{
 			} else {
 				player = 3;
 				
-				if(jsonQueue.port > 8101) {
+				while(jsonQueue.port > 8101) {
 					Queue q = new Queue();
 					q.enqueue(jsonQueue.port);
 //					q.showAll();
+					break;
 				}
 			}
 			
