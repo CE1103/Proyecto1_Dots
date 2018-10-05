@@ -1,7 +1,5 @@
 package app.communication;
 
-import java.util.Arrays;
-
 public class JsonQueue {
 	
 	public int port;
