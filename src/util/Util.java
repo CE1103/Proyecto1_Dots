@@ -381,7 +381,7 @@ import app.server.NodeList;
 				d = 0;
 				
 			}else {
-				System.out.println("opopopopop");
+				
 			}
 			
 			d += 1;
