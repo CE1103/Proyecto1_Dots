@@ -48,7 +48,7 @@ public class GameController implements Initializable, ControlledScreen {
     
     
     ScreensController myController;
-    public int i = 0;
+    public static int x = 0;
     
     Game g1 = new Game();
     
@@ -68,11 +68,11 @@ public class GameController implements Initializable, ControlledScreen {
 	
     public void onMouseClick(MouseEvent event) throws Exception {
     	
-    	if(Player.turn) {
+    	if(ClientCommunication.client.turn) {
     		boolean a = true;
         	for(int c=0;c<161;c++) {
         		
-        		if(((Line)event.getSource()).getId()==Main.linesStatic[c]) {
+        		if(((Line)event.getSource()).getId().equals(Main.linesStatic[c])) {
         			a = false;
         		}    		
         	}
@@ -86,8 +86,8 @@ public class GameController implements Initializable, ControlledScreen {
 //        		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
 
         		
-        		Main.linesStatic[i] = ((Line)event.getSource()).getId();
-        		i++;
+        		Main.linesStatic[x] = ((Line)event.getSource()).getId();
+        		x++;
         		
         		System.out.println(Arrays.toString(Main.linesStatic));
         		
