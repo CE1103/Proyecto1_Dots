@@ -16,19 +16,34 @@ public class RemoveInside {
 			LPC.addListPathCreated(Main.m2.get(pathCreatedCurrent.matrix.firstNode.point1 + " " + 
 			pathCreatedCurrent.matrix.firstNode.point2));
 			
+			
+			
 		}
+		NodePathCreated CurrentNode = LPC.firstNode;
 		Main.linesStatic[c] = "d";
 		while(LPC != null) {
 			
 			while() {
+				
+				if() {
+					
+				}else if() {
+					
+				}else if() {
+					
+				}else {
+					
+				}
+				
 				
 			}
 			
 			
 			
 		}
-		
 	}
+		
+	
 
 	public void removeUp() {
 		
