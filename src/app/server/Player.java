@@ -15,7 +15,7 @@ public class Player extends Game {
 	
 	public static void switchTurn(){
 		
-		if(Game.P1.turn == true){
+		if(Game.P1.turn){
 			Game.P1.turn = false;
 			Game.P2.turn = true;
 		}

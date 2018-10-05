@@ -23,14 +23,25 @@ public class ServerCommunication {
 	public static Server server;
 	public static int contador = -1;
 	public static PathList temp1 = new PathList();
+	public static String[] RecentLines = new String[161];
 	
 	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
 		
 		ObjectMapper mapper = new ObjectMapper();
+		System.out.println("error0.5");
+		server = mapper.readValue(SocketServer.jsonData, Server.class);
+		System.out.println("error1");
 		client = mapper.readValue(SocketServer.jsonData, Client.class);
+		System.out.println("error1.5");
+		System.out.println("error2");
 		String s = client.lines;
 		Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(s);
 		String[] lines = FluentIterable.from(i).toArray(String.class);
+		String RL = client.lines;
+		Iterable<String> i2 = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(RL);
+		String[] recentLines = FluentIterable.from(i2).toArray(String.class);
+		RecentLines = util.Util.CompareList(lines,recentLines);
+		System.out.println("error3");
 		try{
 			List LN = new List();
 
@@ -43,6 +54,7 @@ public class ServerCommunication {
 				}
 				
 			}
+			System.out.println("error4");
 			contador++;
 			NodeList current = LN.firstPoint;
 			PathList p1 = new PathList();
@@ -50,6 +62,7 @@ public class ServerCommunication {
 				p1.addPathList(Main.m1.get(current.pointNumber));
 				current = current.next;
 			}
+			System.out.println("error5");
 			Main.path = p1;
 			PathThread pathTest = new PathThread(null,new PathList(),null,null);
 			pathTest.startThread();
@@ -60,7 +73,7 @@ public class ServerCommunication {
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
 			
 			ObjectMapper mapper = new ObjectMapper();
-			server = mapper.readValue(SocketServer.jsonData, Server.class);
+//			server = mapper.readValue(SocketServer.jsonData, Server.class);
 			String json = mapper.writeValueAsString(server);
 			System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(server));
 			return json;

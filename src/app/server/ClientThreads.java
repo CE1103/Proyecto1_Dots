@@ -12,13 +12,9 @@ public class ClientThreads{
 		
 		 SocketServer h = new SocketServer();
 	     Thread t1 = new Thread(h);
-	     h.setPort1(8100);
+	     h.setPort1(8100,8101);
 	     t1.start();
 	     
-	     SocketServer s = new SocketServer();
-	     Thread t2 = new Thread(s);
-	     s.setPort1(8101);
-	     t2.start();
 	}
 
 }

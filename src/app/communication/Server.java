@@ -15,8 +15,7 @@ public class Server {
 	public String dots5;
 	public String dots6;
 	public String dots7;
-	public boolean turnPlayer1 = Game.P1.turn;
-	public boolean turnPlayer2 = Game.P2.turn;
+	public boolean turn;
 
 	
 	public Server() {

@@ -356,5 +356,40 @@ import app.server.NodeList;
 			System.out.println(Arrays.toString(array[i]));
 		}
 	}
+	
+	public static String[] CompareList(String[] lines, String[] recentList) {
+		System.out.println("error 1.75");
+		
+		int c = 0;
+		int d = 0;
+		
+		System.out.println(Arrays.toString(lines));
+		System.out.println(lines[c].equals("null"));
+		System.out.println(lines[c].equals(null));
+		
+		while(!lines[c].equals("null")) {
+			System.out.println("in");
+			 if(recentList[d].equals(lines[c])) {
+				
+				c += 1;
+				d = 0;
+				
+			}else if(recentList[d].equals("null")) {
+				
+				recentList[d] = lines[c];
+				c += 1;
+				d = 0;
+				
+			}else {
+				System.out.println("opopopopop");
+			}
+			
+			d += 1;
+			
+		}
+		
+		return recentList;
+		
+	}
 
  }
