@@ -28,7 +28,7 @@ public class PathThread implements Runnable {
 
 		Util.pathThreadOn = true;
 		System.out.println("f4");
-		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.matrix.firstNode.point1, a, ServerCommunication.temp1.firstNode.matrix.firstNode.point2));
+		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint1(), a, ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint2()));
 		System.out.println("f5");
 		t.start();
 		System.out.println("f6");
@@ -41,28 +41,28 @@ public class PathThread implements Runnable {
 			while (currentPoint != lookingFor) {
 				if (Util.pathThreadOn) {
 					while(localCurrent != null) {
-						if (localCurrent.matrix.firstNode.point1 == currentPoint) {
+						if (localCurrent.getMatrix().firstNode.getPoint1() == currentPoint) {
 
 							PathList a = copyPathList(pathList);
 							System.out.println(currentPoint);
-							System.out.println(localCurrent.matrix.firstNode.point1);
-							System.out.println(localCurrent.matrix.firstNode.point2);
-							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
-							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point2,a,lookingFor));
+							System.out.println(localCurrent.getMatrix().firstNode.getPoint1());
+							System.out.println(localCurrent.getMatrix().firstNode.getPoint2());
+							a.removeNode(localCurrent.getMatrix().firstNode.getPoint1(), localCurrent.getMatrix().firstNode.getPoint2());
+							Thread t = new Thread(new PathThread(localCurrent.getMatrix().firstNode.getPoint2(),a,lookingFor));
 							t.setDaemon(false); t.start();
 							localCurrent = localCurrent.next;
 
-						}else if(localCurrent.matrix.firstNode.point2 == currentPoint) {
+						}else if(localCurrent.getMatrix().firstNode.getPoint2() == currentPoint) {
 
 
 							PathList a = copyPathList(pathList);
 							System.out.println("\n\n"+currentPoint+"\n\n");
-							System.out.println(localCurrent.matrix.firstNode.point1+"\n\n");
-							System.out.println(localCurrent.matrix.firstNode.point2+"\n\n");
+							System.out.println(localCurrent.getMatrix().firstNode.getPoint1()+"\n\n");
+							System.out.println(localCurrent.getMatrix().firstNode.getPoint2()+"\n\n");
 							a.display();
 							System.out.println("\n\n");
-							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
-							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point1,a,lookingFor));
+							a.removeNode(localCurrent.getMatrix().firstNode.getPoint1(), localCurrent.getMatrix().firstNode.getPoint2());
+							Thread t = new Thread(new PathThread(localCurrent.getMatrix().firstNode.getPoint1(),a,lookingFor));
 							t.setDaemon(false); t.start();
 							localCurrent = localCurrent.next;
 
@@ -92,7 +92,7 @@ public class PathThread implements Runnable {
 
 		while (lastEntry != null) {
 
-			pathLocal.addPathList(new ListHashMap(lastEntry.matrix.firstNode.point1,lastEntry.matrix.firstNode.point2));
+			pathLocal.addPathList(new ListHashMap(lastEntry.getMatrix().firstNode.getPoint1(),lastEntry.getMatrix().firstNode.getPoint2()));
 			lastEntry = lastEntry.next;
 
 		}

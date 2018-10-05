@@ -40,7 +40,7 @@ public class PathList {
 		NodeLinesPath previous = firstNode;
 		
 
-		while(current.matrix.firstNode.point1 != p1 || current.matrix.firstNode.point2 != p2) {
+		while(current.getMatrix().firstNode.getPoint1() != p1 || current.getMatrix().firstNode.getPoint2() != p2) {
 			
 			if(current.next == null) {
 				

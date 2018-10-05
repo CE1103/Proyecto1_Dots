@@ -19,9 +19,12 @@ public class RemoveInside {
 			
 			
 		}
-		NodePathCreated CurrentNode = LPC.firstNode;
+		NodePathCreated CurrentNodeLPC = LPC.firstNode;
 		Main.linesStatic[c] = "d";
-		while(LPC != null) {
+		while(CurrentNodeLPC != null) {
+			
+			String s = CurrentNodeLPC.matrix.firstNode.line;
+			int i = CurrentNodeLPC.matrix.firstNode.lineValue;
 			
 			while() {
 				

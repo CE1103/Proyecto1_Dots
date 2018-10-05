@@ -2,13 +2,21 @@ package HashMapAndPath;
 
 public class NodePathCreated {
 
-	DotsToLinesList matrix;
+	private DotsToLinesList matrix;
 	NodePathCreated next;
 	
 	public NodePathCreated(DotsToLinesList matrix) {
 		
-		this.matrix = matrix;
+		this.setMatrix(matrix);
 		
+	}
+
+	public DotsToLinesList getMatrix() {
+		return matrix;
+	}
+
+	public void setMatrix(DotsToLinesList matrix) {
+		this.matrix = matrix;
 	}
 	
 	

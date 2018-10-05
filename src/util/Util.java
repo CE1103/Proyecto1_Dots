@@ -1,5 +1,5 @@
 package util;
- 
+
 import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import java.util.Arrays;
@@ -11,16 +11,19 @@ import java.util.HashMap;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
 
+import HashMapAndPath.ListPathCreated;
+import HashMapAndPath.NodeLinesPath;
+import HashMapAndPath.PathList;
 import app.communication.Client;
 import app.communication.ServerCommunication;
 import app.server.*;
- 
- public class Util {
-	 
-	 public static boolean pathThreadOn = false;
-	
+
+public class Util {
+
+	public static boolean pathThreadOn = false;
+
 	public static String[][] linkedListToArray(){
-		
+
 		NodeList LN = List.firstPointFinal;
 		NodeList LN1 = LN.matrix.firstPoint;
 		String[][] arrays = new String[4][4];
@@ -41,7 +44,7 @@ import app.server.*;
 		}
 		return arrays;
 	}
-	
+
 	public static List arrayToNode(String[] array) {
 		List NL = new List();
 		System.out.println(Arrays.toString(array));
@@ -51,14 +54,14 @@ import app.server.*;
 				System.out.println(array[n]);
 				NL.addPoint(array[n]);
 			}
-			
+
 		}
 		return NL;
 	}
-	
-	
+
+
 	public static void displayMatrixArray(String[][] array) {
-		
+
 		for (int i = 0; i < 4; i++) {
 			for (int n = 0; n < 4; n++) {
 				System.out.println(array[i][n]);
@@ -66,11 +69,11 @@ import app.server.*;
 			System.out.println("siguiente array" + "\n\n");
 		}
 	}
-	
-	
+
+
 	public static HashMap<String, HashMapAndPath.ListHashMap> createHashMap(){
 		HashMap<String, HashMapAndPath.ListHashMap> m1 = new HashMap<>();
-		
+
 		m1.put("h1", new HashMapAndPath.ListHashMap("p1","p2"));
 		m1.put("h2", new HashMapAndPath.ListHashMap("p2","p3"));
 		m1.put("h3", new HashMapAndPath.ListHashMap("p3","p4"));
@@ -127,7 +130,7 @@ import app.server.*;
 		m1.put("h54", new HashMapAndPath.ListHashMap("p61","p62"));
 		m1.put("h55", new HashMapAndPath.ListHashMap("p62","p63"));
 		m1.put("h56", new HashMapAndPath.ListHashMap("p63","p64"));
-		
+
 		m1.put("v1", new HashMapAndPath.ListHashMap("p1","p9"));
 		m1.put("v2", new HashMapAndPath.ListHashMap("p2","p10"));
 		m1.put("v3", new HashMapAndPath.ListHashMap("p3","p11"));
@@ -184,8 +187,8 @@ import app.server.*;
 		m1.put("v54", new HashMapAndPath.ListHashMap("p54","p62"));
 		m1.put("v55", new HashMapAndPath.ListHashMap("p55","p63"));
 		m1.put("v56", new HashMapAndPath.ListHashMap("p56","p64"));	
-		
-		
+
+
 		m1.put("d1", new HashMapAndPath.ListHashMap("p1","p10"));
 		m1.put("d2", new HashMapAndPath.ListHashMap("p2","p11"));
 		m1.put("d3", new HashMapAndPath.ListHashMap("p3","p12"));
@@ -235,14 +238,14 @@ import app.server.*;
 		m1.put("d47", new HashMapAndPath.ListHashMap("p53","p62"));
 		m1.put("d48", new HashMapAndPath.ListHashMap("p54","p63"));
 		m1.put("d49", new HashMapAndPath.ListHashMap("p55","p64"));
-		
-		
+
+
 		return m1;
 	}
-	
+
 	public static HashMap<String, HashMapAndPath.DotsToLinesList> createDotsToLineHM(){
 		HashMap<String, HashMapAndPath.DotsToLinesList> m1 = new HashMap<>();
-		
+
 		m1.put("p1 p2", new HashMapAndPath.DotsToLinesList("h",1));
 		m1.put("p2 p3", new HashMapAndPath.DotsToLinesList("h",2));
 		m1.put("p3 p4", new HashMapAndPath.DotsToLinesList("h",3));
@@ -299,7 +302,7 @@ import app.server.*;
 		m1.put("p61 p62", new HashMapAndPath.DotsToLinesList("h",54));
 		m1.put("p62 p63", new HashMapAndPath.DotsToLinesList("h",55));
 		m1.put("p63 p64", new HashMapAndPath.DotsToLinesList("h",56));
-		
+
 		m1.put("p1 p9", new HashMapAndPath.DotsToLinesList("v",1));
 		m1.put("p2 p10", new HashMapAndPath.DotsToLinesList("v",2));
 		m1.put("p3 p11", new HashMapAndPath.DotsToLinesList("v",3));
@@ -356,15 +359,39 @@ import app.server.*;
 		m1.put("p54 p62", new HashMapAndPath.DotsToLinesList("v",54));
 		m1.put("p55 p63", new HashMapAndPath.DotsToLinesList("v",55));
 		m1.put("p56 p64", new HashMapAndPath.DotsToLinesList("v",56));
-		
+
 		return m1;
 	}
-	
+
 	public static void displayArray1(String[][] array) {
-		
+
 		for (int i = 0; i < 4; i++) {
 			System.out.println(Arrays.toString(array[i]));
 		}
 	}
 
- }
+	public static int scoredPoints(PathList pathCreated) {
+
+		ListPathCreated LPC = new ListPathCreated();
+		NodeLinesPath pathCreatedCurrent = pathCreated.firstNode;
+		int score = 0;
+		while(pathCreatedCurrent != null) {
+
+			LPC.addListPathCreated(Main.m2.get(pathCreatedCurrent.getMatrix().firstNode.getPoint1() + " " + 
+					pathCreatedCurrent.getMatrix().firstNode.getPoint2()));
+
+
+			if(LPC.firstNode.getMatrix().firstNode.getLine() == "v" || LPC.firstNode.getMatrix().firstNode.getLine() == "h") {
+				score += 2;
+			}else if(LPC.firstNode.getMatrix().firstNode.getLine() == "d") {
+				score +=1;
+			}
+
+
+
+		}
+		
+		return score;
+	}
+
+}

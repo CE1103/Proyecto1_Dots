@@ -2,20 +2,28 @@ package HashMapAndPath;
 
 public class NodeLinesPath {
 
-	ListHashMap matrix;
+	private ListHashMap matrix;
 	NodeLinesPath next;
 	
 	public NodeLinesPath(ListHashMap matrix) {
 		
-		this.matrix = matrix;
+		this.setMatrix(matrix);
 		
 	}
 	
 	public void display() {
 		
-		System.out.println(matrix.firstNode.point1);
-		System.out.println(matrix.firstNode.point2);
+		System.out.println(getMatrix().firstNode.getPoint1());
+		System.out.println(getMatrix().firstNode.getPoint2());
 		
+	}
+
+	public ListHashMap getMatrix() {
+		return matrix;
+	}
+
+	public void setMatrix(ListHashMap matrix) {
+		this.matrix = matrix;
 	}
 	
 
