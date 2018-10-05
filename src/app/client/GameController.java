@@ -87,6 +87,7 @@ public class GameController implements Initializable, ControlledScreen {
         		
         		System.out.println(Arrays.toString(Main.linesStatic));
         		
+        		
         		ClientPrinter.setScore(event);
         		ClientPrinter.updateLineColor(((Line)event.getSource()).getId());
         		

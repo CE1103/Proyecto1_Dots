@@ -30,6 +30,7 @@ public class ClientPrinter extends Game implements DataUpdater {
 		
 	}
 	
+	
 	public static void updateLineColor(String line) {
 			
 		data.getStringLineProp().set(line);
