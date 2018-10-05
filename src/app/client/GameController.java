@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 
 import Sockets.SocketClient;
 import util.Util;
+import app.client.data.SharedData;
 import app.communication.*;
 import app.server.*;
 import javafx.fxml.FXML;
@@ -45,10 +46,8 @@ public class GameController implements Initializable, ControlledScreen {
     @FXML
     private Text textPlayer1, textPlayer2;
     
-    
-    
     ScreensController myController;
-    public int i = 0;
+    public static int x = 0;
     
     Game g1 = new Game();
     
@@ -69,25 +68,27 @@ public class GameController implements Initializable, ControlledScreen {
     		boolean a = true;
         	for(int c=0;c<161;c++) {
         		
-        		if(((Line)event.getSource()).getId()==Main.linesStatic[c]) {
+        		if(((Line)event.getSource()).getId().equals(Main.linesStatic[c])) {
         			a = false;
         		}    		
         	}
         	if(a) {
-        		System.out.println("This line id is - " + ((Line)event.getSource()).getId());
+        		//System.out.println("This line id is - " + ((Line)event.getSource()).getId());
         		alert.setText(" ");  
         		
-        		ClientPrinter.setScore(event);
-        		
-//        		labelP1.setText(Integer.toString(g1.P1.getScore()) + " pts");
-//        		labelP2.setText(Integer.toString(g1.P2.getScore()) + " pts");
 
         		
-        		Main.linesStatic[i] = ((Line)event.getSource()).getId();
-        		i++;
+//        		labelP1.setText(Integer.toString(Player.getScore()) + " pts");
+//        		labelP2.setText(Integer.toString(Player.getScore()) + " pts");
+
+        		
+        		Main.linesStatic[x] = ((Line)event.getSource()).getId();
+        		x++;
         		
         		System.out.println(Arrays.toString(Main.linesStatic));
         		
+        		ClientPrinter.setScore(event);
+        		ClientPrinter.updateLineColor(((Line)event.getSource()).getId());
         		
         		System.out.println(Arrays.toString(Main.linesStatic));
         		System.out.println(Arrays.toString(Game.dots));
@@ -109,5 +110,6 @@ public class GameController implements Initializable, ControlledScreen {
     	}
     	
     }
+    
 	
 }

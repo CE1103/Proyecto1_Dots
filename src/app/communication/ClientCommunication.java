@@ -30,5 +30,4 @@ public class ClientCommunication {
 		String json = mapper.writeValueAsString(c);
 		return json;
 	}
-
 }

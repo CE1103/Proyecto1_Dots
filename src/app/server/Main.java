@@ -12,7 +12,6 @@ import Sockets.SocketClient;
 import Sockets.SocketServer;
 import app.client.ScreensController;
 import app.communication.ClientCommunication;
-import app.communication.Game;
 import app.communication.Queue;
 import app.communication.ServerCommunication;
 import javafx.application.Application;
@@ -37,10 +36,11 @@ public class Main{
     public static String screen6ID = "loadingGame";
     public static String screen6File = "LoadingGame.fxml";
     
-    
     public static List l1;
     public static HashMap<String, HashMapAndPath.ListHashMap> m1;
     public static PathList path = new PathList();
+
+	public static Scene scene4;
 
     public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException { 
     	

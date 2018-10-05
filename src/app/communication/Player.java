@@ -1,5 +1,8 @@
 package app.communication;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+
 public class Player {
 	
 	public static int points;

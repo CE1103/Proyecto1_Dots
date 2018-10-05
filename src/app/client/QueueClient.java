@@ -6,10 +6,10 @@ import java.net.Socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import app.communication.Game;
 import app.communication.JsonQueue;
 import app.communication.Player;
 import app.communication.Queue;
+import app.server.Game;
 
 public class QueueClient implements Runnable{
 	
@@ -23,7 +23,7 @@ public class QueueClient implements Runnable{
 			
 			ObjectMapper mapper = new ObjectMapper();
 			System.out.println("hola");
-			Socket clientSocket = new Socket("192.168.43.55", 7000);
+			Socket clientSocket = new Socket("192.168.1.230", 7000);
 			System.out.println("3");
 			DataInputStream in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 			System.out.println("2");
