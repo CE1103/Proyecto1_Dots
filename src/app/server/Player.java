@@ -4,12 +4,12 @@ import app.communication.Game;
 
 public class Player extends Game {
 	
-	public static int points;
+	private static int score;
 	public boolean turn;
 	
 	public Player(int P) {
 		
-		points = 0;
+		score = 0;
 		this.turn = false;
 	}
 	
@@ -33,12 +33,16 @@ public class Player extends Game {
 		return this.turn;
 	}
 	
-	public void scorePoints(){
-		points += 2;
+	public void scorePointsHV(){
+		score += 2;
+	}
+	
+	public void scorePointsD() {
+		score ++;
 	}
 	
 	public static int getScore(){
-		return points;
+		return score;
 	}
 
 }
