@@ -8,12 +8,14 @@ public class ClientPrinter extends Game {
 	
 	public static void setScore(javafx.scene.input.MouseEvent event) {
 		
-		if(P1.getTurn()){
+		if(ClientCommunication.client.turn){
 			((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
+			Player.scorePoints();
+			System.out.println(Player.points);
 			
 		}
-		else if(P2.getTurn()) {
-				((Line)event.getSource()).setStroke(Color.web("#95F4F1"));
+		else{
+			((Line)event.getSource()).setStroke(Color.web("#95F4F1"));
 		}
 		
 	}

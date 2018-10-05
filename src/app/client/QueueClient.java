@@ -43,10 +43,11 @@ public class QueueClient implements Runnable{
 			} else {
 				player = 3;
 				
-				if(jsonQueue.port > 8101) {
+				while(jsonQueue.port > 8101) {
 					Queue q = new Queue();
 					q.enqueue(jsonQueue.port);
 //					q.showAll();
+					break;
 				}
 			}
 			

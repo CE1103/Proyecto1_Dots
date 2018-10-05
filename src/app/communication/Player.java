@@ -28,7 +28,7 @@ public class Player {
 		return this.turn;
 	}
 	
-	public void scorePoints(){
+	public static void scorePoints(){
 		points += 2;
 	}
 	
