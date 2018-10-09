@@ -1,7 +1,8 @@
 package app.communication;
 
+import org.w3c.dom.NodeList;
+
 import app.server.List;
-import app.server.NodeList;
 import app.server.Player;
 import app.server.Turn;
 

@@ -3,12 +3,9 @@ package util;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import HashMapAndPath.ListPathCreated;
-import HashMapAndPath.NodeLinesPath;
-import HashMapAndPath.PathList;
+import org.w3c.dom.NodeList;
+
 import app.server.List;
-import app.server.Main;
-import app.server.NodeList;
  
  public class Util {
 	 
