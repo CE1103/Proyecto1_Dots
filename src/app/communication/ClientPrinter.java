@@ -17,6 +17,8 @@ public class ClientPrinter extends Game  {
 			
 			if(Game.P1.getTurn()) {
 				((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
+				
+				//((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
 			}
 			else if(Game.P2.getTurn()) {
 				((Line)event.getSource()).setStroke(Color.web("#95F4F1"));
