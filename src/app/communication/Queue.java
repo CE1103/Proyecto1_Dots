@@ -1,17 +1,7 @@
 package app.communication;
 
 public class Queue {
-    
-	class Node {
-        Object element;
-        Node Next;
-
-        public Node(Object object) {
-            element = object;
-            Next = null;
-        }
-    }
-
+	
     Node first;
     Node end;
     int size;
@@ -36,10 +26,10 @@ public class Queue {
     public Object dequeue() {
         if (first == null)
             return null;
-        Object object = first.element;
+        Object o = first.element;
         first = first.Next;
         size--;
-        return object;
+        return o;
     }
 
     public boolean isEmpty() {
@@ -57,7 +47,6 @@ public class Queue {
             System.out.println(first.element);
         return first.element;
     }
-    
     public void showAll(){
         Node current= first;
         while(current!=null){
@@ -65,5 +54,8 @@ public class Queue {
             current=current.Next;
         }
     }
+    
+    
+	
 
 }

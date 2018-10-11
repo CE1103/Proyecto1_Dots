@@ -1,26 +1,28 @@
 package app.communication;
 
+import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 public class QueueThread implements Runnable{
-	
-	private Thread p1 = new Thread();
-	private Thread p2 = new Thread();
-	private Thread q = new Thread();
 
 	@Override
 	public void run() {
-		
-		p1.setDaemon(true);
-		p2.setDaemon(true);
-		p1.start(); 
-		p2.start();
-		q.start();
-		while (true) {
-			
-			
+		try {
+			ServerSocket serverSocketQueue = new ServerSocket(7000);			
+			while(true) {
+				Socket clientSocketQueue = serverSocketQueue.accept();
+				DataOutputStream outqueue = new DataOutputStream(new BufferedOutputStream(clientSocketQueue.getOutputStream()));
+				outqueue.writeUTF(ServerCommunication.jsonPortSend());
+				outqueue.flush();
+				clientSocketQueue.close();
+				
+			}
+		}catch (Exception e) {
+
 		}
-		
 	}
-	
-	
 
 }
+

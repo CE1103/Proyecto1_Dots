@@ -419,8 +419,6 @@ import app.server.NodeList;
 		int d = 0;
 		
 		System.out.println(Arrays.toString(lines));
-		System.out.println(lines[c].equals("null"));
-		System.out.println(lines[c].equals(null));
 		
 		while(!lines[c].equals("null")) {
 			System.out.println("in");
@@ -428,7 +426,7 @@ import app.server.NodeList;
 				
 				c += 1;
 				d = 0;
-				
+			
 			}else if(recentList[d].equals("null")) {
 				
 				recentList[d] = lines[c];
