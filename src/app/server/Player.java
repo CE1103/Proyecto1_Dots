@@ -37,7 +37,7 @@ public class Player extends Game {
 		points += 2;
 	}
 	
-	public static int getScore(){
+	public int getScore(){
 		return points;
 	}
 

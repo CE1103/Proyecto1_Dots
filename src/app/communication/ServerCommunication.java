@@ -34,40 +34,45 @@ public class ServerCommunication {
 		client = mapper.readValue(SocketServer.jsonData, Client.class);
 		System.out.println("error1.5");
 		System.out.println("error2");
-		String s = client.lines;
-		Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(s);
-		String[] lines = FluentIterable.from(i).toArray(String.class);
-		String RL = client.lines;
-		Iterable<String> i2 = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(RL);
-		String[] recentLines = FluentIterable.from(i2).toArray(String.class);
-		RecentLines = util.Util.CompareList(lines,recentLines);
-		System.out.println("error3");
-		try{
-			List LN = new List();
-
-			for (int n = (lines.length-1); n >= 0; n--) {
-				String str = lines[n];
-				if((!str.equals("null")) && contador != n) {
-					LN.addPoint(lines[n]);
-				}else {
-					temp1.addPathList(Main.m1.get(lines[n])); 
+		if (Game.P1.getScore() < 50 && Game.P2.getScore() < 50) {
+			String s = client.lines;
+			Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(s);
+			String[] lines = FluentIterable.from(i).toArray(String.class);
+			String RL = client.lines;
+			Iterable<String> i2 = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(RL);
+			String[] recentLines = FluentIterable.from(i2).toArray(String.class);
+			RecentLines = util.Util.CompareList(lines,recentLines);
+			System.out.println("error3");
+			try{
+				List LN = new List();
+	
+				for (int n = (lines.length-1); n >= 0; n--) {
+					String str = lines[n];
+					if((!str.equals("null")) && contador != n) {
+						LN.addPoint(lines[n]);
+					}else {
+						temp1.addPathList(Main.m1.get(lines[n])); 
+					}
+					
 				}
+				System.out.println("error4");
+				contador++;
+				NodeList current = LN.firstPoint;
+				PathList p1 = new PathList();
+				while(current != null && current.pointNumber != null) {
+					p1.addPathList(Main.m1.get(current.pointNumber));
+					current = current.next;
+				}
+				System.out.println("error5");
+				Main.path = p1;
+				PathThread pathTest = new PathThread(null,new PathList(),null,null);
+				pathTest.startThread();
 				
-			}
-			System.out.println("error4");
-			contador++;
-			NodeList current = LN.firstPoint;
-			PathList p1 = new PathList();
-			while(current != null && current.pointNumber != null) {
-				p1.addPathList(Main.m1.get(current.pointNumber));
-				current = current.next;
-			}
-			System.out.println("error5");
-			Main.path = p1;
-			PathThread pathTest = new PathThread(null,new PathList(),null,null);
-			pathTest.startThread();
-			
-		}catch(NullPointerException e) {}
+			}catch(NullPointerException e) {}
+		} else {
+			server.gameOn = false;
+			client.gameOn = false;
+		}
 	}
 	
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
