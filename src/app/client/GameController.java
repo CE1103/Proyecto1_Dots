@@ -10,7 +10,6 @@ import java.util.ResourceBundle;
 
 import Sockets.SocketClient;
 import util.Util;
-import app.client.data.SharedData;
 import app.communication.*;
 import app.server.*;
 import javafx.fxml.FXML;
@@ -61,7 +60,6 @@ public class GameController implements Initializable, ControlledScreen {
     }
 
     
-	
     public void onMouseClick(MouseEvent event) throws Exception {
     	
     	if(ClientCommunication.client.turn) {
@@ -78,8 +76,8 @@ public class GameController implements Initializable, ControlledScreen {
         		
 
         		
-//        		labelP1.setText(Integer.toString(Player.getScore()) + " pts");
-//        		labelP2.setText(Integer.toString(Player.getScore()) + " pts");
+//        		labelP1.setText(Integer.toString(Game.P1.getScore()) + " pts");
+//        		labelP2.setText(Integer.toString(Game.P2.getScore()) + " pts");
 
         		Main.linesStatic[x] = ((Line)event.getSource()).getId();
         		x++;
@@ -101,9 +99,7 @@ public class GameController implements Initializable, ControlledScreen {
         		alert.setText("Linea Anteriormente Presionada");
         		alert.setStyle("-fx-text-fill: #95F4F1");
         	}
-        	
-        	
-        	
+        		
     	}
     	else{
     		System.out.println("Ni picha NEGROOO");

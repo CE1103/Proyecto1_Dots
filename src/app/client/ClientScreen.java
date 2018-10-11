@@ -41,6 +41,7 @@ public class ClientScreen extends Application {
         Thread t = new Thread(new QueueClient());
         t.start();
         launch(args);
+        
 	}
 	
 	public static HashMap<String, Line> createHashMap(){
