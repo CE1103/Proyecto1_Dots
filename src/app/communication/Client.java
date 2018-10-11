@@ -3,7 +3,6 @@ package app.communication;
 import java.util.Arrays;
 
 import app.server.Game;
-import app.server.Main;
 
 public class Client {
 
@@ -17,10 +16,14 @@ public class Client {
 	public String dots6;
 	public String dots7;
 	public boolean turn;
+	public boolean gameOn;
+	public int scoreP1;
+	public int scoreP2;
 
 	public Client() {
 		
-		this.lines = Arrays.toString(Main.linesStatic);
+		this.gameOn = true;
+		this.lines = Arrays.toString(ServerAttributes.linesStatic);
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);
 		this.dots2 = Arrays.toString(Game.dots[2]);

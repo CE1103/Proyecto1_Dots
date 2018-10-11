@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import app.client.QueueClient;
-import app.server.Main;
 
 public class ClientCommunication {
 	

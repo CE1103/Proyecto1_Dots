@@ -25,8 +25,8 @@ import app.communication.Client;
 import app.communication.ClientCommunication;
 import app.communication.ClientPrinter;
 import app.communication.Player;
+import app.communication.ServerAttributes;
 import app.server.Game;
-import app.server.Main;
 
 public class SocketClient implements Runnable{
 	
@@ -96,7 +96,7 @@ public class SocketClient implements Runnable{
 					if (Player.turn) {
 					    String linesString = ClientCommunication.client.lines;
 						Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(linesString);
-						Main.linesStatic = FluentIterable.from(i).toArray(String.class);
+						ServerAttributes.linesStatic = FluentIterable.from(i).toArray(String.class);
 						wait();
 					} else {
 						GameController.x++;

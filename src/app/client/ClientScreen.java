@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 
 import Sockets.SocketClient;
-import app.server.Main;
+import app.communication.ServerAttributes;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -16,13 +16,13 @@ public class ClientScreen extends Application {
     public void start(Stage primaryStage) {
 
         ScreensController mainContainer = new ScreensController();
-        mainContainer.loadScreen(Main.screen1ID, Main.screen1File);
-        mainContainer.loadScreen(Main.screen3ID, Main.screen3File);
-        mainContainer.loadScreen(Main.screen4ID, Main.screen4File);
-        mainContainer.loadScreen(Main.screen5ID, Main.screen5File);
-        mainContainer.loadScreen(Main.screen6ID, Main.screen6File);
+        mainContainer.loadScreen(ServerAttributes.screen1ID, ServerAttributes.screen1File);
+        mainContainer.loadScreen(ServerAttributes.screen3ID, ServerAttributes.screen3File);
+        mainContainer.loadScreen(ServerAttributes.screen4ID, ServerAttributes.screen4File);
+        mainContainer.loadScreen(ServerAttributes.screen5ID, ServerAttributes.screen5File);
+        mainContainer.loadScreen(ServerAttributes.screen6ID, ServerAttributes.screen6File);
         
-        mainContainer.setScreen(Main.screen1ID);
+        mainContainer.setScreen(ServerAttributes.screen1ID);
         String css = this.getClass().getResource("application.css").toExternalForm(); 
         mainContainer.getStylesheets().add(css);
         

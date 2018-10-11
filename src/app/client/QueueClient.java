@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import app.communication.JsonQueue;
 import app.communication.Player;
 import app.communication.Queue;
+import app.communication.ServerAttributes;
 import app.server.Game;
 
 public class QueueClient implements Runnable{
@@ -16,6 +17,8 @@ public class QueueClient implements Runnable{
 	public static JsonQueue jsonQueue;
 	public static int player;
 	public static String linesCl;
+	
+	ScreensController myController;
 
 	@Override
 	public void run() {
@@ -46,6 +49,7 @@ public class QueueClient implements Runnable{
 				while(jsonQueue.port > 8101) {
 					Queue q = new Queue();
 					q.enqueue(jsonQueue.port);
+					myController.setScreen(ServerAttributes.screen6ID);
 //					q.showAll();
 					break;
 				}

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import app.server.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,6 +12,7 @@ import javafx.scene.image.ImageView;
 import util.ControlledScreen;
 import Sockets.SocketClient;
 import Sockets.SocketServer;
+import app.communication.ServerAttributes;
 
 public class MainController implements Initializable, ControlledScreen {
 
@@ -40,7 +40,7 @@ public class MainController implements Initializable, ControlledScreen {
     @FXML
     private void goToScreen2(ActionEvent event) throws IOException, InterruptedException{      
 
-		myController.setScreen(Main.screen4ID);
+		myController.setScreen(ServerAttributes.screen4ID);
 		g = new SocketClient();
 		Thread t2 = new Thread(g);
 		g.setPort(QueueClient.jsonQueue.port);
@@ -78,6 +78,6 @@ public class MainController implements Initializable, ControlledScreen {
     
     @FXML
     private void goToScreen3(ActionEvent event){
-    	myController.setScreen(Main.screen3ID);
+    	myController.setScreen(ServerAttributes.screen3ID);
     }
 }

@@ -61,52 +61,58 @@ public class GameController implements Initializable, ControlledScreen {
 
     
     public void onMouseClick(MouseEvent event) throws Exception {
-    	
-    	if(ClientCommunication.client.turn) {
-    		boolean a = true;
-        	for(int c=0;c<161;c++) {
-        		
-        		if(((Line)event.getSource()).getId().equals(Main.linesStatic[c])) {
-        			a = false;
-        		}    		
-        	}
-        	if(a) {
-        		//System.out.println("This line id is - " + ((Line)event.getSource()).getId());
-        		alert.setText(" ");  
-        		
+    	if(ClientCommunication.client.gameOn) {
+    		
+    		if(ClientCommunication.client.turn) {
+        		boolean a = true;
+            	for(int c=0;c<161;c++) {
+            		
+            		if(((Line)event.getSource()).getId().equals(ServerAttributes.linesStatic[c])) {
+            			a = false;
+            		}    		
+            	}
+            	if(a) {
+            		//System.out.println("This line id is - " + ((Line)event.getSource()).getId());
+            		alert.setText(" ");  
+            		
+//            		labelP1.setText(Integer.toString(Game.P1.getScore()) + " pts");
+//            		labelP2.setText(Integer.toString(Game.P2.getScore()) + " pts");
+            		
+            		labelP1.setText(Integer.toString(ClientCommunication.client.scoreP1));
+            		labelP2.setText(Integer.toString(ClientCommunication.client.scoreP2));
 
-        		
-//        		labelP1.setText(Integer.toString(Game.P1.getScore()) + " pts");
-//        		labelP2.setText(Integer.toString(Game.P2.getScore()) + " pts");
-
-        		
-        		Main.linesStatic[x] = ((Line)event.getSource()).getId();
-        		x++;
-        		
-        		System.out.println(Arrays.toString(Main.linesStatic));
-        		
-        		
-        		ClientPrinter.setScore(event);
-        		ClientPrinter.updateLineColor(((Line)event.getSource()).getId());
-        		
-        		System.out.println(Arrays.toString(Main.linesStatic));
-        		System.out.println(Arrays.toString(Game.dots));
-        		ClientCommunication.jsonDataSend();
-        		System.out.println("hola");
-        		MainController.thread.start();
+            		
+            		ServerAttributes.linesStatic[x] = ((Line)event.getSource()).getId();
+            		x++;
+            		
+            		System.out.println(Arrays.toString(ServerAttributes.linesStatic));
+            		
+            		
+            		
+            		
+            		System.out.println(Arrays.toString(ServerAttributes.linesStatic));
+            		System.out.println(Arrays.toString(Game.dots));
+            		
+            		ClientPrinter.setColor(event);
+            		
+            		ClientCommunication.jsonDataSend();
+            		System.out.println("hola");
+            		MainController.thread.start();
+            	}
+            	
+            	else {
+            		alert.setText("Linea Anteriormente Presionada");
+            		alert.setStyle("-fx-text-fill: #95F4F1");
+            	}
+            		
         	}
-        	
-        	else {
-        		alert.setText("Linea Anteriormente Presionada");
-        		alert.setStyle("-fx-text-fill: #95F4F1");
+        	else{
+        		System.out.println("Ni picha NEGROOO");
         	}
-        		
     	}
-    	else{
-    		System.out.println("Ni picha NEGROOO");
+    	else {
+    		myController.setScreen(ServerAttributes.screen5ID);
     	}
     	
     }
-    
-	
 }

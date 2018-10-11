@@ -1,4 +1,4 @@
-package app.server;
+package app.communication;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -11,9 +11,8 @@ import HashMapAndPath.PathList;
 import Sockets.SocketClient;
 import Sockets.SocketServer;
 import app.client.ScreensController;
-import app.communication.ClientCommunication;
-import app.communication.Queue;
-import app.communication.ServerCommunication;
+import app.server.Game;
+import app.server.List;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -21,7 +20,7 @@ import javafx.stage.Stage;
 import util.*;
 
 
-public class Main{
+public class ServerAttributes{
 	
 	public static String[] linesStatic = new String[161];
     
