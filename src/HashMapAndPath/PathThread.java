@@ -25,7 +25,7 @@ public class PathThread implements Runnable {
 		PathList a = copyPathList(Main.path);
 
 		Util.pathThreadOn = true;
-		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.matrix.firstNode.point1, a, ServerCommunication.temp1.firstNode.matrix.firstNode.point2,new PathList()));
+		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint1(), a, ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint2(),new PathList()));
 		t.start();
 	}
 
@@ -37,37 +37,38 @@ public class PathThread implements Runnable {
 			while (currentPoint != lookingFor) {
 				if (Util.pathThreadOn) {
 					while(localCurrent != null) {
-						if (localCurrent.matrix.firstNode.point1 == currentPoint) {
+						if (localCurrent.getMatrix().firstNode.getPoint1() == currentPoint) {
 
 							PathList a = copyPathList(pathList);						
 							PathList b = copyPathList(currentPath);
-							b.addPathList(new ListHashMap(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2));
-							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
+							b.addPathList(new ListHashMap(localCurrent.getMatrix().firstNode.getPoint1(), localCurrent.getMatrix().firstNode.getPoint2()));
+							a.removeNode(localCurrent.getMatrix().firstNode.getPoint1(), localCurrent.getMatrix().firstNode.getPoint2());
 							score++;
-							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point2,a,lookingFor,b));
+							Thread t = new Thread(new PathThread(localCurrent.getMatrix().firstNode.getPoint2(),a,lookingFor,b));
 							t.setDaemon(false); t.start();
-							localCurrent = localCurrent.next;
+							localCurrent = localCurrent.getNext();
 
-						}else if(localCurrent.matrix.firstNode.point2 == currentPoint) {
+						}else if(localCurrent.getMatrix().firstNode.getPoint2() == currentPoint) {
 
 
 							PathList a = copyPathList(pathList);
 							PathList b = copyPathList(currentPath);
-							b.addPathList(new ListHashMap(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2));
-							a.removeNode(localCurrent.matrix.firstNode.point1, localCurrent.matrix.firstNode.point2);
+							b.addPathList(new ListHashMap(localCurrent.getMatrix().firstNode.getPoint1(), localCurrent.getMatrix().firstNode.getPoint2()));
+							a.removeNode(localCurrent.getMatrix().firstNode.getPoint1(), localCurrent.getMatrix().firstNode.getPoint2());
 							score++;
-							Thread t = new Thread(new PathThread(localCurrent.matrix.firstNode.point1,a,lookingFor,b));
+							Thread t = new Thread(new PathThread(localCurrent.getMatrix().firstNode.getPoint1(),a,lookingFor,b));
 							t.setDaemon(false); t.start();
-							localCurrent = localCurrent.next;
+							localCurrent = localCurrent.getNext();
 
 						}else {
-							localCurrent = localCurrent.next;		 
+							localCurrent = localCurrent.getNext();		 
 						}
 					} return;
 				} else {
 					return;
 				}
 			}
+			score = util.Util.scoredPoints(currentPath);
 			System.out.println(score);
 			currentPath.display();
 			Util.pathThreadOn = false;
@@ -86,8 +87,8 @@ public class PathThread implements Runnable {
 
 		while (lastEntry != null) {
 
-			pathLocal.addPathList(new ListHashMap(lastEntry.matrix.firstNode.point1,lastEntry.matrix.firstNode.point2));
-			lastEntry = lastEntry.next;
+			pathLocal.addPathList(new ListHashMap(lastEntry.getMatrix().firstNode.getPoint1(),lastEntry.getMatrix().firstNode.getPoint2()));
+			lastEntry = lastEntry.getNext();
 
 		}
 		return pathLocal;

@@ -13,7 +13,7 @@ public class PathList {
 
 		if (firstNode!=null) {
 			NodeLinesPath newPLNode = new NodeLinesPath(matrix);
-			newPLNode.next = firstNode;
+			newPLNode.setNext(firstNode);
 			firstNode = newPLNode;
 		}else {
 			firstNode = new NodeLinesPath(matrix);
@@ -26,7 +26,7 @@ public class PathList {
 		while (NLP != null) {
 			NLP.display();
  			
-			NLP = NLP.next;
+			NLP = NLP.getNext();
 			
 		}
 		
@@ -38,16 +38,16 @@ public class PathList {
 		NodeLinesPath previous = firstNode;
 		
 
-		while(current.matrix.firstNode.point1 != p1 || current.matrix.firstNode.point2 != p2) {
+		while(current.getMatrix().firstNode.getPoint1() != p1 || current.getMatrix().firstNode.getPoint2() != p2) {
 			
-			if(current.next == null) {
+			if(current.getNext() == null) {
 				
 				return null;
 				
 			}else {
 				
 				previous = current;
-				current = current.next;
+				current = current.getNext();
 				
 			}
 			
@@ -55,11 +55,11 @@ public class PathList {
 		
 		if(current == firstNode) {
 			
-			firstNode = firstNode.next;
+			firstNode = firstNode.getNext();
 			
 		}else {
 			
-			previous.next = current.next;
+			previous.setNext(current.getNext());
 			
 		}
 		return current;
