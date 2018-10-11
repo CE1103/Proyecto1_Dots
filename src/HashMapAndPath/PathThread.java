@@ -2,6 +2,7 @@ package HashMapAndPath;
 
 import app.communication.ServerCommunication;
 import app.server.Main;
+import app.server.Player;
 import util.Util;
 
 public class PathThread implements Runnable {
@@ -73,7 +74,7 @@ public class PathThread implements Runnable {
 				}
 			}
 			score = util.Util.scoredPoints(currentPath);
-			System.out.println(score);
+			Player.scoreAdd(score);
 			currentPath.display();
 			Util.pathThreadOn = false;
 			return;
