@@ -23,9 +23,13 @@ public class PathThread implements Runnable {
 	public void startThread() {
 
 		PathList a = copyPathList(Main.path);
+		PathList b = new PathList();
+		
+		b.addPathList(new ListHashMap(ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint1(), 
+				ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint2()));
 
 		Util.pathThreadOn = true;
-		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint1(), a, ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint2(),new PathList()));
+		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint1(), a, ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint2(),b));
 		t.start();
 	}
 
