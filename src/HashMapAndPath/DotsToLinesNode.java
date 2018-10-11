@@ -12,6 +12,10 @@ public class DotsToLinesNode {
 		this.lineValue = lineValue;
 	}
 	
+	public String getLine() {
+		return line;
+	}
+	
 	public void display() {
 		
 		System.out.println(line + ".");

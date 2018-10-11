@@ -3,7 +3,11 @@ package util;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import HashMapAndPath.ListPathCreated;
+import HashMapAndPath.NodeLinesPath;
+import HashMapAndPath.PathList;
 import app.server.List;
+import app.server.Main;
 import app.server.NodeList;
  
  public class Util {
@@ -347,6 +351,56 @@ import app.server.NodeList;
 		m1.put("p55 p63", new HashMapAndPath.DotsToLinesList("v",55));
 		m1.put("p56 p64", new HashMapAndPath.DotsToLinesList("v",56));
 		
+		m1.put("p1 p10", new HashMapAndPath.DotsToLinesList("d",1));
+		m1.put("p2 p11", new HashMapAndPath.DotsToLinesList("d",2));
+		m1.put("d3", new HashMapAndPath.DotsToLinesList("p3 p12"));
+		m1.put("d4", new HashMapAndPath.DotsToLinesList("p4 p13"));
+		m1.put("d5", new HashMapAndPath.DotsToLinesList("p5 p14"));
+		m1.put("d6", new HashMapAndPath.DotsToLinesList("p6 p15"));
+		m1.put("d7", new HashMapAndPath.DotsToLinesList("p7 p16"));
+		m1.put("d8", new HashMapAndPath.DotsToLinesList("p9 p18"));
+		m1.put("d9", new HashMapAndPath.DotsToLinesList("p10 p19"));
+		m1.put("d10", new HashMapAndPath.DotsToLinesList("p11 p20"));
+		m1.put("d11", new HashMapAndPath.DotsToLinesList("p12 p21"));
+		m1.put("d12", new HashMapAndPath.DotsToLinesList("p13 p22"));
+		m1.put("d13", new HashMapAndPath.DotsToLinesList("p14 p23"));
+		m1.put("d14", new HashMapAndPath.DotsToLinesList("p15 p24"));
+		m1.put("d15", new HashMapAndPath.DotsToLinesList("p17 p26"));
+		m1.put("d16", new HashMapAndPath.DotsToLinesList("p18 p27"));
+		m1.put("d17", new HashMapAndPath.DotsToLinesList("p19 p28"));
+		m1.put("d18", new HashMapAndPath.DotsToLinesList("p20 p29"));
+		m1.put("d19", new HashMapAndPath.DotsToLinesList("p21 p30"));
+		m1.put("d20", new HashMapAndPath.DotsToLinesList("p22 p31"));
+		m1.put("d21", new HashMapAndPath.DotsToLinesList("p23 p32"));
+		m1.put("d22", new HashMapAndPath.DotsToLinesList("p25 p34"));
+		m1.put("d23", new HashMapAndPath.DotsToLinesList("p26 p35"));
+		m1.put("d24", new HashMapAndPath.DotsToLinesList("p27 p36"));
+		m1.put("d25", new HashMapAndPath.DotsToLinesList("p28 p37"));
+		m1.put("d26", new HashMapAndPath.DotsToLinesList("p29 p38"));
+		m1.put("d27", new HashMapAndPath.DotsToLinesList("p30 p39"));
+		m1.put("d28", new HashMapAndPath.DotsToLinesList("p31 p40"));
+		m1.put("d29", new HashMapAndPath.DotsToLinesList("p33 p42"));
+		m1.put("d30", new HashMapAndPath.DotsToLinesList("p34 p43"));
+		m1.put("d31", new HashMapAndPath.DotsToLinesList("p35 p44"));
+		m1.put("d32", new HashMapAndPath.DotsToLinesList("p36 p45"));
+		m1.put("d33", new HashMapAndPath.DotsToLinesList("p37 p46"));
+		m1.put("d34", new HashMapAndPath.DotsToLinesList("p38 p47"));
+		m1.put("d35", new HashMapAndPath.DotsToLinesList("p39 p48"));
+		m1.put("d36", new HashMapAndPath.DotsToLinesList("p41 p50"));
+		m1.put("d37", new HashMapAndPath.DotsToLinesList("p42 p51"));
+		m1.put("d38", new HashMapAndPath.DotsToLinesList("p43 p52"));
+		m1.put("d39", new HashMapAndPath.DotsToLinesList("p44 p53"));
+		m1.put("d40", new HashMapAndPath.DotsToLinesList("p45 p54"));
+		m1.put("d41", new HashMapAndPath.DotsToLinesList("p46 p55"));
+		m1.put("d42", new HashMapAndPath.DotsToLinesList("p47 p56"));
+		m1.put("d43", new HashMapAndPath.DotsToLinesList("p49 p58"));
+		m1.put("d44", new HashMapAndPath.DotsToLinesList("p50 p59"));
+		m1.put("d45", new HashMapAndPath.DotsToLinesList("p51 p60"));
+		m1.put("d46", new HashMapAndPath.DotsToLinesList("p52 p61"));
+		m1.put("d47", new HashMapAndPath.DotsToLinesList("p53 p62"));
+		m1.put("d48", new HashMapAndPath.DotsToLinesList("p54 p63"));
+		m1.put("d49", new HashMapAndPath.DotsToLinesList("p55 p64"));		
+		
 		return m1;
 	}
 	
@@ -392,4 +446,35 @@ import app.server.NodeList;
 		
 	}
 
- }
+ 
+	public static int scoredPoints(PathList pathCreated) {
+
+		ListPathCreated LPC = new ListPathCreated();
+		NodeLinesPath pathCreatedCurrent = pathCreated.firstNode;
+		int score = 0;
+		System.out.println("inscore");
+		while(pathCreatedCurrent != null) {
+
+			System.out.println(pathCreatedCurrent.getMatrix().firstNode.getPoint1());
+			System.out.println(pathCreatedCurrent.getMatrix().firstNode.getPoint2());
+			
+			
+			LPC.addListPathCreated(Main.m2.get(pathCreatedCurrent.getMatrix().firstNode.getPoint1() + " " + 
+					pathCreatedCurrent.getMatrix().firstNode.getPoint2()));
+
+			if(LPC.firstNode.getMatrix().firstNode.getLine() == "v" || LPC.firstNode.getMatrix().firstNode.getLine() == "h") {
+				score += 2;
+				pathCreatedCurrent = pathCreatedCurrent.getNext();
+			}else if(LPC.firstNode.getMatrix().firstNode.getLine() == "d") {
+				score +=1;
+				pathCreatedCurrent = pathCreatedCurrent.getNext();
+			}
+
+
+
+		}
+		
+		return score;
+	}
+
+}

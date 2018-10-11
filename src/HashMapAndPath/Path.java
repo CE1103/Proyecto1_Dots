@@ -8,16 +8,16 @@ public class Path {
 	public void figureRecognition() {
 		
 		NodeLinesPath lastEntry = Main.path.firstNode;
-		String point1 = lastEntry.matrix.firstNode.point1;
-		String point2 = lastEntry.matrix.firstNode.point2;
+		String point1 = lastEntry.getMatrix().firstNode.getPoint1();
+		String point2 = lastEntry.getMatrix().firstNode.getPoint2();
 		PathList pathLocal = new PathList();
 		PathList pathCreated = new PathList();
-		lastEntry = lastEntry.next;
+		lastEntry = lastEntry.getNext();
 
 	    while (lastEntry != null) {
 	    	   		
-	    	pathLocal.addPathList(new ListHashMap(lastEntry.matrix.firstNode.point1,lastEntry.matrix.firstNode.point2));
-	    	lastEntry = lastEntry.next;
+	    	pathLocal.addPathList(new ListHashMap(lastEntry.getMatrix().firstNode.getPoint1(),lastEntry.getMatrix().firstNode.getPoint2()));
+	    	lastEntry = lastEntry.getNext();
 
 	    }
 	    NodeLinesPath localCurrent = pathLocal.firstNode;
@@ -38,20 +38,20 @@ public class Path {
 	
 	public String isInNode(String lookFor, PathList pathLocal,NodeLinesPath localCurrent,PathList pathCreated) {
 		while(localCurrent != null){
-			if (localCurrent.matrix.firstNode.point1 == lookFor) {
-				lookFor = localCurrent.matrix.firstNode.point2;
-				pathCreated.addPathList(new ListHashMap(localCurrent.matrix.firstNode.point1,lookFor));
-				pathLocal.removeNode(localCurrent.matrix.firstNode.point1, lookFor);
+			if (localCurrent.getMatrix().firstNode.getPoint1() == lookFor) {
+				lookFor = localCurrent.getMatrix().firstNode.getPoint2();
+				pathCreated.addPathList(new ListHashMap(localCurrent.getMatrix().firstNode.getPoint1(),lookFor));
+				pathLocal.removeNode(localCurrent.getMatrix().firstNode.getPoint1(), lookFor);
 				return  lookFor;
 			
-			}else if(localCurrent.matrix.firstNode.point2 == lookFor) {
-				lookFor = localCurrent.matrix.firstNode.point1;
-				pathCreated.addPathList(new ListHashMap(lookFor,localCurrent.matrix.firstNode.point2));
-				pathLocal.removeNode(lookFor, localCurrent.matrix.firstNode.point2);
+			}else if(localCurrent.getMatrix().firstNode.getPoint2() == lookFor) {
+				lookFor = localCurrent.getMatrix().firstNode.getPoint1();
+				pathCreated.addPathList(new ListHashMap(lookFor,localCurrent.getMatrix().firstNode.getPoint2()));
+				pathLocal.removeNode(lookFor, localCurrent.getMatrix().firstNode.getPoint2());
 				return  lookFor;
 			
 			}else {
-				localCurrent = localCurrent.next;		 
+				localCurrent = localCurrent.getNext();		 
 			}
 		}
 		return "";
@@ -65,8 +65,8 @@ public class Path {
 
 	    while (lastEntry != null) {
 	    	   		
-	    	pathLocal.addPathList(new ListHashMap(lastEntry.matrix.firstNode.point1,lastEntry.matrix.firstNode.point2));
-	    	lastEntry = lastEntry.next;
+	    	pathLocal.addPathList(new ListHashMap(lastEntry.getMatrix().firstNode.getPoint1(),lastEntry.getMatrix().firstNode.getPoint2()));
+	    	lastEntry = lastEntry.getNext();
 
 	    }
 	    return pathLocal;

@@ -26,6 +26,7 @@ public class Main{
     public static String screen4File = "Screen4.fxml";
     public static List l1;
     public static HashMap<String, HashMapAndPath.ListHashMap> m1;
+    public static HashMap<String, HashMapAndPath.DotsToLinesList> m2;
     public static PathList path = new PathList();
 
     public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException { 
@@ -33,6 +34,7 @@ public class Main{
     	l1 = app.server.List.createLinkedList();
         Game.linkedListToArray();
         m1 = util.Util.createHashMap();
+        m2 = util.Util.createDotsToLineHM();
 //        System.out.println(Arrays.toString(linesStatic));
 //        System.out.println(ServerCommunication.jsonDataSend());
 //        System.out.println(ClientCommunication.jsonDataSend());
