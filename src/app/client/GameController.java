@@ -25,6 +25,7 @@ import javafx.scene.text.Text;
 import util.*;
 
 public class GameController implements Initializable, ControlledScreen {
+
 	
 	@FXML
     private Label labelP1, labelP2, alert;
