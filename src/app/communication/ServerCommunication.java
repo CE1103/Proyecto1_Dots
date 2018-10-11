@@ -21,7 +21,7 @@ public class ServerCommunication {
 	
 	public static Client client;
 	public static Server server;
-	public static int contador = -1;
+	public static int counter = -1;
 	public static PathList temp1 = new PathList();
 	public static String[] RecentLines = new String[161];
 	
@@ -48,7 +48,7 @@ public class ServerCommunication {
 	
 				for (int n = (lines.length-1); n >= 0; n--) {
 					String str = lines[n];
-					if((!str.equals("null")) && contador != n) {
+					if((!str.equals("null")) && counter != n) {
 						LN.addPoint(lines[n]);
 					}else {
 						temp1.addPathList(Main.m1.get(lines[n])); 
@@ -56,7 +56,7 @@ public class ServerCommunication {
 					
 				}
 				System.out.println("error4");
-				contador++;
+				counter++;
 				NodeList current = LN.firstPoint;
 				PathList p1 = new PathList();
 				while(current != null && current.pointNumber != null) {
