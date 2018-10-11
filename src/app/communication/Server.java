@@ -17,10 +17,14 @@ public class Server {
 	public String dots7;
 	public boolean turn;
 	public boolean gameOn;
+	public int scoreP1;
+	public int scoreP2;
 
 	
 	public Server() {
 		
+		this.scoreP1 = Game.P1.getScore();
+		this.scoreP2 = Game.P2.getScore();
 		this.lines = Arrays.toString(Main.linesStatic);
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);

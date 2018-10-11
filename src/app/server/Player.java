@@ -40,6 +40,15 @@ public class Player extends Game {
 	public int getScore(){
 		return points;
 	}
+	
+	public static void scoreAddint(int score) {
+		if (Game.P1.getTurn()) {
+			Game.P1.scorePoints(score);
+		} else if (Game.P2.getTurn()) {
+			Game.P2.scorePoints(score);
+		}
+			
+	}
 
 
 	public static void scoreAdd(int score) {
