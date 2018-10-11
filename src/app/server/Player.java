@@ -40,5 +40,14 @@ public class Player extends Game {
 	public int getScore(){
 		return points;
 	}
+	
+	public static void scoreAdd() {
+		if (Game.P1.getTurn()) {
+			Game.P1.scorePoints();
+		} else if (Game.P2.getTurn()) {
+			Game.P2.scorePoints();
+		}
+			
+	}
 
 }
