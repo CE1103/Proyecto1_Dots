@@ -9,9 +9,10 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 import HashMapAndPath.PathList;
 import Sockets.SocketClient;
-import Sockets.SocketServer;
+import app.client.List;
 import app.client.ScreensController;
 import app.communication.ClientCommunication;
+import app.communication.Game;
 import app.communication.Queue;
 import app.communication.ServerCommunication;
 import javafx.application.Application;
@@ -45,7 +46,7 @@ public class Main{
 	
     public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException { 
     	
-    	l1 = app.server.List.createLinkedList();
+    	l1 = app.client.List.createLinkedList();
         Game.linkedListToArray();
         m1 = util.Util.createHashMap();
         System.out.println(Arrays.toString(linesStatic));

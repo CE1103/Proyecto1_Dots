@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import util.ControlledScreen;
 import Sockets.SocketClient;
-import Sockets.SocketServer;
 
 public class MainController implements Initializable, ControlledScreen {
 

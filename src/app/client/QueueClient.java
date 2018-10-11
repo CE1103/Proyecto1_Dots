@@ -6,10 +6,10 @@ import java.net.Socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import app.communication.Game;
 import app.communication.JsonQueue;
 import app.communication.Player;
 import app.communication.Queue;
-import app.server.Game;
 
 public class QueueClient implements Runnable{
 	

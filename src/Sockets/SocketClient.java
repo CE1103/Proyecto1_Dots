@@ -24,8 +24,8 @@ import app.client.QueueClient;
 import app.communication.Client;
 import app.communication.ClientCommunication;
 import app.communication.ClientPrinter;
+import app.communication.Game;
 import app.communication.Player;
-import app.server.Game;
 import app.server.Main;
 
 public class SocketClient implements Runnable{

@@ -1,6 +1,8 @@
-package app.server;
+package app.communication;
 
-import app.communication.Player;
+import app.client.List;
+import app.client.NodeList;
+import app.server.Turn;
 
 
 public class Game {

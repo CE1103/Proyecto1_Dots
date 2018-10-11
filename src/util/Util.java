@@ -11,6 +11,8 @@ import java.util.HashMap;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
 
+import app.client.List;
+import app.client.NodeList;
 import app.communication.Client;
 import app.server.*;
  
