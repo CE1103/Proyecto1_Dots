@@ -1,10 +1,6 @@
 package app.server;
 
-import app.client.data.SharedData;
 import app.communication.Player;
-import javafx.beans.value.ObservableValue;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
 
 
 public class Game {
@@ -14,8 +10,6 @@ public class Game {
 	public static Turn b1 = new Turn(P1, P2);
 
 	public static String[][] dots = new String[8][8];
-	
-	SharedData data;
 		
 	public static void linkedListToArray(){ // Mover Server
 		
@@ -40,19 +34,6 @@ public class Game {
 		}
 	}
 
-	public void setData(SharedData data) {
-		this.data = data;
-		
-		data.getStringLineProp()
-	      .addListener((ObservableValue<? extends String> observable,
-	                String oldValue, String newValue) -> {
-	      String array[] = newValue.split("-");
-	      Color color = Integer.parseInt(array[1]) == 0 ? Color.web("#FFAE52") : Color.web("#95F4F1");
-	      
-	      Line line = (Line) Main.scene4.lookup("#" + array[0]);
-	      line.setStroke(color);
-  });
-		
-	}
+
 
 }
