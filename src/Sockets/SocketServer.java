@@ -86,7 +86,11 @@ public class SocketServer implements Runnable {
 				out2.flush();
 				System.out.println("holaserver8");
 			}
-		}catch (Exception e) {}
+		}catch (Exception e) {
+			ServerCommunication.queue.dequeue();
+			ServerCommunication.queue.dequeue();
+			ServerCommunication.queue.showAll();
+		}
 		
 	}	
 	

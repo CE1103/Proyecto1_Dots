@@ -1,19 +1,10 @@
 package app.communication;
 
 public class Queue {
-    
-	class Node {
-        Object element;
-        Node Next;
 
-        public Node(Object object) {
-            element = object;
-            Next = null;
-        }
-    }
 
-    Node first;
-    Node end;
+    QueueNode first;
+    QueueNode end;
     int size;
 
     public Queue() {
@@ -21,25 +12,28 @@ public class Queue {
         size = 0;
     }
 
-    public void enqueue(Object object) {
-        Node new_node = new Node(object);
+    public void enqueue(int port) {
+    	QueueNode new_node = new QueueNode(port);
         if (first == null) {
-            first = new_node;
-            end = new_node;
+            this.first = new_node;
+            this.end = new_node;
         } else {
-            end.Next = new_node;
-            end = new_node;
+            this.end.next = new_node;
+            this.end = new_node;
         }
         size++;
     }
 
     public Object dequeue() {
-        if (first == null)
-            return null;
-        Object o = first.element;
-        first = first.Next;
-        size--;
-        return o;
+    	if (this.first == null) 
+    		return null; 
+    	
+    	QueueNode queue = this.first; 
+    	this.first = this.first.next; 
+    	
+    	if (this.first == null) 
+    	this.end = null; 
+    	return queue; 
     }
 
     public boolean isEmpty() {
@@ -54,18 +48,15 @@ public class Queue {
         if (first == null)
             return null;
         else
-            System.out.println(first.element);
-        return first.element;
+            System.out.println(first.port);
+        return first.port;
     }
     public void showAll(){
-        Node current= first;
+        QueueNode current= first;
         while(current!=null){
-            System.out.println(current.element);
-            current=current.Next;
+            System.out.println(current.port);
+            current=current.next;
         }
     }
     
-    
-	
-
 }

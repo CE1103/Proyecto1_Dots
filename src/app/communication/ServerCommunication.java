@@ -24,6 +24,7 @@ public class ServerCommunication {
 	public static int counter = -1;
 	public static PathList temp1 = new PathList();
 	public static String[] RecentLines = new String[161];
+	public static Queue queue = new Queue();
 	
 	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
 		
@@ -89,6 +90,7 @@ public class ServerCommunication {
 		JsonQueue jsonQueue = new JsonQueue();
 		String json = mapper.writeValueAsString(jsonQueue);
 		System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonQueue));
+		queue.showAll();
 		return json;
 	}
 	

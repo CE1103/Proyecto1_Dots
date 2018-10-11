@@ -16,6 +16,7 @@ public class QueueThread implements Runnable{
 				DataOutputStream outqueue = new DataOutputStream(new BufferedOutputStream(clientSocketQueue.getOutputStream()));
 				outqueue.writeUTF(ServerCommunication.jsonPortSend());
 				outqueue.flush();
+				
 				clientSocketQueue.close();
 			}
 		}catch (Exception e) {
