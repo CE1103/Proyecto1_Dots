@@ -17,6 +17,7 @@ public class ClientPrinter extends Game implements DataUpdater {
 		if(ClientCommunication.client.turn){
 			
 			if(Game.P1.getTurn()) {
+				
 				//((Line)event.getSource()).setStroke(Color.web("#FFAE52"));
 				Player.scorePoints();
 				System.out.println(Player.points);

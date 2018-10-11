@@ -81,10 +81,9 @@ public class GameController implements Initializable, ControlledScreen {
 //        		labelP1.setText(Integer.toString(Player.getScore()) + " pts");
 //        		labelP2.setText(Integer.toString(Player.getScore()) + " pts");
 
-        		
         		Main.linesStatic[x] = ((Line)event.getSource()).getId();
         		x++;
-        		
+
         		System.out.println(Arrays.toString(Main.linesStatic));
         		
         		
