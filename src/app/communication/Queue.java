@@ -2,8 +2,8 @@ package app.communication;
 
 public class Queue {
 	
-    Node first;
-    Node end;
+    QueueNode first;
+    QueueNode end;
     int size;
 
     public Queue() {
@@ -12,12 +12,12 @@ public class Queue {
     }
 
     public void enqueue(Object object) {
-        Node new_node = new Node(object);
+    	QueueNode new_node = new QueueNode(object);
         if (first == null) {
             first = new_node;
             end = new_node;
         } else {
-            end.Next = new_node;
+            end.next = new_node;
             end = new_node;
         }
         size++;
