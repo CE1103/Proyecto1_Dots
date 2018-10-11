@@ -17,18 +17,18 @@ public class GameOver {
 		
 		if(!ClientCommunication.client.gameOn) {
 			
-			if(Player.getScore() > Player.getScore()) {
-				ClientCommunication.client.scoreP1 = scoreWinnerPlayer;
+			if(ClientCommunication.client.scoreP1 > ClientCommunication.client.scoreP2) {
+				scoreWinnerPlayer = ClientCommunication.client.scoreP1;
 				winnerPlayer = "Jugador1";
 				loserPlayer = "Jugador2";
-				ClientCommunication.client.scoreP2 = scoreLoserPlayer;	
+				scoreLoserPlayer = ClientCommunication.client.scoreP2;	
 				
 			}
 			else {
-				ClientCommunication.client.scoreP2 = scoreWinnerPlayer;
+				scoreWinnerPlayer = ClientCommunication.client.scoreP2;
 				winnerPlayer = "Jugador2";
 				loserPlayer = "Jugador1";
-				ClientCommunication.client.scoreP1 = scoreLoserPlayer;
+				scoreLoserPlayer = ClientCommunication.client.scoreP1;
 			}
 			
 		}

@@ -40,23 +40,32 @@ public class MainController implements Initializable, ControlledScreen {
     @FXML
     private void goToScreen2(ActionEvent event) throws IOException, InterruptedException{      
 
-		myController.setScreen(ServerAttributes.screen4ID);
-		g = new SocketClient();
-		Thread t2 = new Thread(g);
-		g.setPort(QueueClient.jsonQueue.port);
-		Thread threadReset = new Thread(new Runnable() {			
+    	if(QueueClient.jsonQueue.port > 8101) {
+			myController.setScreen(ServerAttributes.screen6ID);
+		}
+    	
+    	else {
+    		myController.setScreen(ServerAttributes.screen4ID);
+    		g = new SocketClient();
+    		Thread t2 = new Thread(g);
+    		g.setPort(QueueClient.jsonQueue.port);
+    		
+    		Thread threadReset = new Thread(new Runnable() {			
 
-		@Override
-		public void run() {
-			try {
-				System.out.println("hola2");
-				resetThread();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}});
-		threadReset.start();
-		t2.start();
+    		@Override
+    		public void run() {
+    			try {
+    				System.out.println("hola2");
+    				resetThread();
+    			} catch (InterruptedException e) {
+    				e.printStackTrace();
+    			}
+    		}});
+    		threadReset.start();
+    		t2.start();
+    	}
+    	
+		
 		
     }
     

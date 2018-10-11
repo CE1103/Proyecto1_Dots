@@ -23,6 +23,7 @@ public class GameOverController implements Initializable, ControlledScreen{
     private Label loserPlayer, winnerPlayer;
     
     ScreensController myController;
+    
 
 	@Override
 	public void setScreenParent(ScreensController screenPage) {
@@ -41,11 +42,12 @@ public class GameOverController implements Initializable, ControlledScreen{
        myController.setScreen(ServerAttributes.screen1ID);
     }
     
+    @FXML
     public void setFinalResults() {
     	
     	scoreLoserPlayer.setText(Integer.toString(GameOver.scoreLoserPlayer));
     	scoreWinnerPlayer.setText(Integer.toString(GameOver.scoreWinnerPlayer));
-    	
+
     	loserPlayer.setText(GameOver.loserPlayer);
     	winnerPlayer.setText(GameOver.winnerPlayer);
     	

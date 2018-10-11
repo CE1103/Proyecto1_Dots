@@ -62,6 +62,7 @@ public class GameController implements Initializable, ControlledScreen {
 
     
     public void onMouseClick(MouseEvent event) throws Exception {
+    	
     	if(ClientCommunication.client.gameOn) {
     		
     		if(ClientCommunication.client.turn) {
@@ -86,9 +87,8 @@ public class GameController implements Initializable, ControlledScreen {
             		ServerAttributes.linesStatic[x] = ((Line)event.getSource()).getId();
             		x++;
             		
+            		
             		System.out.println(Arrays.toString(ServerAttributes.linesStatic));
-            		
-            		
             		
             		
             		System.out.println(Arrays.toString(ServerAttributes.linesStatic));
@@ -105,31 +105,16 @@ public class GameController implements Initializable, ControlledScreen {
             		alert.setText("Linea Anteriormente Presionada");
             		alert.setStyle("-fx-text-fill: #95F4F1");
             	}
-            		
-        		
-//        		labelP1.setText(Integer.toString(Game.P1.getScore()) + " pts");
-//        		labelP2.setText(Integer.toString(Game.P2.getScore()) + " pts");
-
-        		ServerAttributes.linesStatic[x] = ((Line)event.getSource()).getId();
-        		x++;
-
-        		System.out.println(Arrays.toString(ServerAttributes.linesStatic));
-        		
-        		
-        		ClientPrinter.setColor(event);
-        		
-        		System.out.println(Arrays.toString(ServerAttributes.linesStatic));
-        		System.out.println(Arrays.toString(Game.dots));
-        		ClientCommunication.jsonDataSend();
-        		System.out.println("hola");
-        		MainController.thread.start();
         	}
         	else{
         		System.out.println("Ni picha NEGROOO");
         	}
     	}
     	else {
+    		GameOver.checkWinnerPlayer();
     		myController.setScreen(ServerAttributes.screen5ID);
+    		
+    		
     	}
     	
     }
