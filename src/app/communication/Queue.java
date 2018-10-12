@@ -11,7 +11,7 @@ public class Queue {
         size = 0;
     }
 
-    public void enqueue(Object object) {
+    public void enqueue(int object) {
     	QueueNode new_node = new QueueNode(object);
         if (first == null) {
             first = new_node;
@@ -27,7 +27,7 @@ public class Queue {
         if (first == null)
             return null;
         Object o = first.element;
-        first = first.Next;
+        first = first.next;
         size--;
         return o;
     }
@@ -48,10 +48,10 @@ public class Queue {
         return first.element;
     }
     public void showAll(){
-        Node current= first;
+        QueueNode current= first;
         while(current!=null){
             System.out.println(current.element);
-            current=current.Next;
+            current=current.next;
         }
     }
     

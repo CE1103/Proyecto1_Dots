@@ -4,14 +4,23 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+<<<<<<< HEAD
 import Sockets.SocketClient;
 import app.server.Main;
+=======
+>>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import util.ControlledScreen;
+<<<<<<< HEAD
+=======
+import Sockets.SocketClient;
+import Sockets.SocketServer;
+import app.communication.ServerAttributes;
+>>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
 
 public class MainController implements Initializable, ControlledScreen {
 
@@ -39,23 +48,32 @@ public class MainController implements Initializable, ControlledScreen {
     @FXML
     private void goToScreen2(ActionEvent event) throws IOException, InterruptedException{      
 
-		myController.setScreen(Main.screen4ID);
-		g = new SocketClient();
-		Thread t2 = new Thread(g);
-		g.setPort(QueueClient.jsonQueue.port);
-		Thread threadReset = new Thread(new Runnable() {			
+    	if(QueueClient.jsonQueue.port > 8101) {
+			myController.setScreen(ServerAttributes.screen6ID);
+		}
+    	
+    	else {
+    		myController.setScreen(ServerAttributes.screen4ID);
+    		g = new SocketClient();
+    		Thread t2 = new Thread(g);
+    		g.setPort(QueueClient.jsonQueue.port);
+    		
+    		Thread threadReset = new Thread(new Runnable() {			
 
-		@Override
-		public void run() {
-			try {
-				System.out.println("hola2");
-				resetThread();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}});
-		threadReset.start();
-		t2.start();
+    		@Override
+    		public void run() {
+    			try {
+    				System.out.println("hola2");
+    				resetThread();
+    			} catch (InterruptedException e) {
+    				e.printStackTrace();
+    			}
+    		}});
+    		threadReset.start();
+    		t2.start();
+    	}
+    	
+		
 		
     }
     
@@ -77,6 +95,6 @@ public class MainController implements Initializable, ControlledScreen {
     
     @FXML
     private void goToScreen3(ActionEvent event){
-    	myController.setScreen(Main.screen3ID);
+    	myController.setScreen(ServerAttributes.screen3ID);
     }
 }

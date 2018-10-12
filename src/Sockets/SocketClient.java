@@ -17,7 +17,12 @@ import app.client.GameController;
 import app.communication.Client;
 import app.communication.ClientCommunication;
 import app.communication.Player;
+<<<<<<< HEAD
 import app.server.Main;
+=======
+import app.communication.ServerAttributes;
+import app.server.Game;
+>>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
 
 public class SocketClient implements Runnable{
 	
@@ -52,7 +57,7 @@ public class SocketClient implements Runnable{
 		synchronized (this){
 			try {
 				ObjectMapper mapper = new ObjectMapper();
-				clientSocket = new Socket("192.168.1.146", port);
+				clientSocket = new Socket("192.168.43.55", port);
 				out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 				in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 				Thread.sleep(500);
@@ -87,7 +92,7 @@ public class SocketClient implements Runnable{
 					if (Player.turn) {
 					    String linesString = ClientCommunication.client.lines;
 						Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(linesString);
-						Main.linesStatic = FluentIterable.from(i).toArray(String.class);
+						ServerAttributes.linesStatic = FluentIterable.from(i).toArray(String.class);
 						wait();
 					} else {
 						GameController.x++;

@@ -3,7 +3,7 @@ package app.client;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import app.server.Main;
+import app.communication.ServerAttributes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,6 +28,6 @@ public class InfoController implements Initializable, ControlledScreen {
 
     @FXML
     private void goToScreen1(ActionEvent event){
-       myController.setScreen(Main.screen1ID);
+       myController.setScreen(ServerAttributes.screen1ID);
     }
 }

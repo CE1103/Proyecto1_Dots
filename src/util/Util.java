@@ -3,11 +3,10 @@ package util;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import HashMapAndPath.ListPathCreated;
 import HashMapAndPath.NodeLinesPath;
 import HashMapAndPath.PathList;
 import app.server.List;
-import app.server.Main;
+import app.communication.ServerAttributes;
 import app.server.NodeList;
  
  public class Util {
@@ -234,175 +233,175 @@ import app.server.NodeList;
 		return m1;
 	}
 	
-	public static HashMap<String, HashMapAndPath.DotsToLinesList> createDotsToLineHM(){
-		HashMap<String, HashMapAndPath.DotsToLinesList> m1 = new HashMap<>();
-		
-		m1.put("p1 p2", new HashMapAndPath.DotsToLinesList("h",1));
-		m1.put("p2 p3", new HashMapAndPath.DotsToLinesList("h",2));
-		m1.put("p3 p4", new HashMapAndPath.DotsToLinesList("h",3));
-		m1.put("p4 p5", new HashMapAndPath.DotsToLinesList("h",4));
-		m1.put("p5 p6", new HashMapAndPath.DotsToLinesList("h",5));
-		m1.put("p6 p7", new HashMapAndPath.DotsToLinesList("h",6));
-		m1.put("p7 p8", new HashMapAndPath.DotsToLinesList("h",7));
-		m1.put("p9 p10", new HashMapAndPath.DotsToLinesList("h",8));
-		m1.put("p10 p11", new HashMapAndPath.DotsToLinesList("h",9));
-		m1.put("p11 p12", new HashMapAndPath.DotsToLinesList("h",10));
-		m1.put("p12 p13", new HashMapAndPath.DotsToLinesList("h",11));
-		m1.put("p13 p14", new HashMapAndPath.DotsToLinesList("h",12));
-		m1.put("p14 p15", new HashMapAndPath.DotsToLinesList("h",13));
-		m1.put("p15 p16", new HashMapAndPath.DotsToLinesList("h",14));
-		m1.put("p17 p18", new HashMapAndPath.DotsToLinesList("h",15));
-		m1.put("p18 p19", new HashMapAndPath.DotsToLinesList("h",16));
-		m1.put("p19 p20", new HashMapAndPath.DotsToLinesList("h",17));
-		m1.put("p20 p21", new HashMapAndPath.DotsToLinesList("h",18));
-		m1.put("p21 p22", new HashMapAndPath.DotsToLinesList("h",19));
-		m1.put("p22 p23", new HashMapAndPath.DotsToLinesList("h",20));
-		m1.put("p23 p24", new HashMapAndPath.DotsToLinesList("h",21));
-		m1.put("p25 p26", new HashMapAndPath.DotsToLinesList("h",22));
-		m1.put("p26 p27", new HashMapAndPath.DotsToLinesList("h",23));
-		m1.put("p27 p28", new HashMapAndPath.DotsToLinesList("h",24));
-		m1.put("p28 p29", new HashMapAndPath.DotsToLinesList("h",25));
-		m1.put("p29 p30", new HashMapAndPath.DotsToLinesList("h",26));
-		m1.put("p30 p31", new HashMapAndPath.DotsToLinesList("h",27));
-		m1.put("p31 p32", new HashMapAndPath.DotsToLinesList("h",28));
-		m1.put("p33 p34", new HashMapAndPath.DotsToLinesList("h",29));
-		m1.put("p34 p35", new HashMapAndPath.DotsToLinesList("h",30));
-		m1.put("p35 p36", new HashMapAndPath.DotsToLinesList("h",31));
-		m1.put("p36 p37", new HashMapAndPath.DotsToLinesList("h",32));
-		m1.put("p37 p38", new HashMapAndPath.DotsToLinesList("h",33));
-		m1.put("p38 p39", new HashMapAndPath.DotsToLinesList("h",34));
-		m1.put("p39 p40", new HashMapAndPath.DotsToLinesList("h",35));
-		m1.put("p41 p42", new HashMapAndPath.DotsToLinesList("h",36));
-		m1.put("p42 p43", new HashMapAndPath.DotsToLinesList("h",37));
-		m1.put("p43 p44", new HashMapAndPath.DotsToLinesList("h",38));
-		m1.put("p44 p45", new HashMapAndPath.DotsToLinesList("h",39));
-		m1.put("p45 p46", new HashMapAndPath.DotsToLinesList("h",40));
-		m1.put("p46 p47", new HashMapAndPath.DotsToLinesList("h",41));
-		m1.put("p47 p48", new HashMapAndPath.DotsToLinesList("h",42));
-		m1.put("p49 p50", new HashMapAndPath.DotsToLinesList("h",43));
-		m1.put("p50 p51", new HashMapAndPath.DotsToLinesList("h",44));
-		m1.put("p51 p52", new HashMapAndPath.DotsToLinesList("h",45));
-		m1.put("p52 p53", new HashMapAndPath.DotsToLinesList("h",46));
-		m1.put("p53 p54", new HashMapAndPath.DotsToLinesList("h",47));
-		m1.put("p54 p55", new HashMapAndPath.DotsToLinesList("h",48));
-		m1.put("p55 p56", new HashMapAndPath.DotsToLinesList("h",49));
-		m1.put("p57 p58", new HashMapAndPath.DotsToLinesList("h",50));
-		m1.put("p58 p59", new HashMapAndPath.DotsToLinesList("h",51));
-		m1.put("p59 p60", new HashMapAndPath.DotsToLinesList("h",52));
-		m1.put("p60 p61", new HashMapAndPath.DotsToLinesList("h",53));
-		m1.put("p61 p62", new HashMapAndPath.DotsToLinesList("h",54));
-		m1.put("p62 p63", new HashMapAndPath.DotsToLinesList("h",55));
-		m1.put("p63 p64", new HashMapAndPath.DotsToLinesList("h",56));
-		
-		m1.put("p1 p9", new HashMapAndPath.DotsToLinesList("v",1));
-		m1.put("p2 p10", new HashMapAndPath.DotsToLinesList("v",2));
-		m1.put("p3 p11", new HashMapAndPath.DotsToLinesList("v",3));
-		m1.put("p4 p12", new HashMapAndPath.DotsToLinesList("v",4));
-		m1.put("p5 p13", new HashMapAndPath.DotsToLinesList("v",5));
-		m1.put("p6 p14", new HashMapAndPath.DotsToLinesList("v",6));
-		m1.put("p7 p15", new HashMapAndPath.DotsToLinesList("v",7));
-		m1.put("p8 p16", new HashMapAndPath.DotsToLinesList("v",8));
-		m1.put("p9 p17", new HashMapAndPath.DotsToLinesList("v",9));
-		m1.put("p10 p18", new HashMapAndPath.DotsToLinesList("v",10));
-		m1.put("p11 p19", new HashMapAndPath.DotsToLinesList("v",11));
-		m1.put("p12 p20", new HashMapAndPath.DotsToLinesList("v",12));
-		m1.put("p13 p21", new HashMapAndPath.DotsToLinesList("v",13));
-		m1.put("p14 p22", new HashMapAndPath.DotsToLinesList("v",14));
-		m1.put("p15 p23", new HashMapAndPath.DotsToLinesList("v",15));
-		m1.put("p16 p24", new HashMapAndPath.DotsToLinesList("v",16));
-		m1.put("p17 p25", new HashMapAndPath.DotsToLinesList("v",17));
-		m1.put("p18 p26", new HashMapAndPath.DotsToLinesList("v",18));
-		m1.put("p19 p27", new HashMapAndPath.DotsToLinesList("v",19));
-		m1.put("p20 p28", new HashMapAndPath.DotsToLinesList("v",20));
-		m1.put("p21 p29", new HashMapAndPath.DotsToLinesList("v",21));
-		m1.put("p22 p30", new HashMapAndPath.DotsToLinesList("v",22));
-		m1.put("p23 p31", new HashMapAndPath.DotsToLinesList("v",23));
-		m1.put("p24 p32", new HashMapAndPath.DotsToLinesList("v",24));
-		m1.put("p25 p33", new HashMapAndPath.DotsToLinesList("v",25));
-		m1.put("p26 p34", new HashMapAndPath.DotsToLinesList("v",26));
-		m1.put("p27 p35", new HashMapAndPath.DotsToLinesList("v",27));
-		m1.put("p28 p36", new HashMapAndPath.DotsToLinesList("v",28));
-		m1.put("p29 p37", new HashMapAndPath.DotsToLinesList("v",29));
-		m1.put("p30 p38", new HashMapAndPath.DotsToLinesList("v",30));
-		m1.put("p31 p39", new HashMapAndPath.DotsToLinesList("v",31));
-		m1.put("p32 p40", new HashMapAndPath.DotsToLinesList("v",32));
-		m1.put("p33 p41", new HashMapAndPath.DotsToLinesList("v",33));
-		m1.put("p34 p42", new HashMapAndPath.DotsToLinesList("v",34));
-		m1.put("p35 p43", new HashMapAndPath.DotsToLinesList("v",35));
-		m1.put("p36 p44", new HashMapAndPath.DotsToLinesList("v",36));
-		m1.put("p37 p45", new HashMapAndPath.DotsToLinesList("v",37));
-		m1.put("p38 p46", new HashMapAndPath.DotsToLinesList("v",38));
-		m1.put("p39 p47", new HashMapAndPath.DotsToLinesList("v",39));
-		m1.put("p40 p48", new HashMapAndPath.DotsToLinesList("v",40));
-		m1.put("p41 p49", new HashMapAndPath.DotsToLinesList("v",41));
-		m1.put("p42 p50", new HashMapAndPath.DotsToLinesList("v",42));
-		m1.put("p43 p51", new HashMapAndPath.DotsToLinesList("v",43));
-		m1.put("p44 p52", new HashMapAndPath.DotsToLinesList("v",44));
-		m1.put("p45 p53", new HashMapAndPath.DotsToLinesList("v",45));
-		m1.put("p46 p54", new HashMapAndPath.DotsToLinesList("v",46));
-		m1.put("p47 p55", new HashMapAndPath.DotsToLinesList("v",47));
-		m1.put("p48 p56", new HashMapAndPath.DotsToLinesList("v",48));
-		m1.put("p49 p57", new HashMapAndPath.DotsToLinesList("v",49));
-		m1.put("p50 p58", new HashMapAndPath.DotsToLinesList("v",50));
-		m1.put("p51 p59", new HashMapAndPath.DotsToLinesList("v2",51));
-		m1.put("p52 p60", new HashMapAndPath.DotsToLinesList("v",52));
-		m1.put("p53 p61", new HashMapAndPath.DotsToLinesList("v",53));
-		m1.put("p54 p62", new HashMapAndPath.DotsToLinesList("v",54));
-		m1.put("p55 p63", new HashMapAndPath.DotsToLinesList("v",55));
-		m1.put("p56 p64", new HashMapAndPath.DotsToLinesList("v",56));
-		
-		m1.put("p1 p10", new HashMapAndPath.DotsToLinesList("d",1));
-		m1.put("p2 p11", new HashMapAndPath.DotsToLinesList("d",2));
-		m1.put("p3 p12", new HashMapAndPath.DotsToLinesList("d",3));
-		m1.put("p4 p13", new HashMapAndPath.DotsToLinesList("d",4));
-		m1.put("p5 p14", new HashMapAndPath.DotsToLinesList("d",5));
-		m1.put("p6 p15", new HashMapAndPath.DotsToLinesList("d",6));
-		m1.put("p7 p16", new HashMapAndPath.DotsToLinesList("d",7));
-		m1.put("p9 p18", new HashMapAndPath.DotsToLinesList("d",8));
-		m1.put("p10 p19", new HashMapAndPath.DotsToLinesList("d",9));
-		m1.put("p11 p20", new HashMapAndPath.DotsToLinesList("d",10));
-		m1.put("p12 p21", new HashMapAndPath.DotsToLinesList("d",11));
-		m1.put("p13 p22", new HashMapAndPath.DotsToLinesList("d",12));
-		m1.put("p14 p23", new HashMapAndPath.DotsToLinesList("d",13));
-		m1.put("p15 p24", new HashMapAndPath.DotsToLinesList("d",14));
-		m1.put("p17 p26", new HashMapAndPath.DotsToLinesList("d",15));
-		m1.put("p18 p27", new HashMapAndPath.DotsToLinesList("d",16));
-		m1.put("p19 p28", new HashMapAndPath.DotsToLinesList("d",17));
-		m1.put("p20 p29", new HashMapAndPath.DotsToLinesList("d",18));
-		m1.put("p21 p30", new HashMapAndPath.DotsToLinesList("d",19));
-		m1.put("p22 p31", new HashMapAndPath.DotsToLinesList("d",20));
-		m1.put("p23 p32", new HashMapAndPath.DotsToLinesList("d",21));
-		m1.put("p25 p34", new HashMapAndPath.DotsToLinesList("d",22));
-		m1.put("p26 p35", new HashMapAndPath.DotsToLinesList("d",23));
-		m1.put("p27 p36", new HashMapAndPath.DotsToLinesList("d",24));
-		m1.put("p28 p37", new HashMapAndPath.DotsToLinesList("d",25));
-		m1.put("p29 p38", new HashMapAndPath.DotsToLinesList("d",26));
-		m1.put("p30 p39", new HashMapAndPath.DotsToLinesList("d",27));
-		m1.put("p31 p40", new HashMapAndPath.DotsToLinesList("d",28));
-		m1.put("p33 p42", new HashMapAndPath.DotsToLinesList("d",29));
-		m1.put("p34 p43", new HashMapAndPath.DotsToLinesList("d",30));
-		m1.put("p35 p44", new HashMapAndPath.DotsToLinesList("d",31));
-		m1.put("p36 p45", new HashMapAndPath.DotsToLinesList("d",32));
-		m1.put("p37 p46", new HashMapAndPath.DotsToLinesList("d",33));
-		m1.put("p38 p47", new HashMapAndPath.DotsToLinesList("d",34));
-		m1.put("p39 p48", new HashMapAndPath.DotsToLinesList("d",35));
-		m1.put("p41 p50", new HashMapAndPath.DotsToLinesList("d",36));
-		m1.put("p42 p51", new HashMapAndPath.DotsToLinesList("d",37));
-		m1.put("p43 p52", new HashMapAndPath.DotsToLinesList("d",38));
-		m1.put("p44 p53", new HashMapAndPath.DotsToLinesList("d",39));
-		m1.put("p45 p54", new HashMapAndPath.DotsToLinesList("d",40));
-		m1.put("p46 p55", new HashMapAndPath.DotsToLinesList("d",41));
-		m1.put("p47 p56", new HashMapAndPath.DotsToLinesList("d",42));
-		m1.put("p49 p58", new HashMapAndPath.DotsToLinesList("d",43));
-		m1.put("p50 p59", new HashMapAndPath.DotsToLinesList("d",44));
-		m1.put("p51 p60", new HashMapAndPath.DotsToLinesList("d",45));
-		m1.put("p52 p61", new HashMapAndPath.DotsToLinesList("d",46));
-		m1.put("p53 p62", new HashMapAndPath.DotsToLinesList("d",47));
-		m1.put("p54 p63", new HashMapAndPath.DotsToLinesList("d",48));
-		m1.put("p55 p64", new HashMapAndPath.DotsToLinesList("d",49));		
-		
-		return m1;
-	}
+//	public static HashMap<String, HashMapAndPath.DotsToLinesList> createDotsToLineHM(){
+//		HashMap<String, HashMapAndPath.DotsToLinesList> m1 = new HashMap<>();
+//		
+//		m1.put("p1 p2", new HashMapAndPath.DotsToLinesList("h",1));
+//		m1.put("p2 p3", new HashMapAndPath.DotsToLinesList("h",2));
+//		m1.put("p3 p4", new HashMapAndPath.DotsToLinesList("h",3));
+//		m1.put("p4 p5", new HashMapAndPath.DotsToLinesList("h",4));
+//		m1.put("p5 p6", new HashMapAndPath.DotsToLinesList("h",5));
+//		m1.put("p6 p7", new HashMapAndPath.DotsToLinesList("h",6));
+//		m1.put("p7 p8", new HashMapAndPath.DotsToLinesList("h",7));
+//		m1.put("p9 p10", new HashMapAndPath.DotsToLinesList("h",8));
+//		m1.put("p10 p11", new HashMapAndPath.DotsToLinesList("h",9));
+//		m1.put("p11 p12", new HashMapAndPath.DotsToLinesList("h",10));
+//		m1.put("p12 p13", new HashMapAndPath.DotsToLinesList("h",11));
+//		m1.put("p13 p14", new HashMapAndPath.DotsToLinesList("h",12));
+//		m1.put("p14 p15", new HashMapAndPath.DotsToLinesList("h",13));
+//		m1.put("p15 p16", new HashMapAndPath.DotsToLinesList("h",14));
+//		m1.put("p17 p18", new HashMapAndPath.DotsToLinesList("h",15));
+//		m1.put("p18 p19", new HashMapAndPath.DotsToLinesList("h",16));
+//		m1.put("p19 p20", new HashMapAndPath.DotsToLinesList("h",17));
+//		m1.put("p20 p21", new HashMapAndPath.DotsToLinesList("h",18));
+//		m1.put("p21 p22", new HashMapAndPath.DotsToLinesList("h",19));
+//		m1.put("p22 p23", new HashMapAndPath.DotsToLinesList("h",20));
+//		m1.put("p23 p24", new HashMapAndPath.DotsToLinesList("h",21));
+//		m1.put("p25 p26", new HashMapAndPath.DotsToLinesList("h",22));
+//		m1.put("p26 p27", new HashMapAndPath.DotsToLinesList("h",23));
+//		m1.put("p27 p28", new HashMapAndPath.DotsToLinesList("h",24));
+//		m1.put("p28 p29", new HashMapAndPath.DotsToLinesList("h",25));
+//		m1.put("p29 p30", new HashMapAndPath.DotsToLinesList("h",26));
+//		m1.put("p30 p31", new HashMapAndPath.DotsToLinesList("h",27));
+//		m1.put("p31 p32", new HashMapAndPath.DotsToLinesList("h",28));
+//		m1.put("p33 p34", new HashMapAndPath.DotsToLinesList("h",29));
+//		m1.put("p34 p35", new HashMapAndPath.DotsToLinesList("h",30));
+//		m1.put("p35 p36", new HashMapAndPath.DotsToLinesList("h",31));
+//		m1.put("p36 p37", new HashMapAndPath.DotsToLinesList("h",32));
+//		m1.put("p37 p38", new HashMapAndPath.DotsToLinesList("h",33));
+//		m1.put("p38 p39", new HashMapAndPath.DotsToLinesList("h",34));
+//		m1.put("p39 p40", new HashMapAndPath.DotsToLinesList("h",35));
+//		m1.put("p41 p42", new HashMapAndPath.DotsToLinesList("h",36));
+//		m1.put("p42 p43", new HashMapAndPath.DotsToLinesList("h",37));
+//		m1.put("p43 p44", new HashMapAndPath.DotsToLinesList("h",38));
+//		m1.put("p44 p45", new HashMapAndPath.DotsToLinesList("h",39));
+//		m1.put("p45 p46", new HashMapAndPath.DotsToLinesList("h",40));
+//		m1.put("p46 p47", new HashMapAndPath.DotsToLinesList("h",41));
+//		m1.put("p47 p48", new HashMapAndPath.DotsToLinesList("h",42));
+//		m1.put("p49 p50", new HashMapAndPath.DotsToLinesList("h",43));
+//		m1.put("p50 p51", new HashMapAndPath.DotsToLinesList("h",44));
+//		m1.put("p51 p52", new HashMapAndPath.DotsToLinesList("h",45));
+//		m1.put("p52 p53", new HashMapAndPath.DotsToLinesList("h",46));
+//		m1.put("p53 p54", new HashMapAndPath.DotsToLinesList("h",47));
+//		m1.put("p54 p55", new HashMapAndPath.DotsToLinesList("h",48));
+//		m1.put("p55 p56", new HashMapAndPath.DotsToLinesList("h",49));
+//		m1.put("p57 p58", new HashMapAndPath.DotsToLinesList("h",50));
+//		m1.put("p58 p59", new HashMapAndPath.DotsToLinesList("h",51));
+//		m1.put("p59 p60", new HashMapAndPath.DotsToLinesList("h",52));
+//		m1.put("p60 p61", new HashMapAndPath.DotsToLinesList("h",53));
+//		m1.put("p61 p62", new HashMapAndPath.DotsToLinesList("h",54));
+//		m1.put("p62 p63", new HashMapAndPath.DotsToLinesList("h",55));
+//		m1.put("p63 p64", new HashMapAndPath.DotsToLinesList("h",56));
+//		
+//		m1.put("p1 p9", new HashMapAndPath.DotsToLinesList("v",1));
+//		m1.put("p2 p10", new HashMapAndPath.DotsToLinesList("v",2));
+//		m1.put("p3 p11", new HashMapAndPath.DotsToLinesList("v",3));
+//		m1.put("p4 p12", new HashMapAndPath.DotsToLinesList("v",4));
+//		m1.put("p5 p13", new HashMapAndPath.DotsToLinesList("v",5));
+//		m1.put("p6 p14", new HashMapAndPath.DotsToLinesList("v",6));
+//		m1.put("p7 p15", new HashMapAndPath.DotsToLinesList("v",7));
+//		m1.put("p8 p16", new HashMapAndPath.DotsToLinesList("v",8));
+//		m1.put("p9 p17", new HashMapAndPath.DotsToLinesList("v",9));
+//		m1.put("p10 p18", new HashMapAndPath.DotsToLinesList("v",10));
+//		m1.put("p11 p19", new HashMapAndPath.DotsToLinesList("v",11));
+//		m1.put("p12 p20", new HashMapAndPath.DotsToLinesList("v",12));
+//		m1.put("p13 p21", new HashMapAndPath.DotsToLinesList("v",13));
+//		m1.put("p14 p22", new HashMapAndPath.DotsToLinesList("v",14));
+//		m1.put("p15 p23", new HashMapAndPath.DotsToLinesList("v",15));
+//		m1.put("p16 p24", new HashMapAndPath.DotsToLinesList("v",16));
+//		m1.put("p17 p25", new HashMapAndPath.DotsToLinesList("v",17));
+//		m1.put("p18 p26", new HashMapAndPath.DotsToLinesList("v",18));
+//		m1.put("p19 p27", new HashMapAndPath.DotsToLinesList("v",19));
+//		m1.put("p20 p28", new HashMapAndPath.DotsToLinesList("v",20));
+//		m1.put("p21 p29", new HashMapAndPath.DotsToLinesList("v",21));
+//		m1.put("p22 p30", new HashMapAndPath.DotsToLinesList("v",22));
+//		m1.put("p23 p31", new HashMapAndPath.DotsToLinesList("v",23));
+//		m1.put("p24 p32", new HashMapAndPath.DotsToLinesList("v",24));
+//		m1.put("p25 p33", new HashMapAndPath.DotsToLinesList("v",25));
+//		m1.put("p26 p34", new HashMapAndPath.DotsToLinesList("v",26));
+//		m1.put("p27 p35", new HashMapAndPath.DotsToLinesList("v",27));
+//		m1.put("p28 p36", new HashMapAndPath.DotsToLinesList("v",28));
+//		m1.put("p29 p37", new HashMapAndPath.DotsToLinesList("v",29));
+//		m1.put("p30 p38", new HashMapAndPath.DotsToLinesList("v",30));
+//		m1.put("p31 p39", new HashMapAndPath.DotsToLinesList("v",31));
+//		m1.put("p32 p40", new HashMapAndPath.DotsToLinesList("v",32));
+//		m1.put("p33 p41", new HashMapAndPath.DotsToLinesList("v",33));
+//		m1.put("p34 p42", new HashMapAndPath.DotsToLinesList("v",34));
+//		m1.put("p35 p43", new HashMapAndPath.DotsToLinesList("v",35));
+//		m1.put("p36 p44", new HashMapAndPath.DotsToLinesList("v",36));
+//		m1.put("p37 p45", new HashMapAndPath.DotsToLinesList("v",37));
+//		m1.put("p38 p46", new HashMapAndPath.DotsToLinesList("v",38));
+//		m1.put("p39 p47", new HashMapAndPath.DotsToLinesList("v",39));
+//		m1.put("p40 p48", new HashMapAndPath.DotsToLinesList("v",40));
+//		m1.put("p41 p49", new HashMapAndPath.DotsToLinesList("v",41));
+//		m1.put("p42 p50", new HashMapAndPath.DotsToLinesList("v",42));
+//		m1.put("p43 p51", new HashMapAndPath.DotsToLinesList("v",43));
+//		m1.put("p44 p52", new HashMapAndPath.DotsToLinesList("v",44));
+//		m1.put("p45 p53", new HashMapAndPath.DotsToLinesList("v",45));
+//		m1.put("p46 p54", new HashMapAndPath.DotsToLinesList("v",46));
+//		m1.put("p47 p55", new HashMapAndPath.DotsToLinesList("v",47));
+//		m1.put("p48 p56", new HashMapAndPath.DotsToLinesList("v",48));
+//		m1.put("p49 p57", new HashMapAndPath.DotsToLinesList("v",49));
+//		m1.put("p50 p58", new HashMapAndPath.DotsToLinesList("v",50));
+//		m1.put("p51 p59", new HashMapAndPath.DotsToLinesList("v2",51));
+//		m1.put("p52 p60", new HashMapAndPath.DotsToLinesList("v",52));
+//		m1.put("p53 p61", new HashMapAndPath.DotsToLinesList("v",53));
+//		m1.put("p54 p62", new HashMapAndPath.DotsToLinesList("v",54));
+//		m1.put("p55 p63", new HashMapAndPath.DotsToLinesList("v",55));
+//		m1.put("p56 p64", new HashMapAndPath.DotsToLinesList("v",56));
+//		
+//		m1.put("p1 p10", new HashMapAndPath.DotsToLinesList("d",1));
+//		m1.put("p2 p11", new HashMapAndPath.DotsToLinesList("d",2));
+//		m1.put("p3 p12", new HashMapAndPath.DotsToLinesList("d",3));
+//		m1.put("p4 p13", new HashMapAndPath.DotsToLinesList("d",4));
+//		m1.put("p5 p14", new HashMapAndPath.DotsToLinesList("d",5));
+//		m1.put("p6 p15", new HashMapAndPath.DotsToLinesList("d",6));
+//		m1.put("p7 p16", new HashMapAndPath.DotsToLinesList("d",7));
+//		m1.put("p9 p18", new HashMapAndPath.DotsToLinesList("d",8));
+//		m1.put("p10 p19", new HashMapAndPath.DotsToLinesList("d",9));
+//		m1.put("p11 p20", new HashMapAndPath.DotsToLinesList("d",10));
+//		m1.put("p12 p21", new HashMapAndPath.DotsToLinesList("d",11));
+//		m1.put("p13 p22", new HashMapAndPath.DotsToLinesList("d",12));
+//		m1.put("p14 p23", new HashMapAndPath.DotsToLinesList("d",13));
+//		m1.put("p15 p24", new HashMapAndPath.DotsToLinesList("d",14));
+//		m1.put("p17 p26", new HashMapAndPath.DotsToLinesList("d",15));
+//		m1.put("p18 p27", new HashMapAndPath.DotsToLinesList("d",16));
+//		m1.put("p19 p28", new HashMapAndPath.DotsToLinesList("d",17));
+//		m1.put("p20 p29", new HashMapAndPath.DotsToLinesList("d",18));
+//		m1.put("p21 p30", new HashMapAndPath.DotsToLinesList("d",19));
+//		m1.put("p22 p31", new HashMapAndPath.DotsToLinesList("d",20));
+//		m1.put("p23 p32", new HashMapAndPath.DotsToLinesList("d",21));
+//		m1.put("p25 p34", new HashMapAndPath.DotsToLinesList("d",22));
+//		m1.put("p26 p35", new HashMapAndPath.DotsToLinesList("d",23));
+//		m1.put("p27 p36", new HashMapAndPath.DotsToLinesList("d",24));
+//		m1.put("p28 p37", new HashMapAndPath.DotsToLinesList("d",25));
+//		m1.put("p29 p38", new HashMapAndPath.DotsToLinesList("d",26));
+//		m1.put("p30 p39", new HashMapAndPath.DotsToLinesList("d",27));
+//		m1.put("p31 p40", new HashMapAndPath.DotsToLinesList("d",28));
+//		m1.put("p33 p42", new HashMapAndPath.DotsToLinesList("d",29));
+//		m1.put("p34 p43", new HashMapAndPath.DotsToLinesList("d",30));
+//		m1.put("p35 p44", new HashMapAndPath.DotsToLinesList("d",31));
+//		m1.put("p36 p45", new HashMapAndPath.DotsToLinesList("d",32));
+//		m1.put("p37 p46", new HashMapAndPath.DotsToLinesList("d",33));
+//		m1.put("p38 p47", new HashMapAndPath.DotsToLinesList("d",34));
+//		m1.put("p39 p48", new HashMapAndPath.DotsToLinesList("d",35));
+//		m1.put("p41 p50", new HashMapAndPath.DotsToLinesList("d",36));
+//		m1.put("p42 p51", new HashMapAndPath.DotsToLinesList("d",37));
+//		m1.put("p43 p52", new HashMapAndPath.DotsToLinesList("d",38));
+//		m1.put("p44 p53", new HashMapAndPath.DotsToLinesList("d",39));
+//		m1.put("p45 p54", new HashMapAndPath.DotsToLinesList("d",40));
+//		m1.put("p46 p55", new HashMapAndPath.DotsToLinesList("d",41));
+//		m1.put("p47 p56", new HashMapAndPath.DotsToLinesList("d",42));
+//		m1.put("p49 p58", new HashMapAndPath.DotsToLinesList("d",43));
+//		m1.put("p50 p59", new HashMapAndPath.DotsToLinesList("d",44));
+//		m1.put("p51 p60", new HashMapAndPath.DotsToLinesList("d",45));
+//		m1.put("p52 p61", new HashMapAndPath.DotsToLinesList("d",46));
+//		m1.put("p53 p62", new HashMapAndPath.DotsToLinesList("d",47));
+//		m1.put("p54 p63", new HashMapAndPath.DotsToLinesList("d",48));
+//		m1.put("p55 p64", new HashMapAndPath.DotsToLinesList("d",49));		
+//		
+//		return m1;
+//	}
 
 	
 	public static void displayArray1(String[][] array) {
@@ -448,27 +447,27 @@ import app.server.NodeList;
  
 	public static int scoredPoints(PathList pathCreated) {
 
-		ListPathCreated LPC = new ListPathCreated();
-		NodeLinesPath pathCreatedCurrent = pathCreated.firstNode;
-		
+//		ListPathCreated LPC = new ListPathCreated();
+//		NodeLinesPath pathCreatedCurrent = pathCreated.firstNode;
+//		
 		int score = 0;
-		while(pathCreatedCurrent != null) {
-			
-			LPC.addListPathCreated(Main.m2.get(pathCreatedCurrent.getMatrix().firstNode.getPoint1() + " " + 
-					pathCreatedCurrent.getMatrix().firstNode.getPoint2()));
-
-			if(LPC.firstNode.getMatrix().firstNode.getLine() == "v" || LPC.firstNode.getMatrix().firstNode.getLine() == "h") {
-				score += 2;
-				pathCreatedCurrent = pathCreatedCurrent.getNext();
-			}else if(LPC.firstNode.getMatrix().firstNode.getLine() == "d") {
-				score +=1;
-				pathCreatedCurrent = pathCreatedCurrent.getNext();
-			}
-
-
-
-		}
-		
+//		while(pathCreatedCurrent != null) {
+//			
+//			LPC.addListPathCreated(ServerAttributes.m2.get(pathCreatedCurrent.getMatrix().firstNode.getPoint1() + " " + 
+//					pathCreatedCurrent.getMatrix().firstNode.getPoint2()));
+//
+//			if(LPC.firstNode.getMatrix().firstNode.getLine() == "v" || LPC.firstNode.getMatrix().firstNode.getLine() == "h") {
+//				score += 2;
+//				pathCreatedCurrent = pathCreatedCurrent.getNext();
+//			}else if(LPC.firstNode.getMatrix().firstNode.getLine() == "d") {
+//				score +=1;
+//				pathCreatedCurrent = pathCreatedCurrent.getNext();
+//			}
+//
+//
+//
+//		}
+//		
 		return score;
 	}
 
