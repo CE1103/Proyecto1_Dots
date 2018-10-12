@@ -41,7 +41,6 @@ public class Player extends Game {
 		return points;
 	}
 
-
 	public static void scoreAdd(int score) {
 		if (!Game.P1.getTurn()) {
 			Game.P1.scorePoints(score);
