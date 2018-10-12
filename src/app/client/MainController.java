@@ -4,23 +4,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-<<<<<<< HEAD
 import Sockets.SocketClient;
-import app.server.Main;
-=======
->>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
+import app.communication.ServerAttributes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import util.ControlledScreen;
-<<<<<<< HEAD
-=======
-import Sockets.SocketClient;
-import Sockets.SocketServer;
-import app.communication.ServerAttributes;
->>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
 
 public class MainController implements Initializable, ControlledScreen {
 

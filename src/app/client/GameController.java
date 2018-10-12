@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import app.communication.ClientCommunication;
-import app.communication.ClientPrinter;
-import app.server.Main;
+import app.communication.Game;
+import app.communication.ServerAttributes;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;

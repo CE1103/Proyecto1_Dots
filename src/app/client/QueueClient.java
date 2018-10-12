@@ -6,15 +6,9 @@ import java.net.Socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import app.communication.ClientCommunication;
 import app.communication.JsonQueue;
 import app.communication.Player;
 import app.communication.Queue;
-<<<<<<< HEAD
-=======
-import app.communication.ServerAttributes;
-import app.server.Game;
->>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
 
 public class QueueClient implements Runnable{
 	

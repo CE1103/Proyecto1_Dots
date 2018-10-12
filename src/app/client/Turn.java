@@ -1,4 +1,4 @@
-package app.server;
+package app.client;
 
 import app.communication.Player;
 

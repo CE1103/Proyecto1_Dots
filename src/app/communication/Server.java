@@ -2,8 +2,6 @@ package app.communication;
 
 import java.util.Arrays;
 
-import app.server.Main;
-
 public class Server {
 	
 	public String lines;

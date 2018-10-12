@@ -17,12 +17,7 @@ import app.client.GameController;
 import app.communication.Client;
 import app.communication.ClientCommunication;
 import app.communication.Player;
-<<<<<<< HEAD
-import app.server.Main;
-=======
 import app.communication.ServerAttributes;
-import app.server.Game;
->>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
 
 public class SocketClient implements Runnable{
 	

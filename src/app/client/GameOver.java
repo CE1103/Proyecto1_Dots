@@ -1,8 +1,6 @@
 package app.client;
 
 import app.communication.ClientCommunication;
-import app.communication.Player;
-import app.server.Game;
 
 public class GameOver {
 	

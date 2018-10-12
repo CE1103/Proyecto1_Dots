@@ -2,7 +2,7 @@ package app.communication;
 
 import app.client.List;
 import app.client.NodeList;
-import app.server.Turn;
+import app.client.Turn;
 
 
 public class Game {

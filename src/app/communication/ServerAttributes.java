@@ -1,23 +1,7 @@
 package app.communication;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
-
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-
-import HashMapAndPath.PathList;
-import Sockets.SocketClient;
-import Sockets.SocketServer;
-import app.client.ScreensController;
-import app.server.Game;
-import app.server.List;
-import javafx.application.Application;
-import javafx.scene.Group;
+import app.client.List;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
-import util.*;
 
 
 public class ServerAttributes{
@@ -36,29 +20,7 @@ public class ServerAttributes{
     public static String screen6File = "LoadingGame.fxml";
     
     public static List l1;
-    public static HashMap<String, HashMapAndPath.ListHashMap> m1;
-    public static PathList path = new PathList();
 
 	public static Scene scene4;
-
-	
-    public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException { 
-    	
-    	l1 = app.server.List.createLinkedList();
-        Game.linkedListToArray();
-        m1 = util.Util.createHashMap();
-        System.out.println(Arrays.toString(linesStatic));
-//        System.out.println(ServerCommunication.jsonDataSend());
-//        System.out.println(ClientCommunication.jsonDataSend());
-        
-        
-        SocketServer h = new SocketServer();
-        
-        Thread t1 = new Thread(h);
-        
-        h.setPort1(8081);
-        t1.start();
-        
-    }
     
 }

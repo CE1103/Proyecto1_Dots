@@ -3,7 +3,6 @@ package app.client;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import app.communication.ClientCommunication;
 import app.communication.ServerAttributes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

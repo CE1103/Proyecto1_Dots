@@ -4,12 +4,7 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.HashMap;
 
-<<<<<<< HEAD
-import app.server.Main;
-=======
-import Sockets.SocketClient;
 import app.communication.ServerAttributes;
->>>>>>> branch '8x8_Merge' of https://github.com/CE1103/Proyecto1_Dots.git
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;

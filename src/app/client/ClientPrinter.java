@@ -1,9 +1,7 @@
-package app.communication;
+package app.client;
 
-import app.server.Game;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
-
+import app.communication.ClientCommunication;
+import app.communication.Game;
 
 public class ClientPrinter extends Game  {
 	

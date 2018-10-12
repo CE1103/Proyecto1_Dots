@@ -3,11 +3,9 @@ package util;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import HashMapAndPath.NodeLinesPath;
 import HashMapAndPath.PathList;
-import app.server.List;
-import app.communication.ServerAttributes;
-import app.server.NodeList;
+import app.client.List;
+import app.client.NodeList;
  
  public class Util {
 	 
