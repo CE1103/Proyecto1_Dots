@@ -10,24 +10,27 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import util.ControlledScreen;
 
-public class InfoController implements Initializable, ControlledScreen {
-
+public class QueueController implements Initializable, ControlledScreen{
+	
     @FXML
     private Button backToPrincipal;
     
     ScreensController myController;
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }
-    
-    public void setScreenParent(ScreensController screenParent){
-        myController = screenParent;
-    }
 
+	@Override
+	public void setScreenParent(ScreensController screenPage) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
     @FXML
     private void goToScreen1(ActionEvent event){
        myController.setScreen(Main.screen1ID);
     }
+
 }
