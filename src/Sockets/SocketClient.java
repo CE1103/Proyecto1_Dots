@@ -2,17 +2,11 @@ package Sockets;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.Arrays;
-import java.util.Scanner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.CharMatcher;
@@ -20,11 +14,8 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.FluentIterable;
 
 import app.client.GameController;
-import app.client.QueueClient;
 import app.communication.Client;
 import app.communication.ClientCommunication;
-import app.communication.ClientPrinter;
-import app.communication.Game;
 import app.communication.Player;
 import app.server.Main;
 
@@ -61,7 +52,7 @@ public class SocketClient implements Runnable{
 		synchronized (this){
 			try {
 				ObjectMapper mapper = new ObjectMapper();
-				clientSocket = new Socket("192.168.43.55", port);
+				clientSocket = new Socket("192.168.1.146", port);
 				out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 				in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 				Thread.sleep(500);

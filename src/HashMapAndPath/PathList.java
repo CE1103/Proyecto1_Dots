@@ -1,7 +1,5 @@
 package HashMapAndPath;
 
-import app.client.NodeList;
-
 public class PathList {
 //	
 //	NodeLinesPath firstNode;

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Sockets.SocketClient;
 import app.server.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +12,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import util.ControlledScreen;
-import Sockets.SocketClient;
 
 public class MainController implements Initializable, ControlledScreen {
 

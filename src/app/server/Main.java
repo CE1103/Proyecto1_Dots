@@ -8,18 +8,9 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 import HashMapAndPath.PathList;
-import Sockets.SocketClient;
 import app.client.List;
-import app.client.ScreensController;
-import app.communication.ClientCommunication;
 import app.communication.Game;
-import app.communication.Queue;
-import app.communication.ServerCommunication;
-import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
-import util.*;
 
 
 public class Main{
@@ -48,18 +39,18 @@ public class Main{
     	
     	l1 = app.client.List.createLinkedList();
         Game.linkedListToArray();
-        m1 = util.Util.createHashMap();
+//        m1 = util.Util.createHashMap();
         System.out.println(Arrays.toString(linesStatic));
 //        System.out.println(ServerCommunication.jsonDataSend());
 //        System.out.println(ClientCommunication.jsonDataSend());
         
         
-        SocketServer h = new SocketServer();
+//        SocketServer h = new SocketServer();
         
-        Thread t1 = new Thread(h);
-        
-        h.setPort1(8081);
-        t1.start();
+//        Thread t1 = new Thread(h);
+//        
+//        h.setPort1(8081);
+//        t1.start();
         
     }
     

@@ -1,9 +1,8 @@
 package app.communication;
 
 import java.util.Arrays;
-import app.client.*;
 
-import app.server.*;
+import app.server.Main;
 
 public class Server {
 	
