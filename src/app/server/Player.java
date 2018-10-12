@@ -42,6 +42,9 @@ public class Player extends Game {
 	}
 
 	public static void scoreAdd(int score) {
+		/**
+		 * Función que suma la cantidad de puntos especificada en los parámetros al jugador que creó la figura.
+		 */
 		if (!Game.P1.getTurn()) {
 			Game.P1.scorePoints(score);
 		} else if (!Game.P2.getTurn()) {

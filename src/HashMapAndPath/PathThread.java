@@ -21,8 +21,10 @@ public class PathThread implements Runnable {
 		this.currentPath = currentPath;
 
 	}
-	@SuppressWarnings("deprecation")
 	public void startThread() throws InterruptedException {
+		/**
+		 * Función que crea el hilo para comenzar a buscar el recorrido y detectar si se se creó alguna figura.
+		 */
 
 		PathList a = copyPathList(Main.path);
 		PathList b = new PathList();

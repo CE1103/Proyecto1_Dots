@@ -36,6 +36,9 @@ public class SocketServer implements Runnable {
 	
 	@Override
 	public void run() {
+		/**
+		 * Hilo que recibe y envía json a los clientes.
+		 */
 		try {
 			serverSocket = new ServerSocket(port1);
 			serverSocket2 = new ServerSocket(port2);

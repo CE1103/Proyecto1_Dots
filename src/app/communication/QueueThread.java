@@ -9,6 +9,9 @@ public class QueueThread implements Runnable{
 
 	@Override
 	public void run() {
+		/**
+		 * Función que ejecuta el thread de la cola de jugadores. Esta siempre está funcionando y buscando conexiones entrantes.
+		 */
 		try {
 			ServerSocket serverSocketQueue = new ServerSocket(7000);			
 			while(true) {

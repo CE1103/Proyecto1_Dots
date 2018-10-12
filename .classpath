@@ -7,9 +7,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Jonathan/Downloads/guava-19.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Jonathan/Downloads/jackson-annotations-2.9.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Jonathan/Downloads/jackson-core-2.9.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Jonathan/Downloads/jackson-databind-2.9.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isoli/Documents/Tec/Progras/Java/Jars/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isoli/Documents/Tec/Progras/Java/Jars/jackson-annotations-2.9.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isoli/Documents/Tec/Progras/Java/Jars/jackson-core-2.9.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isoli/Documents/Tec/Progras/Java/Jars/jackson-databind-2.9.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

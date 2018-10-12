@@ -12,9 +12,12 @@ import app.server.NodeList;
  
  public class Util {
 	 
-	 public static boolean pathThreadOn = false;
+	public static boolean pathThreadOn = false;
 	
 	public static String[][] linkedListToArray(){
+		/**
+		 * Función que transforma una lista enlazada a un array.
+		 */
 		
 		NodeList LN = List.firstPointFinal;
 		NodeList LN1 = LN.matrix.firstPoint;
@@ -38,6 +41,9 @@ import app.server.NodeList;
 	}
 	
 	public static List arrayToNode(String[] array) {
+		/**
+		 * Función que transforma un array a una lista enlazada.
+		 */
 		List NL = new List();
 		System.out.println(Arrays.toString(array));
 		for (int n = (array.length-1); n >= 0; n--) {

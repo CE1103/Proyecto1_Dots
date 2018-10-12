@@ -7,6 +7,9 @@ public class QueueElements extends Queue{
 
 	
 	public static int givePort() {
+		/**
+		 * Función que retorna el puerto siguiente en la cola para enviar al cliente que se conecte.
+		 */
 		
 		if(currentPort == 8106) {
 			

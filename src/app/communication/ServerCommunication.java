@@ -27,6 +27,13 @@ public class ServerCommunication {
 	public static Queue queue = new Queue();
 	
 	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
+		/**
+		 * Función que maneja los datos obtenidos del json que envían los clientes
+		 * 
+		 * <p>
+		 * Recibe el json del cliente, revisa si se creó una figura y en ese caso se le agregan los puntos al jugador que la creó,
+		 * luego modifica el json y lo prepara para el envío.
+		 */
 		
 		ObjectMapper mapper = new ObjectMapper();
 		System.out.println("error0.5");
@@ -81,6 +88,9 @@ public class ServerCommunication {
 	}
 	
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
+		/**
+		 * Función que retorna el json que se quiere enviar a los clientes.
+		 */
 			
 			ObjectMapper mapper = new ObjectMapper();
 //			server = mapper.readValue(SocketServer.jsonData, Server.class);
@@ -90,6 +100,9 @@ public class ServerCommunication {
 	}
 	
 	public static String jsonPortSend() throws JsonProcessingException {
+		/**
+		 * Función que retorna el json que se le quiere enviar a cada nuevo cliente que se une.
+		 */
 		ObjectMapper mapper = new ObjectMapper();
 		JsonQueue jsonQueue = new JsonQueue();
 		String json = mapper.writeValueAsString(jsonQueue);
