@@ -86,9 +86,9 @@
 		</TabPane>
 		
 		
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="289.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="289.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../img/HEADER.png" />
+                  <Image url="@../../img/HEADER2.png" />
                </image>
             </ImageView>
             <Button fx:id="backToPrincipal" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="35.0" prefWidth="88.0" text="Atrás" />

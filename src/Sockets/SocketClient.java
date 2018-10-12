@@ -97,10 +97,6 @@ public class SocketClient implements Runnable{
 			System.out.println(e);
 			}
 		}
-<<<<<<< HEAD
-	}
-=======
 		
 	}
->>>>>>> refs/heads/8x8_Merge
 }
