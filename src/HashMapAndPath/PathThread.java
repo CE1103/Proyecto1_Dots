@@ -1,5 +1,6 @@
 package HashMapAndPath;
 
+import app.communication.Game;
 import app.communication.ServerCommunication;
 import app.server.Main;
 import app.server.Player;
@@ -21,7 +22,7 @@ public class PathThread implements Runnable {
 
 	}
 	@SuppressWarnings("deprecation")
-	public void startThread() {
+	public void startThread() throws InterruptedException {
 
 		PathList a = copyPathList(Main.path);
 		PathList b = new PathList();
@@ -32,6 +33,7 @@ public class PathThread implements Runnable {
 		Util.pathThreadOn = true;
 		Thread t = new Thread(new PathThread(ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint1(), a, ServerCommunication.temp1.firstNode.getMatrix().firstNode.getPoint2(),b));
 		t.start();
+		Thread.sleep(1000);
 	}
 
 	@Override
@@ -74,6 +76,7 @@ public class PathThread implements Runnable {
 				}
 			}
 			score = util.Util.scoredPoints(currentPath);
+			System.out.println(score);
 			Player.scoreAdd(score);
 			currentPath.display();
 			Util.pathThreadOn = false;

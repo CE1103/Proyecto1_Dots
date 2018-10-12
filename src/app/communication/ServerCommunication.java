@@ -35,7 +35,7 @@ public class ServerCommunication {
 		client = mapper.readValue(SocketServer.jsonData, Client.class);
 		System.out.println("error1.5");
 		System.out.println("error2");
-		if (Game.P1.getScore() < 50 && Game.P2.getScore() < 50) {
+		if (Game.P1.getScore() < 8 && Game.P2.getScore() < 8) {
 			String s = client.lines;
 			Iterable<String> i = Splitter.on(",").trimResults(CharMatcher.WHITESPACE.or(CharMatcher.anyOf("[]"))).split(s);
 			String[] lines = FluentIterable.from(i).toArray(String.class);
@@ -67,7 +67,11 @@ public class ServerCommunication {
 				System.out.println("error5");
 				Main.path = p1;
 				PathThread pathTest = new PathThread(null,new PathList(),null,null);
-				pathTest.startThread();
+				try {
+					pathTest.startThread();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 				
 			}catch(NullPointerException e) {}
 		} else {

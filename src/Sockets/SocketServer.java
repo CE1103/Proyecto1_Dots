@@ -40,11 +40,15 @@ public class SocketServer implements Runnable {
 			serverSocket = new ServerSocket(port1);
 			serverSocket2 = new ServerSocket(port2);
 			clientSocket = serverSocket.accept();
-			clientSocket2 = serverSocket2.accept();
+			clientSocket2 = serverSocket2.accept(); 
 			out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 			in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 			out2 = new DataOutputStream(new BufferedOutputStream(clientSocket2.getOutputStream()));;
 			in2 = new DataInputStream(new BufferedInputStream(clientSocket2.getInputStream()));
+			ServerCommunication.queue.dequeue();
+			ServerCommunication.queue.showAll();
+			ServerCommunication.queue.dequeue();
+			ServerCommunication.queue.showAll();
 			String inputLine;
 			while (true) {
 				if(Game.P1.turn) {
@@ -75,6 +79,10 @@ public class SocketServer implements Runnable {
 				System.out.println("holaserver3");
 				Main.linesStatic = ServerCommunication.RecentLines;
 				ServerCommunication.server.turn = Game.P1.getTurn();
+				ServerCommunication.server.scoreP1 = Game.P1.getScore();
+				ServerCommunication.server.scoreP2 = Game.P2.getScore();
+				System.out.println("P1 = " + Game.P1.getScore());
+				System.out.println("P2 = " + Game.P2.getScore());
 				System.out.println("holaserver4");
 				out.writeUTF(ServerCommunication.jsonDataSend());
 				System.out.println("holaserver5");
@@ -87,9 +95,7 @@ public class SocketServer implements Runnable {
 				System.out.println("holaserver8");
 			}
 		}catch (Exception e) {
-			ServerCommunication.queue.dequeue();
-			ServerCommunication.queue.dequeue();
-			ServerCommunication.queue.showAll();
+			
 		}
 		
 	}	
