@@ -10,7 +10,7 @@ public class Player {
 		points = 0;
 		this.turn = false;
 	}
-	
+		
 	public static void switchTurn(){
 		if(turn){
 			turn = false;
