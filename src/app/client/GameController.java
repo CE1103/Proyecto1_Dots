@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 
 import app.communication.ClientCommunication;
 import app.communication.ClientPrinter;
-import app.communication.Game;
 import app.server.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -16,8 +16,6 @@ public class Server {
 	public String dots6;
 	public String dots7;
 	public boolean turn;
-	public int scoreP1;
-	public int scoreP2;
 
 	
 	public Server() {

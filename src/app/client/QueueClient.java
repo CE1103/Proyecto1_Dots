@@ -44,7 +44,7 @@ public class QueueClient implements Runnable{
 				
 				while(jsonQueue.port > 8101) {
 					Queue q = new Queue();
-//					q.enqueue(jsonQueue.port);
+					q.enqueue(jsonQueue.port);
 //					q.showAll();
 					break;
 				}

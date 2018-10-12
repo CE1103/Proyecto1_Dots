@@ -1,5 +1,6 @@
 package app.communication;
 
+import app.server.Game;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
