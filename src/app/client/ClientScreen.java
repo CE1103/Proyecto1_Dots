@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 
 public class ClientScreen extends Application {
 	
+	public static HashMap<String, Line> m1 = createHashMap();
+	
 	@Override
     public void start(Stage primaryStage) {
 

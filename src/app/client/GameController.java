@@ -94,7 +94,8 @@ public class GameController implements Initializable, ControlledScreen {
             		System.out.println(Arrays.toString(ServerAttributes.linesStatic));
             		System.out.println(Arrays.toString(Game.dots));
             		
-            		ClientPrinter.setColor(event);
+            		ClientPrinter.setColorPlayer(event);
+            		ClientPrinter.setColor();
             		
             		ClientCommunication.jsonDataSend();
             		System.out.println("hola");
@@ -102,12 +103,13 @@ public class GameController implements Initializable, ControlledScreen {
             	}
             	
             	else {
+            		ClientPrinter.setColor();
             		alert.setText("Linea Anteriormente Presionada");
             		alert.setStyle("-fx-text-fill: #95F4F1");
             	}
         	}
         	else{
-        		System.out.println("Ni picha NEGROOO");
+        		System.out.println("No es su turno");
         	}
     	}
     	else {
