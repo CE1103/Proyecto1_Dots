@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="CENTER" hgap="10.0" prefHeight="679.0" prefWidth="777.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.client.GameController">
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="679.0" prefWidth="777.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.client.GameController">
   <children>
     <AnchorPane prefHeight="467.0" prefWidth="467.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>
@@ -59,8 +59,8 @@
         <Line fx:id="v18" endX="-100.0" endY="42.0" layoutX="293.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v19" endX="-100.0" endY="42.0" layoutX="373.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
         <Line fx:id="v20" endX="-100.0" endY="42.0" layoutX="453.0" layoutY="235.0" onMouseClicked="#onMouseClick" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
-            <Text layoutX="148.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
-            <Text layoutX="479.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
+            <Text fx:id="textPlayer1" layoutX="148.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 1:" />
+            <Text fx:id="textPlayer2" layoutX="479.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jugador 2:" />
             <Label fx:id="labelP1" layoutX="260.0" layoutY="608.0" text="0 pts">
                <font>
                   <Font size="18.0" />

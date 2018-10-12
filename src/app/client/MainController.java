@@ -4,15 +4,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import app.server.Main;
+import Sockets.SocketClient;
+import app.communication.ServerAttributes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import util.ControlledScreen;
-import Sockets.SocketClient;
-import Sockets.SocketServer;
 
 public class MainController implements Initializable, ControlledScreen {
 
@@ -40,22 +39,32 @@ public class MainController implements Initializable, ControlledScreen {
     @FXML
     private void goToScreen2(ActionEvent event) throws IOException, InterruptedException{      
 
-		myController.setScreen(Main.screen4ID);
-		g = new SocketClient();
-		Thread t2 = new Thread(g);
-		g.setPort(8081);
-		Thread threadreset = new Thread(new Runnable() {			
+    	if(QueueClient.jsonQueue.port > 8101) {
+			myController.setScreen(ServerAttributes.screen6ID);
+		}
+    	
+    	else {
+    		myController.setScreen(ServerAttributes.screen4ID);
+    		g = new SocketClient();
+    		Thread t2 = new Thread(g);
+    		g.setPort(QueueClient.jsonQueue.port);
+    		
+    		Thread threadReset = new Thread(new Runnable() {			
 
-		@Override
-		public void run() {
-			try {
-				resetThread();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}});
-		threadreset.start();
-		t2.start();
+    		@Override
+    		public void run() {
+    			try {
+    				System.out.println("hola2");
+    				resetThread();
+    			} catch (InterruptedException e) {
+    				e.printStackTrace();
+    			}
+    		}});
+    		threadReset.start();
+    		t2.start();
+    	}
+    	
+		
 		
     }
     
@@ -77,6 +86,6 @@ public class MainController implements Initializable, ControlledScreen {
     
     @FXML
     private void goToScreen3(ActionEvent event){
-    	myController.setScreen(Main.screen3ID);
+    	myController.setScreen(ServerAttributes.screen3ID);
     }
 }

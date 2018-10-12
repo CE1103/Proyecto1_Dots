@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package app.communication;
 
 import app.server.List;
@@ -7,6 +8,13 @@ import app.server.Turn;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+=======
+package app.communication;
+
+import app.client.List;
+import app.client.NodeList;
+import app.client.Turn;
+>>>>>>> refs/heads/8x8_Merge
 
 
 public class Game {
@@ -39,4 +47,11 @@ public class Game {
 			j++; i = 0;
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+
+
+
+}
+>>>>>>> refs/heads/8x8_Merge

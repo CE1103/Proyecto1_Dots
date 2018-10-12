@@ -2,11 +2,8 @@ package app.communication;
 
 import java.util.Arrays;
 
-import app.server.Main;
-import app.server.Player;
-
 public class Client {
-	
+
 	public String lines;
 	public String dots0;
 	public String dots1;
@@ -16,12 +13,15 @@ public class Client {
 	public String dots5;
 	public String dots6;
 	public String dots7;
-	public String turnPlayer1;
-	public String turnPlayer2;
+	public boolean turn;
+	public boolean gameOn;
+	public int scoreP1;
+	public int scoreP2;
 
 	public Client() {
 		
-		lines = Arrays.toString(Main.linesStatic);
+		this.gameOn = true;
+		this.lines = Arrays.toString(ServerAttributes.linesStatic);
 		this.dots0 = Arrays.toString(Game.dots[0]);
 		this.dots1 = Arrays.toString(Game.dots[1]);
 		this.dots2 = Arrays.toString(Game.dots[2]);

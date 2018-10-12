@@ -1,25 +1,22 @@
-package app.server;
+package app.communication;
 
-import app.communication.Game;
-
-public class Player extends Game {
+public class Player {
 	
 	public static int points;
-	public boolean turn;
+	public static boolean turn;
 	
 	public Player(int P) {
 		
 		points = 0;
 		this.turn = false;
 	}
-	
-	public void switchTurn(){
 		
-		if(this.turn){
-			this.turn = false;
+	public static void switchTurn(){
+		if(turn){
+			turn = false;
 		}
 		else {
-			this.turn = true;
+			turn = true;
 		}
 	}
 	
@@ -31,7 +28,7 @@ public class Player extends Game {
 		return this.turn;
 	}
 	
-	public void scorePoints(){
+	public static void scorePoints(){
 		points += 2;
 	}
 	
