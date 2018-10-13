@@ -35,7 +35,6 @@ public class SocketClient implements Runnable{
 	public void timer() throws InterruptedException {
 		synchronized(this) {
 			Thread.sleep(1000);
-			System.out.println("hola3");
 			notify();
 		}
 	}
@@ -52,17 +51,15 @@ public class SocketClient implements Runnable{
 		synchronized (this){
 			try {
 				ObjectMapper mapper = new ObjectMapper();
-				clientSocket = new Socket("192.168.43.55", port);
+				clientSocket = new Socket("192.168.1.116", port);
 				out = new DataOutputStream(new BufferedOutputStream(clientSocket.getOutputStream()));;
 				in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
 				Thread.sleep(500);
 				String str;
 				while(true) {
 					Thread.sleep(1000);
-					System.out.println("holaclient");
 					
 					if(Player.turn) {
-						System.out.println("hola45");
 						out.writeUTF(ClientCommunication.jsonDataSend());
 						out.flush();
 					}
@@ -71,13 +68,8 @@ public class SocketClient implements Runnable{
 				
 
 					Thread.sleep(500);
-					System.out.println("asdf");
 					str = in.readUTF();		
-					System.out.println("asdfjgie");
-//					System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(str));
-					
-//					ClientCommunication.client = mapper.readValue(str, Client.class);
-//					QueueClient.linesCl = ClientCommunication.client.lines;
+
 
 					ClientCommunication.client = mapper.readValue(str, Client.class);
 					System.out.println(str);
@@ -93,9 +85,7 @@ public class SocketClient implements Runnable{
 						GameController.x++;
 					}
 				}	
-			}catch(Exception e) {
-			System.out.println(e);
-			}
+			}catch(Exception e) {}
 		}
 		
 	}

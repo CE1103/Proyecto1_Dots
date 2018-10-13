@@ -23,16 +23,12 @@ public class QueueClient implements Runnable{
 		try {
 			
 			ObjectMapper mapper = new ObjectMapper();
-			System.out.println("hola");
-			Socket clientSocket = new Socket("192.168.43.55", 7000);
-			System.out.println("3");
+			Socket clientSocket = new Socket("192.168.1.116", 7000);
 			DataInputStream in = new DataInputStream(new BufferedInputStream(clientSocket.getInputStream()));
-			System.out.println("2");
 			String str = in.readUTF();
-			System.out.println("1");
 			jsonQueue = mapper.readValue(str, JsonQueue.class);
 			System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(str));
-//			
+			
 			if (jsonQueue.port == 8100) {
 				player = 1;
 				
@@ -51,7 +47,6 @@ public class QueueClient implements Runnable{
 					q.enqueue(jsonQueue.port);
 					
 					
-//					q.showAll();
 					break;
 				}
 			}

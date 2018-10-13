@@ -69,11 +69,7 @@ public class GameController implements Initializable, ControlledScreen {
             		}    		
             	}
             	if(a) {
-            		//System.out.println("This line id is - " + ((Line)event.getSource()).getId());
             		alert.setText(" ");  
-            		
-//            		labelP1.setText(Integer.toString(Game.P1.getScore()) + " pts");
-//            		labelP2.setText(Integer.toString(Game.P2.getScore()) + " pts");
             		
             		labelP1.setText(Integer.toString(ClientCommunication.client.scoreP1));
             		labelP2.setText(Integer.toString(ClientCommunication.client.scoreP2));
@@ -92,7 +88,6 @@ public class GameController implements Initializable, ControlledScreen {
             		ClientPrinter.setColor(event);
             		
             		ClientCommunication.jsonDataSend();
-            		System.out.println("hola");
             		MainController.thread.start();
             	}
             	
@@ -102,7 +97,7 @@ public class GameController implements Initializable, ControlledScreen {
             	}
         	}
         	else{
-        		System.out.println("Ni picha NEGROOO");
+        		System.out.println("No es su turno");
         	}
     	}
     	else {

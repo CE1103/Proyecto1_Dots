@@ -29,9 +29,7 @@ public class Game {
 			LN = LN.next;
 			try {
 				LN1 = LN.matrix.firstPoint;
-			}catch (Exception e) {
-				System.out.println(e);
-			}
+			}catch (Exception e) {}
 			j++; i = 0;
 		}
 	}

@@ -11,12 +11,6 @@ public class ClientCommunication {
 	public static String jsonDataClient;
 	public static Client client;
 	
-//	public static void jsonDataReceive() throws JsonGenerationException, JsonMappingException, IOException{
-//		
-//		ObjectMapper mapper = new ObjectMapper();
-//		client = mapper.readValue(jsonDataClient, Client.class);
-//		
-//	}
 	
 	public static String jsonDataSend() throws JsonGenerationException, JsonMappingException, IOException{
 		
