@@ -35,9 +35,6 @@ public class Main{
         Game.linkedListToArray();
         m1 = util.Util.createHashMap();
         m2 = util.Util.createDotsToLineHM();
-//        System.out.println(Arrays.toString(linesStatic));
-//        System.out.println(ServerCommunication.jsonDataSend());
-//        System.out.println(ClientCommunication.jsonDataSend());
         
 	     QueueElements queue = new QueueElements();
 	     ClientThreads.createClientThreads();

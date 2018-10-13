@@ -22,9 +22,7 @@ public class QueueThread implements Runnable{
 				
 				clientSocketQueue.close();
 			}
-		}catch (Exception e) {
-
-		}
+		}catch (Exception e) {}
 	}
 
 }

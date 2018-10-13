@@ -77,7 +77,6 @@ public class List {
 			p=0;
 			matrix.addNode(list);
 		}
-		matrix.displayPoint();
 		return matrix;
 	}
 }

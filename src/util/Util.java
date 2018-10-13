@@ -418,17 +418,11 @@ import app.server.NodeList;
 	}
 	
 	public static String[] CompareList(String[] lines, String[] recentList) {
-		System.out.println("error 1.75");
 		
 		int c = 0;
 		int d = 0;
 		
-		System.out.println(Arrays.toString(lines));
-		System.out.println(lines[c].equals("null"));
-		System.out.println(lines[c].equals(null));
-		
 		while(!lines[c].equals("null")) {
-			System.out.println("in");
 			 if(recentList[d].equals(lines[c])) {
 				
 				c += 1;

@@ -78,9 +78,7 @@ public class PathThread implements Runnable {
 				}
 			}
 			score = util.Util.scoredPoints(currentPath);
-			System.out.println(score);
 			Player.scoreAdd(score);
-			currentPath.display();
 			Util.pathThreadOn = false;
 			return;
 		}else{
