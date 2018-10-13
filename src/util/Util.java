@@ -72,6 +72,10 @@ import app.server.NodeList;
 	public static HashMap<String, HashMapAndPath.ListHashMap> createHashMap(){
 		HashMap<String, HashMapAndPath.ListHashMap> m1 = new HashMap<>();
 		
+		/**
+		 * Crea un diccionario que pasa del valor String de la linea a puntos
+		 */
+		
 		m1.put("h1", new HashMapAndPath.ListHashMap("p1","p2"));
 		m1.put("h2", new HashMapAndPath.ListHashMap("p2","p3"));
 		m1.put("h3", new HashMapAndPath.ListHashMap("p3","p4"));
@@ -242,6 +246,10 @@ import app.server.NodeList;
 	
 	public static HashMap<String, HashMapAndPath.DotsToLinesList> createDotsToLineHM(){
 		HashMap<String, HashMapAndPath.DotsToLinesList> m1 = new HashMap<>();
+		
+		/**
+		 * Crea un diccionario que pasa del valor String de los puntos al valor de la linea
+		 */
 		
 		m1.put("p1 p2", new HashMapAndPath.DotsToLinesList("h",1));
 		m1.put("p2 p3", new HashMapAndPath.DotsToLinesList("h",2));
@@ -418,6 +426,10 @@ import app.server.NodeList;
 	}
 	
 	public static String[] CompareList(String[] lines, String[] recentList) {
+		
+		/**
+		 * Compara la lista actual que tiene el servidor con la lista que le llegó del cliente
+		 */
 		
 		int c = 0;
 		int d = 0;

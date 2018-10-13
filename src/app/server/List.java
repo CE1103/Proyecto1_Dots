@@ -1,6 +1,13 @@
 package app.server;
 
 public class List {
+	/**
+	 * Usa los nodos de NodeList para crear una lista de listas que tengan los valores de los botones
+	 * Esta lista se crea una sola vez y para crearse se usan dos for anidados
+	 * 
+	 */
+	
+	
 		
 	public NodeList firstPoint;
 	public static NodeList firstPointFinal;
